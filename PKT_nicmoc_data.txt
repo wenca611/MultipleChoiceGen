@@ -1,0 +1,135 @@
+# PKT mini-test
+# pozn. pozor kde píšete dvojtečky a otazníky
+# Teorie určitě není z ChadGPT, ok možná trochu XD
+
+# Co bylo
+1. Jak je možné na příchozím ICMP echo reply paketu poznat,\
+ke které z odeslaných ICMP echo request zpráv patří a určit tak dobu odezvy?:2.5:6.0:0.2
+Zejména podle hodnoty ID a sekvenčního čísla v ICMP echo reply zprávě, které se musí shodovat s hodnotami v ICMP echo request:1
+Doba odezvy na ICMP echo reply paket je vždy stejná bez ohledu na to, ke kterému ICMP echo request patří.
+Identifikátor a sekvence v ICMP echo reply paketu jsou náhodné hodnoty a nelze je použít k určení doby odezvy.
+K určení doby odezvy je třeba porovnávat IP adresy odesílatele a příjemce ICMP echo request a reply zpráv.
+
+2. K čemu slouží délka okna u TCP protokolu?:1.9:5.0:0.1
+Vyjadřuje maximální počet bajtů, které může vysílač odeslat bez čekání na potvrzení od přijímače:1
+Délka okna u TCP protokolu určuje maximální délku přenášeného datového toku.
+Délka okna u TCP protokolu slouží ke zjištění, zda jsou data správně zakódována.
+Délka okna u TCP protokolu určuje maximální počet připojení na jeden port.
+-Délka okna u TCP protokolu slouží k řízení toku dat mezi odesílatelem a příjemcem.
+-K určení, kolik dat může odeslat, aniž by způsobil zahlcení sítě a ztrátu dat.
+
+3. Jaký typ provozu lze zachytávat do trasovacího souboru v NS3?:2.5:6.0:0.2
+Doručené pakety:1
+Zahozené pakety:1
+Pouze datový provoz typu UDP.
+Pouze řídící zprávy a události, ale ne datový provoz.
+Pouze síťové protokoly typu ARP.
+-datový provoz (např. TCP, UDP), síťové protokoly (např. ICMP) a různé řídící zprávy a událostí.
+
+4. Která z odpovědí nepatří do typů DNS (Domain Name System) záznamů?:2.6:6.0:0.1
+TTL(Time To Live):1
+MX(Mail eXchanger)
+DNSKEY
+RRSIG(Resource Record Signature)
+A(IPV4 host address)
+CNAME(Canonical name for an alias)
+NS(Authoritative name server)
+
+5. Který z následujících termínů v protokolu DNS (Domain Name System) neoznačuje typ záznamu v DNS databázi?:2.3714285714285714:5.0:0.1
+QUERY:1
+A
+NS
+MX
+DNSKEY
+RRSIG
+CNAME
+
+6. Po použití filtru „(ip.addr==192.168.0.1) and (http or dns)“ v programu Wireshark se?:2.5:6.0:0.2
+Zobrazí pouze pakety, u nichž je cílová nebo zdrojová IP adresa 192.168.0.1 a zároveň obsahují protokol http nebo dns:1
+Zobrazí se všechny pakety v síti, bez ohledu na protokol a zdrojovou IP adresu.
+Zobrazí se pouze pakety, které mají IP adresu 192.168.0.1 a obsahují pouze protokol HTTP.
+Zobrazí se pouze pakety, které mají IP adresu 192.168.0.1 a obsahují pouze protokol DNS.
+
+7. Definice topologie uzlů a linek se v NS3 provádí na jaké vrstvě simulačního modelu TCP/IP?:1.7999999999999998:5.0:0.1
+Fyzické vrstvě
+Aplikační vrstva
+Transportní vrstva
+Síťová vrstva:1
+-asi opraveno
+
+8. Konfigurace protokolů TCP/UDP se provádí v NS3 na jaké vrstvě simulačního modelu TCP/IP?:2.4:6.0:0.2
+Transportní vrstva:1
+Fyzické vrstvě
+Aplikační vrstvě
+Síťové vrstvě
+-chat approved
+
+9. DHCP (Dynamic Host Configuration Protocol) relay agent provádí?:2.4:6.0:0.2
+Převádí libovolné zprávy protokolu DHCP z jedné sítě do druhé a zpět:1
+Dynamickou konfiguraci sítě pomocí protokolu ICMP (Internet Control Message Protocol).
+Řízení směrování mezi různými síťovými protokoly.
+Zajištění bezpečného a autentizovaného přístupu do sítě.
+-Přeposílání DHCP zpráv mezi DHCP klienty a DHCP serverem napříč různými síťovými segmenty.
+
+10. Jaké je správné pořadí záhlaví u zapouzdřeného paketu zpracovávaného po přijetí síťovou kartou příjemce paketu?:2.6:6.0:0.1
+Ethernet, IP, UDP/TCP, aplikační záhlaví:1
+Ethernet, UDP/TCP, Aplikační záhlaví, IP
+Aplikační záhlaví, UDP/TCP, IP, Ethernet
+IP, Ethernet, UDP/TCP, Aplikační záhlaví
+-Fyzická vrstva (např. Ethernetová hlavička)
+-Síťová vrstva (např. IP hlavička)
+-Transportní vrstva (např. TCP nebo UDP hlavička)
+-Aplikační vrstva (např. HTTP nebo DNS data)
+
+11. Technika SNAT (Source Network Address Translation) v případě reálného nasazení v situaci s více stanicemi\
+nacházejícími se na lokální síti musí umět?:2.5:6.0:0.2
+Rozpoznat u paketu příchozího na vnější rozhraní zda náleží k již probíhající komunikaci:1
+Měnit adresu portu v datagramu:1
+Měnit IP adresu v datagramu:1
+Umožnit každé stanici na lokální síti používat stejnou privátní adresu.
+Zabezpečit, aby každá stanice na lokální síti používala stejnou veřejnou IP adresu.
+Být schopen transformovat všechny adresy v paketu, včetně cílové adresy.
+
+12. Pro atribut Multi Exit Discriminator (MED) platí?:1.9:5.0:0.1
+Nižší hodnota tohoto atributu vede na upřednostnění dané trasy při směrování.:1
+Slouží k ovlivnění směrování dovnitř spravovaného autonomního systému.:1
+Hodnota tohoto atributu se mění dynamicky během směrování
+MED je vlastností protokolu OSPF
+MED se využívá pro směrování multicastových datagramů
+
+13. Pro atribut LOCAL_PREF platí?:1.9:5.0:0.1
+Slouží k ovlivnění směrování ven ze spravovaného autonomního systému.:1
+Vyšší hodnota lokální preference vede na upřednostnění dané trasy při směrování.:1
+Trasa s nižší hodnotou lokální preference je preferována při směrování.
+LOCAL_PREF slouží k ovlivnění směrování uvnitř jednoho autonomního systému.
+Nižší hodnota lokální preference vede na upřednostnění dané trasy při směrování.
+
+14. Vyberte správné tvrzení o protokolu IPv6?:1.9:5.0:0.1
+Nekompatibilní s IPv4:1
+Velikost základního záhlaví je pevná 40B:1
+IPv6 je zpětně kompatibilní s IPv4
+Velikost základního záhlaví je pevná 60B
+IPV6 má stejný formát adresy jako IPv4.
+-IPV6 záhlaví má 40 bajtů, z toho 32 B tvoří adresy odesilatele a příjemce
+
+15. Vyberte správné tvrzení o protokolu QUIC?:2.6:6.0:0.1
+Protokol je vystavený nad protokolem UDP (User Data Protocol), má poskytovat přenášenému obsahu kryptografickou ochranu.:1
+Protokol QUIC je v mnoha vlastnostech podobný TCP (Transmission Control Protocol):1
+GQUIC je verzí od Googlu, IETF QUIC je verzí od IETF (Internet Engineering Task Force).:1
+Každé spojení je identifikováno nejen pomocí dvou adres socketů, ale i pomocí tzv. Connection ID.:1
+Protokol QUIC byl vyvinut výhradně pro bezdrátové sítě.
+QUIC je zkratka pro "Quick Universal Internet Connection", což znamená, že protokol byl vytvořen pro rychlejší a univerzálnější internetové spojení.
+QUIC je kompatibilní pouze s webovým protokolem HTTP/2.
+Protokol QUIC neumožňuje použití streamů pro přenos dat.
+
+#=====================================================================================#
+# Bonus
+
+100. Zahazování paketů v simulačním prostředí Riverbed Modeler lze nastavit v objektu?:1.9:5.0:0.1
+Failure Recovery:1
+Subnet
+Application Config
+IP32_cloud
+-v tomle jsme nedělali...
+
+

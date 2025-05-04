@@ -1,0 +1,716 @@
+1. Označte vlastnosti Explicitní signalizace zahlcení (ECN)?:0.0:0.0:0.1
+vyžaduje podporu síťových prvků i koncových stanic:1
+patří mezi přímé metody řízení propustnosti:1
+patří mezi metody pasivní správy front
+nevyžaduje podporu síťových prvků
+nevyžaduje podporu koncových stanic
+
+2. Které parametry popisují vstupní tok obsluhového systému?:0.0:0.0:0.1
+Intenzita vstupu:1
+Časový průměr přicházejících požadavků:1
+Souborový průměr přicházejících požadavků
+Typ fronty pro čekající požadavky
+Přenesené zatížení
+Bitová chybovost způsobená vnějším rušením
+Stacionarita vstupního toku
+Statistický popis délky trvání zpracování obsluhy
+Zahlcení aktivních síťových prvků
+Kolize na úrovni linkové vrstvy
+Počet odmítnutých požadavků
+-TODO: Zkontrolovat odpovědi...
+-Nevím co znamená "souborový půměr" proto jsem dal že se jedná o špatnou odpověď
+
+3. Mezi algoritmy proti zahlcení patří?:0.0:0.0:0.1
+Implicitní signalizace zahození:1
+Explicitní signalizace zahození:1
+Tlumící paket:1
+Brownův systém redukce pohybu paketů
+Dijkstrův algoritmus
+
+4. Vyberte správné tvrzení o standardu 802.11e?:0.0:0.0:0.1
+definuje novou přístupovou metodu, tzv. rozšířenou distribuovanou koordinační funkci (EDCF):1
+definuje novou přístupovou metodu, tzv. hybridní koordinační funkci (HCF):1
+je plně kompatibilní se staršími přístupovými metodami WLAN:1
+je to dodatek k 802.11 definující mechanismus pro podporu QoS pro aplikace WLAN pomocí modifikace MAC:1
+Je to dodatek k 802.11 definující pouze službu VOIP přes WLAN
+Používá přístupovou metodu centralizovanou koordinační funkci (PCF)
+Není kompatibilní se staršími přístupovými metodami WLAN
+Definuje Session Description Protocol (SDP)
+
+5. Vyberte správná tvrzení o mechanismu Token Bucket a jeho modelu využívajícího zásobník (nádobu) s kredity (tokeny)?:0.0:0.0:0.1
+pokud zásobník obsahuje dostatek kreditů, je paket zpracován standardním způsobem:1
+zásobník je plněn kredity v pravidelných intervalech:1
+kredity jsou odebrány ze zásobníku nepravidelně podle příchodů paketů a výsledku měření:1
+počet odebraných kreditů ze zásobníku je úměrný prioritě paketu
+Jde o nejčastěji využívaný mechanismus pro řízení provozu
+-TODO: Zkontrolovat odpovědi...
+
+6. O pravděpodobnosti jevu A, označené symbolem P(A), platí, že?:0.0:0.0:0.1
+P(A) ≤ 1:1
+0 ≤ P(AUA) ≤ 1, kde U označuje sjednocení dvou množin:1
+0 ≤ P(A∩A) ≤ 0,5, kde ∩ označuje průnik dvou množin
+P(A) ≤ 0
+
+7. Vyberte charakteristické vlastnosti systému M/M/1?:0.0:0.0:0.1
+Časové intervaly mezi jednotlivými příchody požadavků mají exponenciální charakter:1
+Systém má jeden obslužný kanál:1
+Ze znalosti intenzity vstupního toku a intenzity obsluhy můžeme odvodit intenzitu provozu:1
+Systém lze popsat pomocí Markovských procesů:1
+Doba trvání vyřízení požadavku má vždy lineární charakter
+Systém je definován jen pro spojité procesy
+Intenzitu provozu, označenou symbolem ρ, můžeme definovat vztahem ρ = 1 / µ
+Pokud příchody budou rychlejší než obsluha, tj. ρ je menší, než µ, systém bude stacionární
+-TODO: Zkontrolovat odpovědi...
+
+8. Vyberte z následujícího seznamu systémy s nekonečně dlouhou frontou?:0.0:0.0:0.1
+M/M/1:1
+D/M/2:1
+M/D/10:1
+D/M/1/∞:1
+M/M/1/0
+K/M/2/0/∞
+
+9. Označte charakteristické vlastnosti metody Weighted Random Early Detection (WRED)?:0.0:0.0:0.1
+umožňuje nastavit různé profily zahazování pro různé třídy:1
+slouží pro označení požadavku aplikace na síťové prostředky
+zajišťuje řazení paketů do front podle přidělené váhy
+pracuje efektivně s protokoly UDP a TCP
+
+-TODO: Zkontrolovat odpovědi...
+
+10. Vyberte z následujících systémů front uzavřený system?:0.0:0.0:0.1
+GI/GI/1/10/10:1
+G/M/2/0/2:1
+M/M/2/5/2:1
+M/M/1/0
+-TODO: Zkontrolovat odpovědi...
+
+11. Vyznačte správná tvrzení o opakovaném vysílání TCP segmentů?:0.0:0.0:0.1
+Potřeba opakování přenosu segmentu je indikována vypršením časovače opakovaného vysílání, který hlídá včasné doručení potvrzení:1
+Důvodem může být detekce poruchy segmentu přijímací TCP entitou:1
+Potřeba opakování přenosu segmentu je indikována příchodem čtyř potvrzení stejného, dříve odeslaného, segmentu
+Opakování přenosu segmentu není v protokolu TCP vůbec implementováno
+Opakování přenosu je založeno na záporném potvrzování
+
+12. Vyberte pole, které jsou obsaženy v hlavičce TCP segmentu?:0.0:0.0:0.1
+Potvrzovací číslo:1
+Maska podsítě
+V bezdrátových sítích hodnota SSID
+informace BGP protokolu
+
+13. Vyznačte správné vlastnosti maximální přenosové rychlosti (Peak Information Rate - PIR)?:0.0:0.0:0.1
+je předem sjednána mezi poskytovatelem a uživatelem v rámci dohody o úrovni služby (Service Level Agreement – SLA):1
+nemůže přesáhnout propustnost linky:1
+měří rychlost přenosu IP paketů, včetně hlavičky protokolu IP:1
+udává dobu odezvy přijímače při potvrzení správného příjmu paketu
+
+14. Vyberte algoritmy ochrany proti zahlcení?:0.0:0.0:0.1
+Explicitní signalizace zahlcení:1
+Round-Robin
+Metody vyhrazení dynamické přídavné vyrovnávací paměti
+Odmítnutí spojení
+
+15. Vyberte správná tvrzení o Centralizované koordinační funkci (Point Coordination Function - PCF)?:0.0:0.0:0.1
+Představuje přístupovou metodu bez soutěžení:1
+Před využitím této metody se musí klient registrovat u přístupového bodu:1
+Představuje metodu se soutěžením
+Tato metoda může pracovat samostatně
+
+16. Vyberte správná tvrzení o mechanismu Backpressure?:0.0:0.0:0.1
+Zajišťuje postupnou blokaci toku dat od jednotlivých uzlů až k vysílači:1
+Předává informaci o přetížení sítě směrem ke zdroji dat:1
+Je jeden z algoritmů ochrany proti zahlcení:1
+Je použitelný pouze pro spojově orientovaný přenos s postupným řízením toku dat:1
+
+17. Vyznačte správné vlastnosti průměrné přenosové rychlosti (Commited Information Rate - CIR)?:0.0:0.0:0.1
+Charakterizuje dlouhodobé chování služby či uživatele:1
+Síť garantuje přenos dat bez omezení do této rychlosti:1
+Je vždy větší než maximální přenosová rychlost PIR
+Uživatel garantuje, že data bude vysílat minimálně rychlostí CIR
+
+18. Vyberte správná tvrzení o vlastnostech distribuované koordinační funkce?:0.0:0.0:0.1
+DCF umožňuje soutěžení o médium:1
+PCF dotazuje registrované stanice na data k odeslání:1
+PCF nemůže pracovat bez DCF:1
+PCF zná všechny MAC adresy zařízení v síti
+-TODO: Zkontrolovat odpovědi...
+
+19. Jaké jsou nevýhody pasivní správy front?:0.0:0.0:0.1
+projevuje se až po úplném zahlcení front:1
+způsobuje, že žádný z paketů nebude nikdy zahozen a proto může narůstat výrazně zpoždění
+vede ke změně pořadí paketů ve frontě
+způsobuje, že TCP entita neustále zvyšuje rychlost odesílání segmentů
+-TODO: Zkontrolovat odpovědi...
+
+20. Vyberte pravdivá tvrzení o pevně nastavené hodnotě časovače opakovaného vysílání u protokolu TCP?:0.0:0.0:0.1
+malý počet opakování přenosu vede ke zvýšení propustnosti linky:1
+příliš dlouhá čekací doba může způsobit opakování vyslání segmentu před příjmem zpožděného potvrzení
+nastavení příliš malé hodnoty způsobuje zpomalení síťové služby
+nastavení příliš velké hodnoty způsobuje opožděnou reakci na ztrátu segmentů a tak vede k zpomalení síťové služby
+-TODO: Zkontrolovat odpovědi...
+
+21. Vyznačte správná tvrzení o opakovaném vysílání TCP segmentů?:0.0:0.0:0.1
+důvodem může být detekce poruchy segmentu přijímací TCP entitou:1
+opakování přenosu je založeno na záporném potvrzování
+důvodem pro opakování přenosu je příchod dvou potvrzení daného segmentu
+potřeba opakování přenosu segmentu je indikována přijetím požadavku na opakovaný přenos
+
+22. Ve kterých částích sítě lze provádět řízení toku dat?:0.0:0.0:0.1
+Na rozhraní sítě:1
+Přes jeden přeskok:1
+Pouze ve směrovači
+Pouze ve speciálním úseku určeném pro řízení toku dat
+-TODO: Zkontrolovat odpovědi...
+
+23. O vrstvovém modelu technologií řady 802.11 platí, že?:0.0:0.0:0.1
+fyzická vrstva obsahuje Podvrstvu funkcí závislých na fyzickém médiu (Physical Medium Dependent Sublayer – PMD Sublayer) a Podvrstvu konvergenčních procedur fyzické vrstvy (Physical Layer Convergence Procedure Sublayer – PLCP Sublayer):1
+linková vrstva obsahuje: Podvrstvu řízení přístupu k médiu (Medium Access Control - MAC) a Podvrstvu řízení logické linky (Logical Link Control - LLC):1
+koordinační funkce jsou implementovány v podvrstvě přístupu k médiu (Medium Access Control - MAC):1
+fyzická vrstva obsahuje Podvrstvu funkcí nezávislých na fyzickém médiu (Physical Medium Independent Sublayer – PID Sublayer) a Podvrstvu kódování a modulace (Coding and Modulation Sublayer – CaM - Sublayer)
+-TODO: Zkontrolovat odpovědi...
+
+24. Jaké jsou vlastnosti explicitních mechanizmů signalizace zahlcení?:0.0:0.0:0.1
+Explicitní mechanizmy signalizace zahlcení předem varují koncové uzly o hrozícím zahlcení, a tyto pak mohou zmenšit vysílaný objem dat a tím zahlcení zabránit:1
+Explicitní mechanizmus signalizace zahlcení je funkcí koncových stanic a nevyžaduje podporu ze strany uzlů sítě
+Explicitní signalizace zahlcení se využívá mezi dvěma směrovači sítě
+Explicitní signalizace zahlcení nepředpokládá logické spojení mezi vysílacím a přijímacím uzlem
+
+25. Jaké příznaky obsahuje hlavička segmentu TCP?:0.0:0.0:0.1
+ukončení spojení – FIN:1
+synchronizace pořadových čísel – SYN:1
+reset spojení – RST:1
+potvrzení – ACK:1
+-URG, ACK, PSH, RST, SYN, FIN
+
+26. Mezi úkoly služeb pro zajištění kvality služeb patří?:0.0:0.0:0.1
+plánované odesílání paketů:1
+tvarování provozu:1
+dohled nad přicházejícím provozem:1
+správa front:1
+-TODO: Zkontrolovat odpovědi...
+
+27. Uveďte některé vlastnosti přístupu EDCA?:0.0:0.0:0.1
+datové toky jsou rozděleny až do 4 přístupových kategorií:1
+každá přístupová kategorie má vlastní frontu:1
+kategorie přístupu s vyšší prioritou mají kratší okno soutěžení
+velikost okna soutěžení je dána počtem kategorií přístupu
+-TODO: Odpověďmi si nejsem vůbec jistý, Zkontrolovat odpovědi...
+
+28. Základní vlastnosti technologie Frame Relay jsou?:0.0:0.0:0.1
+Přenosové rychlosti od 64 kbit/s do 45 Mbit/s, typicky 2 Mbit/s:1
+Běžně pracují s permanentními virtuálními okruhy (Permanent Virtual Circuit - PVC), které jsou nastaveny pro spojení bod-bod přes celou síť:1
+Rámce spojové vrstvy se předávají až k cílové stanici:1
+Soustřeďuje adresování a multiplexování do spojové vrstvy:1
+Přenáší ATM buňky o velikosti 53 bajtů
+Rámce spojové vrstvy jsou předávány ATM vrstvě
+Využívá bezdrátové pásmo 2,4 GHz
+Přenosová rychlost je 155 Mbit/s
+
+45. Čím jsou charakterizovány Markovské procesy?:0.0:0.0:0.1
+Příchod vstupních požadavků je modelován Poissonovským procesem:1
+Doba potřebná k obsloužení požadavků má exponenciální rozdělení pravděpodobnosti:1
+Podle Kendallovy klasifikace označujeme Markovský systém front jako M/M/...:1
+Markovské procesy patří mezi stochastické procesy, u kterých je následný stav systému obvykle funkcí předchozího stavu procesu:1
+V oblasti komunikačních sítí se Markovské modely používají zcela výjimečně
+Markovský proces je závislý na pravidelném příchodu vstupních požadavků
+Markovský proces má geometrické rozložení časových intervalů
+Pro Markovský proces platí příchod vstupních požadavků modelovaný spojitým rozložením
+
+44. Vlastnosti přenosu streamovaného videa po paketové síti jsou.!?:0.0:0.0:0.1
+Větší tolerance vůči velikosti zpoždění:1
+Ztrátovost do 5%:1
+Zpoždění v jednom směru nesmí překročit hodnotu 100 ms
+Netoleruje žádné ztráty
+
+43. Vyberte správná tvrzení o mechanismu DiffServ?:0.0:0.0:0.1
+Aplikace během sestavení spojení musí oznámit síti svoje požadavky na síťové prostředky:1
+Mechanismus DiffServ zajišťuje stejné zacházení pro všechny přicházející pakety
+Data překročující sjednané parametry jsou vždy zahozena
+Tok dat přicházející od uživatelů třídí a značkuje hraniční směrovač
+
+42. Označte parametry, které ovlivňují normovanou propustnost protokolu TCP?:0.0:0.0:0.1
+Velikost okna w:1
+Rychlost přenosu dat daného TCP spojení R:1
+Doba šíření signálu od zdroje TCP spojení k cíli D:1
+Chybovost linky p
+
+41. Jaké jevy či typy zpoždění mají vliv na celkovou velikost zpoždění přenosu?:0.0:0.0:0.1
+Doba sestavení aplikačního rámce:1
+Zpoždění způsobené sestavením paketu:1
+Zpoždění způsobené prokládáním:1
+Zpoždění způsobené zabezpečováním informací:1
+Zpoždění způsobené vyrovnáním kolísání zpoždění:1
+Zpoždění způsobené čekáním paketu ve vyrovnávací paměti:1
+Doba šíření signálu médiem:1
+Zatmění slunce
+Sluneční erupce
+
+40. Vyznačte správná tvrzení o možných způsobech potvrzení segmentů u protokolu TCP?:0.0:0.0:0.1
+Okamžité potvrzování generuje přídavnou zátěž v síti:1
+Při okamžitém potvrzování odesílatel je pořád informován o stavu přenosu jednotlivých segmentů:1
+Při kumulativním potvrzování je možné potvrdit více segmentů naráz:1
+Při kumulativním potvrzování přijímač čeká do určité doby na datový segment posílaný v opačném směru:1
+Okamžité potvrzování je v dnešní době nejvíce používané
+
+39. Vyznačte správná tvrzení o technologii Frame Relay?:0.0:0.0:0.1
+Je technologií založené na přepínání rámců:1
+Podporuje přenosové rychlosti od 64 kbit/s do 45 Mbit/s:1
+Pracuje na úrovni fyzické a linkové vrstvy referenčního modelu OSI/ISO:1
+Dá se s výhodou použít v případech, kdy je dán požadavek na dodržení parametrů přenosové rychlosti:1
+Je navržena pro propojení rozsáhlých sítí:1
+Je technologií založené na přepínání paketů
+Je nástupcem technologie ethernet
+Přenáší data rychlostmi od 2 Mbit/s po 1024 Mbit/s
+Pracuje nad 1. až 4. vrstvou síťového modelu ISO/OSI
+-1. a 2. vrstva OSI modelu
+
+38. Čím je charakterizovaná intenzita obsluhy?:0.0:0.0:0.1
+Intenzita obsluhy vyjadřuje průměrný počet jednotek obsloužených za jednotku času:1
+Intenzita obsluhy se označuje symbolem μ:1
+Intenzita obsluhy udává dlouhodobý průměr počtu příchozích požadavků
+Intenzita obsluhy udává souborový průměr počtu příchozích požadavků
+
+37. Podvrstva funkcí závislých na fyzickém médiu (Physical Medium Dependent Sublayer – PMD Sublayer) fyzické vrstvy technologie 802.11 zahrnuje.!?:0.0:0.0:0.1
+Zajištění rádiového přenosu:1
+Měření úrovně signálu:1
+Identifikace začátku rámce
+Odvození rychlosti přenosu zapouzdřené datové jednotky
+-Not sure about měření úrovně signálu, ve skriptech ani v prezentaci tam o tom moc není
+
+36. O centralizované koordinační funkci (Point Coordination Function – PCF) platí, že?:0.0:0.0:0.1
+Je využitelná pouze v bezdrátové lokální síti s přístupovým bodem:1
+Je využitelný pouze v ad-hoc sítích:1
+Jedná se o volitelný mechanismus přístupu:1
+Je rozšířením HCF (Hybrid Coordination function)
+-Asi takhle
+
+35. Vyberte pravdivá tvrzení o mechanismech řízení toku dat, používaných u protokolu TCP?:0.0:0.0:0.1
+Když přijímací entita TCP převezme úspěšně segment, neprovede při kumulativním potvrzování potvrzení ihned, ale počká na datový segment posílaný v opačném směru a teprve poté potvrdí přijatá data nastavením potvrzovacího čísla tohoto segmentu:1
+Potvrzení úspěšného přijetí datových jednotek vždy způsobuje otevření okna a tím pádem vysílač automaticky získá i povolení k odesílání dalších segmentů:1
+Přidělení kreditů probíhá nezávisle na okamžité kapacitě vyrovnávací paměti:1
+Během přenosu TCP segmentů nemůže nastat jejich zahození
+
+34. Vyberte algoritmy ochrany proti zahlcení?:0.0:0.0:0.1
+Backpressure (zpětný tlak):1
+Tlumící paket (choke packet):1
+Implicitní signalizace zahlcení:1
+Explicitní signalizace zahlcení:1
+Rozložení zátěže do alternativních cest
+Odmítnutí spojení
+Metody vyhrazení dynamické přídavné vyrovnávací paměti
+
+33. Vyberte správná tvrzení o vlastnostech samočasovacího chování protokolu TCP?:0.0:0.0:0.1
+V ustáleném stavu segmenty odcházejí stejně rychle, jako přicházejí potvrzení:1
+Úzkým místem sítě nemůže být nikdy sám přijímač
+Úzká místa na trase jsou pouze fyzického charakteru a nikoliv logického
+Rychlost přenosu TCP segmentů se automaticky nepřizpůsobuje rychlosti nejužšího místa v síti
+
+32. Vyznačte správná tvrzení o systému front se spravedlivou obsluhou?:0.0:0.0:0.1
+Znevýhodní provoz s malými pakety:1
+Provoz s většími pakety obsadí více síťových prostředků:1
+Během obsluhy má každá fronta stejnou váhu:1
+Během obsluhy fronty mohou mít odlišné váhy
+Nelze použít pro přenos s malými pakety
+
+31. Vyberte správná tvrzení o mechanismu Token Bucket a jeho modelu využívajícího zásobník (nádobu) s kredity (tokeny)?:0.0:0.0:0.1
+Pokud zásobník obsahuje dostatek kreditů, je paket zpracován standardním způsobem:1
+Jde o nejrozšířenější základní metodu měření provozu:1
+Zásobník je plněn kredity v pravidelných intervalech:1
+Na počátku měření je nádoba, jejíž míra naplnění představuje určitý objem dat s povolením k odeslání, plná:1
+Jde o mechanismus, který se používá pouze výjimečně
+Na počátku měření je nádoba, jejíž míra naplnění představuje určitý objem dat s povolením k odeslání, prázdná
+Pokud nádoba, jejíž míra naplnění představuje určitý objem dat s povolením k odeslání, obsahuje dostatek tokenů, paket musí být zahozen
+Tokeny jsou do nádoby, jejíž míra naplnění představuje určitý objem dat s povolením k odeslání, doplňovány proměnnou rychlostí
+
+30. Vyberte správná tvrzení o mechanismu stůj a čekej (stop and wait)?:0.0:0.0:0.1
+Rámec musí být uchován v paměti vysílače až do příjmu potvrzení:1
+Vysílač musí uchovat všechny rámce ve své paměti až do ukončení spojení
+Rámec je okamžitě po vyslání odstraněn z paměti vysílače
+Po vypršení časovače stanice nepošle nepotvrzený rámec, ale ukončí spojení a čeká
+
+29. Dynamické nastavení velikosti okna v případě zahlcení má následující vlastnosti?:0.0:0.0:0.1
+Aktivuje se při detekci ztraceného segmentu pomocí mechanismu rychlého opakování přenosu (fast retransmit):1
+Po detekci ztraceného segmentu nastaví hodnotu ssthres na cwnd/2 a následně sníží hodnotu cwnd na 1:1
+Inkrementuje parametr cwnd po celou dobu přenosu exponenciálně
+Po detekci ztraceného segmentu nastaví parametr ssthres na 10ti násobek hodnoty cwnd
+Jakmile dojde k zahlcení sítě, ukončí přenos, aby nedošlo ke ztrátě dalších segmentů
+
+46. Vyznačte správné vlastnosti průměrné přenosové rychlosti (Commited Information Rate - CIR)?:0.0:0.0:0.1
+do měření rychlosti nejsou zahrnuty hlavičky protokolů linkové vrstvy:1
+při měření CIR nejsou zohledněny režijní data síťové vrstvy, ale jsou zahrnuty režijní informace linkové vrstvy
+je předem sjednána mezi poskytovatelem a uživatelem v rámci dohody o úrovni služby (Service Level Agreement – SLA)
+dlouhodobě dosažitelná CIR znamená, že jsou mezi pakety stejně dlouhé pauzy
+-TODO: Zkontrolovat odpovědi...
+
+47. Jaké jsou vlastnosti explicitních mechanismů signalizace zahlcení?:0.0:0.0:0.1
+O zahlcení lze informovat jak zdroj, tak přijímač dat s tím, že informované zařízení aktivuje mechanismy proti zahlcení:1
+Základní princip explicitní signalizace zahlcení spočívá v tom, že při vzniku zahlcení přijímač nebo zdroj detekují zvýšené zpoždění a ztrátu paketů
+Explicitní signalizace zahlcení pracují buď ve zpětném, nebo v přímém směru
+Hlavička rámce Frame Relay obsahuje bit explicitní signalizace zahlcení, který je nastaven zahlceným uzlem a je určen k řízení zdroje dat
+-TODO: Zkontrolovat odpovědi...
+
+48. Jaké třídy služeb má standard 802.16?:0.0:0.0:0.1
+Služba výzev v reálném čase (rt-PS):1
+Třída konverzačních služeb (ConvServ)
+Služba nevyžadující oprávnění (UGS):1
+Excellent – Effort (EE)
+-O 802.16 nikde není zmíňka. Ještě jedna odpověď má být správná, nevím které 
+-pry je to 802.16e, ale co už
+
+49. Vyberte správná tvrzení o metodě IntServ?:0.0:0.0:0.1
+Požadavky na síťové prostředky musí akceptovat každý uzel sítě, přes který bude probíhat daný přenos:1
+Aplikace musí dopředu oznámit síti svoje požadavky na přenos dat:1
+Může garantovat kvalitu služby po celé trase (end-to-end QoS):1
+Požadavky na síťové prostředky musí akceptovat pouze hraniční směrovač
+Během spojení mechanismus IntServ dynamicky mění požadavky na rezervované
+Excellent – Effort (EE)
+-TODO: Zkontrolovat odpovědi...
+
+50. Vyznačte správná tvrzení o způsobu zacházení Best-Effort?:0.0:0.0:0.1
+Označuje stejný způsob zacházení se všemi pakety:1
+Zpracovává pakety je bez jakýchkoliv garancí:1
+Těžko se implementuje ochrana proti monopolizaci síťových prostředků na úkor ostatních:1
+Garantuje průchod paketu přes DiffServ doménu
+-TODO: Zkontrolovat odpovědi...
+
+51. Která pole obsahuje hlavička podvrstvy konvergenčních procedur fyzické vrstvy PLCP u standardu 802.11?:0.0:0.0:0.1
+SYNC:1
+Start Frame Delimiter (SFD):1
+Signal:1
+Service:1
+Délka (Length):1
+CRC (Cyclic Redundancy Code):1
+Garantuje průchod paketu přes DiffServ doménu
+Cílová MAC adresa
+Zdrojová MAC adresa
+
+52. Jaké jsou vlastnosti ideální sítě?:0.0:0.0:0.1
+Při přiměřeném zatížení sítě se její zpoždění udržuje na minimální hodnotě:1
+Propustnost sítě narůstá při zvyšujícím se zatížení lineárně:1
+Dosažení velké propustnosti v ideální síti nemá vliv na zpoždění
+V ideální síti je zpoždění vždy konstantní
+
+53. Vyberte správná tvrzení o vlastnostech distribuované koordinační funkce (Distributed Coordination Function – DCF) a centralizované koordinační funkce (Point Coordination Function - PCF)?:0.0:0.0:0.1
+DCF umožňuje soutěžení o médium:1
+PCF nemůže pracovat bez DCF:1
+PCF dotazuje registrované stanice na data k odeslání:1
+PCF zná všechny MAC adresy zařízení v síti
+-TODO: Zkontrolovat špatnou odpověď
+
+54. Co platí pro okamžité potvrzení přenosu u protokolu TCP?:0.0:0.0:0.1
+Přijaté TCP segmenty jsou potvrzeny okamžitě po úspěšném převzetí segmentu:1
+S potvrzením se čeká na datový segment posílaný v opačném směru
+Jedná se o komplexní a výpočetně náročné řešení
+Potvrzovací segment vždy přenáší i uživatelské informace
+
+55. Vyberte správná tvrzení o protokolu TCP?:0.0:0.0:0.1
+zajišťuje spolehlivý, spojově orientovaný přenos:1
+TCP přenos má tři fáze: navázání spojení, přenos dat, ukončení spojení:1
+je určen pro přenos dat od aplikací pracujících v reálném čase
+zajišťuje spolehlivý přenos bez spojové orientace
+
+56. Vyberte nejčastější příčiny vzniku ztrát při přenosu?:0.0:0.0:0.1
+Porucha bitu způsobená vnějším rušením:1
+Kolize na úrovni linkové vrstvy způsobená přístupovou metodou:1
+Chyba během zpracování na úrovni síťové vrstvy:1
+Zahlcení aktivních síťových prvků:1
+Porucha PC způsobená vnějšími podmínkami
+Výpadek napájení na straně příjemce
+Směrování bitu do správného směru
+Záměrné zahození paketu ve směrovači z důvodu ochrany před viry
+
+57. Vyberte parametry, které jsou běžně uvedeny v dohodě o úrovni poskytované služby (Service Level Agreement – SLA)?:0.0:0.0:0.1
+parametry přenosové sítě:1
+způsob zpracování provozu překračujícího sjednané parametry:1
+Maximální okamžitá přenosová rychlost PIR:1
+profily provozu:1
+typ linkového protokolu v síti poskytovatele připojení
+-TODO: Zkontrolovat špatnou odpověď
+
+58. Jaké jsou vlastnosti reálné sítě.! ?:0.0:0.0:0.1
+K zahazování datových jednotek může dojít i v jednom jediném uzlu, který je na rozdíl od ostatních uzlů zahlcen:1
+Různé uzly sítě se mohou dostat do různé úrovně zahlcení:1
+Reálná síť má omezenou kapacitu vyrovnávacích pamětí a může dojít k jejich přetečení:1
+Konečná velikost front v reálné síti má vliv na pokles celkové propustnosti:1
+V reálné síti celkové zpoždění narůstá intenzitou provozu lineárně:1
+Ani jedna z uvedených možností není správná
+Propustnost reálné sítě narůstá při zvyšujícím se zatížení vždy lineárně
+Úspěšně přenesené datové jednotky nesmí být za žádných okolností vyslány opakovaně
+
+59. Protokol TCP zajišťuje.! ?:0.0:0.0:0.1
+funkce transportní vrstvy:1
+číslování přenášených dat:1
+přenos dat pouze jedním směrem (simplex)
+nespolehlivý přenos dat
+
+60. Vyberte správná tvrzení popisující kvalitu obsluhy dle závislosti pravděpodobnosti jevu pn(t) (pravděpodobnost, že v systému se v okamžiku t nachází n požadavků) na intenzitě provozu Þ ("ró")?:0.0:0.0:0.1
+U systému M/M/1 má pravděpodobnost pn(t) Poissonovské rozdělení:1
+Přibližováním intenzity obsluhy k intenzitě vstupu se pravděpodobnosti výskytu jednotlivých počtů požadavků v systému sbližují:1
+Náhodný proces popisující počet požadavků v obslužném systému je spojitý
+Pokud se obsluhový systém dostane do stavu, kdy je intenzita vstupu výrazně větší než intenzita obsluhy, s největší pravděpodobností bude v systému 0 požadavků
+
+61. V jakých stavech se mohou nacházet TCP segmenty při využití mechanismu alokace kreditů na straně přijímače.! ?:0.0:0.0:0.1
+Úspěšně přijatý a potvrzený segment, který byl předán uživatelské aplikaci:1
+Úspěšně přijatý a potvrzený segment, který čeká na předání uživatelské aplikaci:1
+Protokol TCP je bezestavový a proto segmenty nemají žádný stav
+Segment přijatý mimo pořadí, který byl předán uživatelské aplikaci
+-Netuším, dělal jsem podle sebe jsem slepej a ve skriptech to nevidim
+
+62. Vyberte pravdivá tvrzení o mechanismech řízení toku dat, používaných u protokolu TCP?:0.0:0.0:0.1
+TCP nevyužívá záporné potvrzení typu REJ či SREJ, ale spoléhá pouze na využití kladného potvrzení a na opakování přenosu v případě, že potvrzení není přijato do dané limitní hodnoty:1
+TCP jako běžný způsob řízení toku dat využívá mechanismus klouzavého okna:1
+Má oddělenou funkci potvrzování přijatých dat od přidělení povolení k zaslání dalších datových jednotek:1
+Přijímací TCP entita nesmí potvrdit přijatá data kumulativně
+-Netuším, dělal jsem podle sebe jsem slepej a ve skriptech to nevidim
+
+63. Vyberte správná tvrzení o Poissonovu rozdělení.! ?:0.0:0.0:0.1
+Střední hodnota Poissonova rozdělení je stejná jako jeho rozptyl :1
+Poissonovo rozdělení se používá k popisu diskrétní náhodné veličiny:1
+Poissonovo rozdělení popisuje počet požadavků ve frontě u obsluhového systému D/D/1
+Poissonovo rozdělení se používá k popisu spojité náhodné veličiny
+
+64. Jaké následky může mít na protokol TCP zahlcení aktivního síťového prvku v síti.! ?:0.0:0.0:0.1
+snížení rychlosti odesílání TCP segmentů :1
+nárůst doby odezvy:1
+změnu cílového portu u opakovaně vyslaného TCP segmentu
+snížení hodnoty časovače opakovaného vysílání
+
+65. Vyberte správná tvrzení o vlastnostech samočasovacího chování protokolu TCP.! ?:0.0:0.0:0.1
+Rychlost odesílání segmentů odpovídá propustnosti nejpomalejší linky ve spojení :1
+Zdrojová TCP entita neumí rozlišit, zda pomalý příchod potvrzení je způsoben zahlcením sítě, nebo jestli jde o řízení toku dat cílovou entitou TCP:1
+Časový odstup mezi přicházející potvrzení zajistí u vysílače krokování odesílání dalších segmentů:1
+Samočasovací chování nefunguje v případě, že je nejužším místem sítě samotný přijímač
+
+66. Zvolte výroky, které platí o axiomech klasické teorie pravděpodobnosti.! ?:0.0:0.0:0.1
+Platí, že P(S) = 1, kde S je výběrový prostor:1
+Platí, že P(A) = 1, pokud P(B) = 1 a podmnožiny A a B jsou nenulové podmnožiny stejného výběrového prostoru
+Platí, že P(A) > 1, kde A je podmnožinou výběrového prostoru
+Existuje pět základních axiomů teorie pravděpodobnosti
+
+67. Mechanismus ARQ se selektivním zamítnutím.! ?:0.0:0.0:0.1
+Přenáší rámce selektivně vždy po jednom rámci:1
+Z mechanismů ARQ je implementačně nejnáročnější:1
+Vyžaduje komplexní řízení:1
+Ke své činnosti nepotřebuje vyrovnávací paměti
+-Not sure about vždy po jednom rámci, když se vysílá znova tak ano, ale jinak může více naráz
+
+68. Vyberte techniky, které se používají pro řízení velikosti plovoucího okna u vysílací TCP entity.! ?:0.0:0.0:0.1
+dynamické nastavení velikosti okna v případě zahlcení (dynamic window sizing on congestion):1
+metoda pomalého startu (slow start):1
+metoda alokace kreditů:1
+rychlého opakovaného přenosu (Fast Restrasmit):1
+rychlého zotavení (Fast Recovery):1
+omezeného vysílání (Limited Trasmit):1
+zesílení vysílacího výkonu (power increase)
+
+69. Vyznačte správná tvrzení o způsobech zacházení s pakety v DiffServ doméně.! ?:0.0:0.0:0.1
+Existují tři standardizované typy způsobu zacházení s pakety: Best-Effort, Assured Forwarding a Expedited Forwarding:1
+Způsob zacházení Expedited Forwarding zajišťuje absolutní prioritu pro danou třídu:1
+Způsob zacházení Best-Effort se využívá u provozu zařazeného do výchozí třídy:1
+Způsob zacházení Assured Forwarding dělí provoz do čtyř tříd s pevně danou prioritou
+
+70. Které jsou základní komponenty systému front.! ?:0.0:0.0:0.1
+Ani jedna z uvedených odpovědí:1
+Sčítačka
+Výstupní filtr
+Vstupní filtr
+
+71. Zvolte hlavní požadavky na řízení propustnosti u technologie Frame Relay?:0.0:0.0:0.1
+Spravedlivé rozdělování síťových zdrojů mezi uživateli:1
+Minimalizace zahození rámců:1
+Efektivní využitelnost síťových zdrojů nezávisle na směru toku dat:1
+Možnost neřízeného zahazování příchozích rámců v případě začínajícího zahlcení sítě
+
+72. O mechanismu stůj a čekej (stop and wait) a platí, že?:0.0:0.0:0.1
+Patří mezi algoritmy řízení chybových stavů:1
+Před vysíláním se vždy čeká na potvrzení naposledy odeslaného rámce:1
+Je jednoduchý na implementaci
+
+73. Vyberte komponenty architektury bezdrátové sítě WLAN?:0.0:0.0:0.1
+Přístupový bod:1
+Mobilní terminály:1
+IP Multimedia Subsystem
+Páteřní síť (Core Network - CN)
+
+74. Vyberte základní metody obsluhy front?:0.0:0.0:0.1
+systém front se spravedlivou obsluhou (FQ):1
+fronta s obsluhou typu FIFO:1
+systém front s váženou cyklickou obsluhou (WRR):1
+systém front s prioritní obsluhou (PQ):1
+-+vážená spravedlivá(+založená na třídách)
+
+75. Vyberte charakteristické vlastnosti mechanismů barvení "jedna rychlost tři barvy" (Single Rate Three Color Marker - srTCM) a "dvě rychlosti tři barvy" (Two Rate Three Color Marker - trTCM)?:0.0:0.0:0.1
+U mechanismu srTCM jsou oba zásobníky (nádoby) kreditů plněny stejnou rychlostí, kdežto u mechanismu trTCM je rychlost plnění zásobníků (nádob) odlišná:1
+Zásobníky (nádoby) s kredity musí být u obou mechanismů vždy plné
+Ani jeden z mechanismů nezohledňuje předchozí barvu zpracovávaných paketů
+Výsledkem barvení je u obou mechanismů zahození paketů překračujících průměrnou rychlost CIR a zpracování paketů nepřekročující maximální rychlost PIR
+
+76. Techniky řízení propustnosti u technologie Frame Relay jsou?:0.0:0.0:0.1
+Implicitní signalizace zahlcení:1
+Řízené zahazování:1
+Tabulka propustnosti
+Statické řízení potvrzování
+
+77. Vlastnosti přístupu ke kanálu řízeným pomocí Hybridní koordinační funkce (Hybrid Coordination Function - HCF)?:0.0:0.0:0.1
+využitelnost během Intervalu bez soutěžení (Contention Free Period – CFP):1
+přidělování Příležitosti k přenosu (Transmission Oportunity – TXOP) přístupovým kategoriím:1
+Je jednodušší než Centralizovaná koordinační funkce (Point Coordination Function – PCF)
+možnost absolutní garance propustnosti
+
+78. Vyberte správná tvrzení o mechanismu "Source quench" protokolu ICMP?:0.0:0.0:0.1
+Řídící zprávu "Source quench" generuje zahlcený uzel:1
+Řídící zpráva "Source quench" je zasílána ke zdroji dat za účelem omezení vysílací rychlosti:1
+Omezení vysílání pomocí zprávy "Source quench" trvá po dobu 1 minuty
+Zdroj dat omezí po přijetí řídící zprávy "Source quench" rychlost vysílání do všech směrů
+
+79. Zvolte rozšiřující metody, které jsou zahrnuty do implementace TCP Reno.!?:0.0:0.0:0.1
+metoda pomalého startu (slow start):1
+metoda rychlého zotavení (fast recovery):1
+metoda náhodného výběru (random selection)
+Hammingův algoritmus (Hamming’s algorithm)
+
+80. Vyberte fáze procesu přenosu rámců v bezdrátové síti využitím explicitní rezervace média?:0.0:0.0:0.1
+Vyslání žádosti o povolení k odesílání pomocí zprávy Request-to-Send (RTS):1
+Potvrzení řídicí zprávy Clear-to-Send (CTS):1
+Potvrzení datového rámce – ACK:1
+Rezervace média pomocí zpráv Request-to-Send / Clear-to-Send (RTS/CTS) pro přenos potvrzení ACK:1
+
+81. Vyberte pravdivý výrok týkající se řízení kvality služeb v bezdrátových sítích?:0.0:0.0:0.1
+Mechanismus EDCA zavádí pravděpodobnostní prioritní mechanismus pro alokaci šířky pásma na základě kategorií provozu:1
+Základem Hybridní koordinační funkce HCF je soutěžení o médium
+Centralizovaná koordinační funkce neumožňuje upřednostnění jednoho typu provozu před jiným
+Problém skrytého uzlu u distribuované koordinační funkce je řešen pomocí CRC zabezpečení paketu
+
+82. Zvolte hlavní požadavky na řízení propustnosti u technologie Frame Relay?:0.0:0.0:0.1
+Omezení rozšíření zahlcení do další části sítě:1
+Zajistit nové spojení bez ohledu na požadavky na kvalitu služby ostatních uživatelů
+Zvýhodnění uživatele s velkým datovým tokem na úkor ostatních uživatelů, pokud jejich celkový datový tok nedosahuje velikosti datového toku majoritního uživatele
+V případě požadavku na velkou propustnost možnost omezení přenosu dat druhým směrem
+
+83. Duplicitní zaslání potvrzení může u protokolu TCP znamenat, že?:0.0:0.0:0.1
+je nastavena příliš pomalá rychlost komunikace:1
+se vyskytl problém během přenosu:1
+segment vyslaný za potvrzeným segmentem se ztratil během přenosu:1
+se jedná o standardní chování protokolu TCP
+-Přílíš pomalá rychlost, není jistá, záleží jak to pochopíš
+
+84. Vyberte správná tvrzení o mechanismu "Source quench" protokolu ICMP?:0.0:0.0:0.1
+Řídící zprávu "Source quench" generuje zahlcený uzel:1
+Řídící zpráva "Source quench" je zasílána ke zdroji dat za účelem omezení vysílací rychlost:1
+Omezení vysílání pomocí zprávy "Source quench" trvá po dobu 1 minuty
+Zdroj dat omezí po přijetí řídící zprávy "Source quench" rychlost vysílání do všech směrů
+
+85. Které jsou základní komponenty systému front?:0.0:0.0:0.1
+Výstupní tok:1
+Vstupní tok:1
+Kanál obsluhy:1
+Obsluha fronty:1
+
+86. O distribuované koordinační funkci (Distributed Coordination Function – DCF) platí, že?:0.0:0.0:0.1
+stará se o přístup k mediu u WiFi sítí – klienti mají stejnou pravděpodobnost přístupu:1
+jedná se o mechanismus pro řízení přístupu k médiu:1
+vykonává řízení přístupu k médiu na bázi mnohonásobného přístupu s detekcí nosné a předcházení kolizím:1
+když se o stejný kanál uchází více klientů v jeden okamžik, dojde k odkladu vysílání (backoff):1
+
+87. Vyberte správná tvrzení o systému front s váženou spravedlivou obsluhou (Weighted Fair Queueing - WFQ)?:0.0:0.0:0.1
+řízení odesílání paketů je založeno na vážené bitové cyklické obsluze všech front:1
+v modelu metody obsluhy WFQ jsou pakety odebrány z front bit po bitu:1
+příchozí provoz je dělen do m front:1
+všem frontám je přiřazena váhová hodnota wi:1
+všechny fronty mají stejnou váhu
+nevýhodou je, že mechanismus nezohledňuje délku paketů
+příchozí provoz je řazen do jedné fronty FIFO
+
+88. Vyberte správná tvrzení o distribuční funkci F(x)?:0.0:0.0:0.1
+Je neklesající funkcí:1
+Je dána vztahem F(x) = P(X ≤ x):1
+Je vždy větší nebo rovna 0:1
+Je nerostoucí funkcí
+
+89. Jaké přístupové kategorie jsou definovány ve standardu 802.11e?:0.0:0.0:0.1
+AC_VO - přenos hlasu:1
+AC_VI - přenos videa:1
+AC_BP - přenos v popředí
+AC_AE - přenos typu any-effort
+-AC_BK - přenos v pozadí, AC_BE - přenos typu best effort
+
+90. Jaký význam mají parametry Kendallova klasifikace obsluhových systémů X/Y/n/D/E?:0.0:0.0:0.1
+X – popis vstupního toku, distribuce časového intervalu mezi příchody požadavků:1
+Y – popis obsluhy, distribuce doby potřebmé pro obsluhu požadavků:1
+n - počet obslužných kanálů:1
+D - celkový počet požadavků, které mohou současně být v systému front:1
+E - počet požadavků:1
+Y – popis vstupního toku, distribuce časového intervalu mezi příchody požadavků
+X – popis obsluhy, distribuce doby potřebmé pro obsluhu požadavků
+n - počet požadavků
+E - celkový počet požadavků, které mohou současně být v systému front
+D - počet obslužných kanálů
+-D=E=Inf -> můžeme vynechat, fronta = (D - n)
+
+91. Vyberte správná tvrzení o technice pomalého startu (Slow Start)?:0.0:0.0:0.1
+Technika pomalého startu postupně navyšuje velikost okna, aby rychlost přenosu mohla přizpůsobit propustnosti sítě:1
+Vlivem techniky pomalého startu okno zahlcení (congestion window - cwnd) narůstá exponenciálně:1
+Technika pomalého startu řeší problém nastavení okna vysílání při zahájení komunikace:1
+Technika pomalého startu inkrementuje velikost okna zahlcení (congestion window - cwnd) po příchodu každého potvrzení:1
+
+92. Které z následujících pojmů jsou hlavní nebo odvozenou jednotkou provozního zatížení?:0.0:0.0:0.1
+Erlang:1
+Hovorová vteřina:1
+mA
+dB
+
+93. Které z následujících pojmů jsou hlavní nebo odvozenou jednotkou provozního zatížení?:0.0:0.0:0.1
+Obsluhový systém má nekonečně dlouhé fronty:1
+Požadavky do systému přicházejí pravidelně:1
+mA
+dB
+
+94. Čím je charakterizovaná intenzita vstupu?:0.0:0.0:0.1
+Intenzita vstupu udává dlouhodobý průměr počtu příchozích požadavků:1
+Intenzita vstupu se označuje symbolem μ
+Intenzita vstupu vyjadřuje průměrný počet jednotek obsloužených za jednotku času
+Intenzita vstupu je převrácenou hodnotou střední doby obsluhy
+
+95. Vyznačte správná tvrzení o systému front se spravedlivou obsluhou?:0.0:0.0:0.1
+nezajistí frontám odlišné požadavky na šířku pásma:1
+provoz s většími pakety obsadí více síťových prostředků:1
+zajistí frontám odlišné požadavky na šířku pásma
+znevýhodní provoz s velkými pakety
+
+96. Vyberte vlastnosti systému M/M/1/D/E?:0.0:0.0:0.1
+Časové intervaly mezi jednotlivými příchody požadavků mají exponenciální charakter:1
+Doba trvání vyřízení požadavku má exponenciální charakter:1
+Celkový počet požadavků v systému je N:1
+Systém má jeden obslužný kanál:1
+Časové intervaly mezi jednotlivými příchody požadavků mají charakter určený eliptickou křivkou
+Doba trvání vyřízení požadavku má vždy lineární charakter
+Celkový počet požadavků v systému je 1
+Systém má M obslužných kanálů
+
+97. Vyberte platná tvrzení, o obsluhovém systému D/M/n?:0.0:0.0:0.1
+Obsluhový systém má nekonečně dlouhé fronty:1
+Požadavky do systému přicházejí pravidelně:1
+Obsluhový systém nemá frontu
+Časové intervaly mezi přicházející požadavky má exponenciální rozložení
+
+98. Vyberte intenzitu vstupu?:0.0:0.0:0.1
+lambda[1/s]:1
+mu[1/s]
+
+99. Vyberte intenzitu obsluhy?:0.0:0.0:0.1
+lambda[1/s]
+mu[1/s]:1
+
+100. Co obsahuje hlavička segmentu TCP?:0.0:0.0:0.1
+Zdrojový a Cílový port:1
+Pořadové číslo:1
+Potvrzovací číslo:1
+Offset dat. části:1
+Rezervované:1
+Příznaky(6):1
+Okno:1
+Volitelné parametry:1
+Výplň:1
+Data:1
+
+

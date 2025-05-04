@@ -1,0 +1,1512 @@
+1. Action=redirect is applied in?:2.0:5.0:0.1
+chain=dstnat:1
+chain=srcnat
+chain=forward
+-add chain=dstnat action=redirect to-ports=8080 ....
+
+2. You have 802.11b/g wireless car. What frequencies are available to you?:2.0:5.0:0.1
+2412MHz:1
+2422MHz:1
+5800MHz
+5210MHz
+2327MHz
+
+3. Mark all correct statements about /export (rsc file)?:2.0:5.0:0.1
+Exports only part of the configuration (for example/ip firewall):1
+Exports logs from/log print
+Exports full configuration of the router
+Exports scripts from/system script
+Exports files could not be edited
+
+4. What wireless card can we use to achieve 100 Mbps actual wireless throughput?:2.0:5.0:0.1
+802.11 a/n:1
+802.11 a/b/g/n:1
+802.11 b/g
+802.11 a/b/g
+802.11 a
+
+5. It is possible to add user-defined chains in ip firewall mangle?:2.7:6.0:0.1
+True:1
+False
+
+6. Choose all valid hosts address range for subnet 15.242.55.62/27?:2.1:10.0:0.1
+15.242.55.33-15.242.55.62:1
+15.242.55.31-15.242.55.62
+15.242.55.32-15.242.55.63
+15.242.55.33-15.242.55.63
+
+7. Action=redirect allows you to make?:2.0:5.0:0.1
+Transparent DNS Cache:1
+Transparent HTTP Proxy:1
+Forward DNS to another device IP address
+Enable Local Service
+
+8. Which is correct masquerade rule for 192.168.0.0/24 network on the router with outgoing interface=ether1?:2.0:5.0:0.1
+/ip firewall nat add action=masquerade chain=srcnat out-interface=ether1:1
+/ip firewall nat add action=masquerade chain=srcnat
+/ip firewall nat add action=masquerade chain=srcnat src-address=192.168.0.0/24
+/ip firewall nat add action=masquerade out-interface=ether1 chain=dstnat
+
+9. What letters appear next to a route, which is automatically created by RouterOS when user adds a valid adress to an active interface?:2.66:6.0:0.1
+D:1
+A:1
+C:1
+I
+S
+-A - active, C - connected, D - dynamic
+
+10. Mark all features that are compatible with Nstreme?:2.6250000000000004:6.0:0.1
+WDS between a device in ap-bridge mode with a device in station-wds mode:1
+Encryption
+WDS between a device in station-wds mode and a device in station-wds mode
+Bridging a device in station mode with a device in ap-bridge mode
+
+11. Can you manually add drivers to RouterOS in case your PCI Ethernet card is not recognized, and it's a driver issue?:2.1:5.0:0.1
+No:1
+Yes
+
+12. What protocol is used for Ping and Trace route?:2.0:5.0:0.1
+ICMP - ping:1
+UDP - trace route:1
+IP
+TCP
+DHCP
+-Ping cez ICMP, trace route cez UDP
+
+13. From which of the following locations can you obtain Winbox?:2.0:5.0:0.1
+Router's webpage:1
+mikrotik.com:1
+Files menu in your router
+Via the console cable
+
+14. What kind of users are listed in the Secrets window of the PPP menu?:2.0:5.0:0.1
+pptp users:1
+l2tp users:1
+pppoe users:1
+winbox users
+wireless users
+hotspot users
+
+15. If you need to make sure that one computer in your HotSpot network can access the Internet without HotSpot authentication, which menu allows you to do this?:2.0:5.0:0.1
+IP bindings:1
+Users
+Walled-garden
+Walled-garden IP
+-IP bindings povoluje připojení k hostpotu jednomu počítači bez autentifikace
+
+16. Which default route will be active.!\
+/ip route\
+add disabled=no distance=10 dst-address=0.0.0.0/0 gateway=1.1.1.1\
+add disabled=no distance=5 dst-address=0.0.0.0/0 gateway=2.2.2.2?:2.0:5.0:0.1
+Route via gateway 2.2.2.2:1
+Route via gateway 1.1.1.1
+
+17. How long is level 1 (free / demo) license valid?:2.0:5.0:0.1
+Infinite time:1
+24 hours
+1 month
+1 year
+-niekde je pisane infinite, niekde 24 hours...
+
+18. The basic unit of a physical network (OSI Layer 1)?:2.0:5.0:0.1
+Bit:1
+Frame
+Header
+Byte
+
+19. Select valid MAC-address?:2.0:5.0:0.1
+00:00:5E:80:EE:B0:1
+G2:60:CF:21:99:H0
+192.168.0.0/16
+AEC8:21F1:AA44:54FF:1111:DDAE:0212:1201
+-MAC obsahuje maximálně F
+
+20. Which ones of the following are valid IP addresses?:2.375:6.0:0.1
+10.10.14.0:1
+192.168.13.255:1
+1.27.14.254:1
+192.168.256.1
+
+21. How many usable IP addresses are there in a 23-bit (255.255.254.0) subnet?:2.0:5.0:0.1
+510:1
+254
+512
+508
+-2^(32-23) = 512-2 = 510
+
+22. You want to use PCQ and allow 256k maximum download and upload for each client. Choose correct argument?:2.0:5.0:0.1
+kind=pcq pcq-limit=256000 pcq-classifier=dst-address:1
+kind=pcq pcq-limit=256000 pcq-classifier=src-address:1
+kind=pcq pcq-limit=1256000 pcq-classifier=dst-address
+kind=pcq pcq-limit=5000000 pcq-classifier=src-address
+kind=pcq pcq-limit=5000000 pcq-classifier=dst-address
+
+23. Which of the following is true for connection tracking?:2.0:5.0:0.1
+Connection tracking must be enabled for firewall to be effective:1
+Connection tracking must be enable for NATed network:1
+Enabling connection tracking reduces CPU usage in RouterOS
+Disable connection tracking for mangle to work
+
+24. Which of these are possible solutions to bridge two networks over a wireless link?:2.0:5.0:0.1
+One device in AP mode, another one in station-pseudobridge-clone:1
+One device in AP mode, another one in station-pseudobridge:1
+Both devices in AP mode and enable WDS mode
+One device in AP mode, another one in station
+-mozno aj WDS mode
+
+25. Which of the following Routes statuses are possible?:2.0:5.0:0.1
+C = Connected:1
+S = Static:1
+A = Active:1
+D = Drop
+
+26. Action=redirect applies to?:2.0:5.0:0.1
+DST-NAT rules:1
+Route rules
+Firewall Filter rules
+SRC-NAT rules
+
+27. When backing up your router by using the 'Export' command, the following happens?:2.6:6.0:0.1
+The Export file can be edited with a standard text editor after its creation:1
+You are requested to give the export file a name:1
+Winbox usernames and passwords are backed up
+-nie som si ista, ci 'You are requested to give the export file a name' je spravne. 
+
+28. You need to reboot a RouterBoard after importing a previously exported rsc file to activate the new configuration?:2.0:5.0:0.1
+False:1
+True
+
+29. If a packet comes to a router and starts a new, previously unseen connection, which connection state would be applied to it?:1.32:4.0:0.1
+new:1
+no connection state would be applied to such packet
+unknown
+invalid
+established
+-new - a packet which begins a new connection
+
+30. What is the default protocol/port of (secure) winbox?:2.0:5.0:0.1
+TCP/8291:1
+UDP/5678
+TCP/22
+TCP/8080
+
+31. We have two radio cards in a point-to-point link with settings.\
+Card 1 has mode=ap-bridge ssid="office" frequency=2447 band=2.4ghz-b/g defaultauthentication=yes default-forwarding=yes security-profile=wpa\
+Card 2 has mode=station ssid="office" frequency=2412 band=2.4ghz-b/g defaultauthentication=yes default-forwarding=yes security-profile=wpa2\
+Is Card 2 able to connect to Card 1?:2.0:5.0:0.1
+Yes, when security profile settings are compatible with each other and Nstreme is enabled or disabled on both:1
+Yes, if Nstreme is enabled or disabled on both
+No, because of the different frequencies
+No, because of the different security profiles
+-4 zdroje, 4 rozne odpovede :D
+
+32. Select which of the following are 'Public IP addresses'?:2.04:5.0:0.1
+11.63.72.21:1
+172.168.254.2:1
+10.110.50.37
+172.28.73.21
+192.168.0.1
+-Protože nezasahují do skupin privátních adres 10.0.0.0-10.255.255.255, 172.16.0.0-172.31.255.255, 192.168.0.0-192.168.255.255
+
+33. Is ARP used in the IPv6 protocol?:2.0:5.0:0.1
+False:1
+True
+-ARP se používá jen v IPv4, IPv6 používá NDP
+
+34. How many usable IP addresses are there in a 20-bit subnet?:2.0:5.0:0.1
+4094:1
+2047
+4096
+2048
+2046
+-2^12 = 4096 - 2 (síť a broadcast) = 4094
+
+35. What is the default TTL (time to live) on a router that an IP packet can experience before it will be discarded?:1.8000000000000003:5.0:0.1
+64:1
+60
+30
+1
+-Cauchy vravi, ze 1
+
+36. The network address is?:0.9:3.0:0.1
+The first address of the subnet:1
+The first usable address of the subnet
+The last address of the subnet
+
+37. Choose all valid hosts address range for subnet 15.242.55.62/27?:2.2:6.0:0.1
+15.242.55.33-15.242.55.62:1
+15.242.55.32-15.242.55.63
+15.242.55.33-15.242.55.63
+15.242.55.31-15.242.55.62
+
+38. What is term for the hardware coded address found on an interface?:2.0:5.0:0.1
+MAC Address:1
+IP Address
+Interface Address
+FQDN Address
+
+39. Which of the following IP addresses are publicly routable?:1.975:5.0:0.1
+11.3.10.4:1
+192.168.1.4
+127.34.155.3
+172.16.13.23
+-127... je local
+
+40. How many IP addresses can one find in the header of an IP packet?:2.0:5.0:0.1
+2:1
+3
+4
+1
+-Zdrojovou a cílovou adresu
+
+41. You have a router with configuration\
+Public IP 202.168.125.45/24\
+Default gateway 202.168.125.1\
+DNS server 248.115.148.136, 248.115.148.137\
+Local IP 192.168.2.1/24\
+Mark the correct configuration on client PC to access to the Internet?:2.0:5.0:0.1
+192.168.2.115/24, gateway 192.168.2.1:1
+192.168.0.1/24, gateway 192.168.2.1
+192.168.2.253/24, gateway 202.168.0.1
+192.168.1.223/24, gateway 248.115.148.136
+192.168.2.2/24, gateway 202.168.125.45
+-Gateway by měla být nejvýše postavená IP adresa v subnetu -> v tomto přípádě Local IP
+
+42. What configuration is added by /ip Hot-Spot setup command.! (select all that apply)?:2.62:6.0:0.1
+/ip Hot-Spot user:1
+/ip dhcp-server:1
+/queue tree
+/ip service
+/ip hotspot walled-garden
+
+43. Which of the following keystrokes enables safe mode in console?:1.4:4.0:0.1
+Ctrl+x:1
+Ctrl+s
+Ctrl+d
+Ctrl+c
+
+44. For static routing functionality, additionally to the RouterOS system package, you will also need the following software package?:2.3000000000000003:6.0:0.1
+none:1
+dhcp
+routing
+advanced-tools
+-Static routing je obsažen v system package
+
+45. Which are necessary sections in /queue simple to set bandwidth limitation?:2.0:5.0:0.1
+target-address, max-limit:1
+target-address, dst-address, max-limit
+target-address, dst-address
+max-limit
+
+46. Two hosts, A and B, are connected to a broadcast LAN. Select all the answers showing pairs of IP address/mask which would allow IP connections to be established between the two hosts?:2.6:6.0:0.1
+A 10.1.2.192/24 and B 10.1.2.129/26:1
+A 10.1.2.66/25 and B 10.1.2.109/26
+A 10.2.2.1/23 and B 10.2.0.1/22
+A 10.2.1.0/23 and B 10.2.0.1/22
+
+47. Why is it useful to set a Radio Name on the radio interface?:2.566666666666667:6.0:0.1
+To identify a station in a list of connected clients:1
+To identify a station in the Access List
+To identify a station in Neighbor discovery
+
+48. Router A and B are both running as PPPoE servers on different broadcast domains of your network. Is it possible to set Router A to use "/ppp secret" accounts from Router B to authenticate PPPoE customers?:0.4:2.0:0.1
+False:1
+True
+
+49. MikroTik RouterOS DHCP client can receive following options?:1.3800000000000001:4.0:0.1
+IP Gateway:1
+IP Address and Subnet:1
+Byte limit
+Rate limit
+Uptime limit
+-Mozno aj Rate limit?
+
+50. The HotSpot feature can be used only on ethernet interfaces. You have to use a separate access point if you want to use this feature with wireless?:1.6:4.0:0.1
+No:1
+Yes
+
+51. How many different priorities can be selected for queues in MikroTik RouterOS?:0.9:3.0:0.1
+8:1
+16
+0
+1
+-1 je nejvyšší, 8 nejnižší
+
+52. A PC with IP 192.168.1.2 can access internet, and static ARP has been set for that IP address on gateway. When the PC Ethernet card failed, the user change it with a new card and set the same IP for it. What else should be done?:1.75:5.0:0.1
+MAC-address of the new card has to be changed to MAC address of old card:1
+Old static ARP entry on gateway has to be updated for the new card:1
+Nothing – it will work as before
+Another IP has to be added for Internet access
+-Static ARP je vázanej s Mac adresou
+
+53. Hotspot is required on the interfaces ether2, ether3, wlan1 (in ap-bridge mode). These interfaces are bridged in the bridge1 interface. Which interface should the Hotspot server be configured on?:0.5:2.0:0.1
+bridge1:1
+ether2
+ether3
+wlan1
+
+54. Mark all the configuration where RouterOS is utilizing the DNS feature?:0.2:1.0:0.1
+Hotspot configuration:1
+Layer-7 packet filter configuration
+Web-proxy configuration
+PPP Configuration
+
+55. Which facility should be used to ensure that clients with radio signal strength poorer than -90 dBm can't connect to interface wlan1 on Mikrotik Access Point?:0.2:1.0:0.1
+Access List:1
+Connection List
+Registered List
+Hotspot User Profile
+
+56. The command\
+/ip firewall nat add chain=dstnat in-interface=ether1 protocol=tcp dst-port=3389 action=dst-nat toaddress=192.168.1.2 to-ports=81?:0.15000000000000002:1.0:0.1
+Forwards any TCP traffic incoming through ether1 port 3389 to the port 81 of the internal host 192.168.1.2:1
+Forwards any TCP traffic incoming through ether1 port 81 to the port 3389 of the internal host 192.168.1.2
+Forwards all TCP traffic from 192.168.1.2 to port 81 of the interface ether1
+Adds IP address 192.168.1.2 to the interface ether1
+
+57. How many layers does Open Systems Interconnection model have?:0.9:3.0:0.1
+7:1
+5
+6
+12
+
+58. Select all the RouterOS software packages required for configuring a wireless AP?:0.8800000000000001:3.0:0.1
+wireless:1
+system:1
+advanced-tools
+routing
+dhcp
+
+59. Mark the queue types that are available in RouterOS?:0.4833333333333334:2.0:0.1
+SFQ - Stochastic Fairness Queuing:1
+RED - Random Early Detect (or Drop):1
+FIFO - First In First Out (for Bytes or for Packets):1
+PCQ - Per Connection Queuing:1
+DRR - Deficit Round Robin
+LIFO - Last In First Out
+
+60. MikroTik PPPoE Server can be used only within a broadcast domain, that is, users can not run PPPoE protocol with a server if there is a router between the customer and that PPPoE server?:0.5:2.0:0.1
+True:1
+False
+-Je potřeba vytvořit určitou VPN pak by to šlo
+
+61. To limit wireless access for your HotSpot users?:-0.07500000000000001:-1.0:0.1
+Create MAC Address restriction on HotSpot user login:1
+Create MAC Address restriction in the Wireless Access List:1
+Create MAC Address restriction on PPP user login
+Create IP Address restriction in the Wireless Access List
+
+62. Is it possible to have PPTP Client and PPTP server on one MikroTik router at the same time?:0.9:3.0:0.1
+Yes:1
+No
+
+63. Is it possible for a client to get an IP address but no gateway after a successful DHCP request?:0.5:2.0:0.1
+Yes:1
+No
+
+64. You want to transfer existing '/ip firewall filter' configuration from one router to a new system. Choose the best possible way?:0.2:1.0:0.1
+Export only '/ip firewall filter':1
+Create backup, edit backup file and restore on target router
+Export global configuration and remove everything apart from '/ip firewall filter'
+Create backup only of '/ip firewall filter' rules
+
+65. Mark all features that can be help to assign bandwidth limitation for a group of users?:0.17500000000000002:1.0:0.1
+Mangle:1
+Queue Tree:1
+Address-list:1
+NAT
+
+66. Connection state in MikroTik RouterOS is the same thing as TCP state elsewhere?:2.0:5.0:0.1
+Yes:1
+No
+
+67. To block access to web proxies running on TCP port 8080, you have to create a firewall rule and specify?:0.6000000000000001:3.0:0.1
+chain, action, protocol, port:1
+chain, action, port
+chain, action, protocol, limit
+chain, action, protocol
+-protocol=tcp action=redirect to-ports=8080 chain=dstnat
+
+68. What is possible with Netinstall?:0.24000000000000002:1.0:0.1
+MikroTik RouterOS install:1
+MikroTik RouterOS reinstall:1
+MikroTik RouterOS configuration reset:1
+MikroTik RouterOS password reset with saving router's configuration:1
+nevím
+-protocol bootp btw
+
+69. Pick the allowed input formats for wireless scan-list?:0.2:1.0:0.1
+5500 - 5700:1
+5500 5700
+5500-5700:1
+5500/5700
+5500,5700
+-Od verzí 6.0 již čárky nejsou povoleny
+-pravdepodobne aj 5500-5700
+
+70. NStreme works only on 40mhz Channel width?:2.0:5.0:0.1
+No:1
+Yes
+
+71. You have to connect to a RouterBOARD without any previous configuration. Select all possibilities to connect and do some basic configuration?:0.35000000000000003:2.0:0.1
+Serial Connection:1
+MAC-Winbox:1
+Telnet:1
+Attach-monitor/keyboard
+
+72. It is necessary to configure a local DNS server to be able to give out a DNS setting to clients via DHCP server ?:0.5:2.0:0.1
+False:1
+True
+
+73. Which option in the configuration of a wireless card must be disabled to cause the router to permit ONLY known clients listed in the access?:0.45000000000000007:2.0:0.1
+Enable Access List:1
+Default Forward
+Security Profile
+Default Authenticate
+
+74. MikroTik RouterOS commands can be run once a day by?:2.0:5.0:0.1
+/system scheduler:1
+/system cron
+/system watchdog
+
+75. Mark correct statements?:0.2:1.0:0.1
+Backup files are not editable:1
+Export files are not editable
+Backup files are editable
+
+76. Mark possible TCP states in the connection tracking table?:0.13333333333333333:0.0:0.1
+Syn:1
+Estabilished:1
+New
+Invalid
+Related
+Closed
+-Syn Sent, Syn Recieved, Established, Fin, Close, Last Ack, Time
+
+77. What packages allow ROS to perform static routing?:0.2:1.0:0.1
+system:1
+routing
+multicast
+wireless
+
+78. When sending out an ARP request, an IP host is expecting what kind of address for an answer?:0.5:2.0:0.1
+MAC Address:1
+IP Address
+VLAN ID
+802.11g
+
+79. Which of the following actions are available for '/ip firewall mangle' (select all valid actions)?:0.8333333333333334:3.0:0.1
+Change MSS:1
+Mark Connection:1
+Accept:1
+Jump:1
+Mark Packet:1
+Drop
+
+80. What is the maximum number of ARP entries on a Mikrotik RouterOS device?:2.0:5.0:0.1
+8192:1
+Unlimited
+2048
+10240
+
+81. You wish to secure your RouterOS system. You do not want the RouterOS to be discoverable using MNDP or CDP. You also want to deny management via the MAC addresses on all interfaces. Select the correct actions to accomplish this?:1.0:3.0:0.1
+Remove/Disable all interfaces under mac-server telnet:1
+Remove/Disable all discovery interfaces:1
+Remove/Disable all interfaces under mac-Server winbox:1
+Add a Deny All input firewall rule
+Remove/Disable the Interfaces
+Place a proper forward firewall rule to block mac discovery
+Place a proper input firewall rule to block mac discovery
+
+82. What is the correct action for a NAT rule on a router that should intercept SMTP traffic and send it over to a specified mail server?:2.45:6.0:0.1
+dst-nat:1
+redirect
+passtrough
+tarpit
+-alebo redirect?
+
+83. To be able to do NAT, the connection tracking does not need to be enabled?:0.2:1.0:0.1
+No:1
+Yes
+-Mikrotik Wiki: 'Connection tracking must be enabled in order to use NAT.'
+
+84. Which port does PPTP use by default?:0.9:3.0:0.1
+TCP 1723:1
+UDP 1723
+UDP 1721
+TCP 1721
+
+85. What will happen if "Default forward" is disabled in wireless menu on a RouterOS AP?:0.8:3.0:0.1
+Clients will not be able to connect to each other:1
+Only clients with matching access control list rule will be able to connect to the AP
+AP will not be able to connect to the clients
+Clients will not be able to connect to the AP
+
+86. In the Route List, the identification DAb for a route stands for?:0.9:3.0:0.1
+dynamic - active - bgp:1
+direct - active - bgp
+direct - acknowledge - backup
+dynamic - active – backup
+
+87. Simple Queue is defined as\
+0.! 2M for upload and download for target IP 10.10.0.33.\
+1.! 4M for upload and download for target IP 10.10.0.33.\
+Client 10.10.0.33 is be able to obtain?:1.4:4.0:0.1
+2M upload/download:1
+4M upload/download
+0M upload/download
+6M upload/download
+
+88. What does the firewall action "Redirect" do. Select all true statements?:0.17500000000000002:1.0:0.1
+Redirects a packet to a specified IP:1
+Redirects a packet to a specified port on a host in the network:1
+Redirects a packet to a specified port on the router
+Redirects a packet to the router
+
+89. If you wish to block user access to MSN messenger, which chain should the firewall rule be placed in?:0.45000000000000007:2.0:0.1
+forward:1
+input
+output
+process
+
+90. /interface wireless access-list is used for?:0.35000000000000003:2.0:0.1
+Shows a list of Client's MAC Address that are already registered at AP:1
+Authenticate Hotspot users
+Contains the security profiles settings
+Handles a list of Client's MAC Address to permit/deny connection to AP
+
+91. There can be more than one PPPoE server in a single broadcast domain?:0.9:3.0:0.1
+True:1
+False
+
+92. In which situations Netinstall can not be used to install RouterOS on a RouterBOARD?:0.75:3.0:0.1
+The router is connected only to a wireless network:1
+The router does not have an operating system
+The router is connected only to a secondary Ethernet port
+The password of the router is not known
+
+93. Select true statements about Mikrotik RouterOS backup file?:0.675:3.0:0.1
+/user menu usernames and passwords are saved in the backup file:1
+Entire router configuration is saved:1
+Files from /files are included in the backup file
+Backup file is editable
+
+94. It is possible to create an encrypted PPPoE tunnel in RouterOS?:2.0:5.0:0.1
+True:1
+False
+
+95. Which options should be used when you want to prevent access from one specific address to your router web?:1.1500000000000001:4.0:0.1
+Firewall Filter Chain Forward:1
+WWW service from IP Services
+Firewall Filter Chain Input
+Group setting for System users
+-asi :D 
+
+96. In case when router login password is lost, it is necessary to reinstall RouterOS or use hardware reset function?:0.5:2.0:0.1
+Yes:1
+No
+
+97. WPA 2 Pre Shared key (PSK) is enabled on AP, all your clients have to use the same PSK. Only Virtual AP could be used to allow clients to connect with a different PSK?:0.0:0.0:0.1
+No:1
+Yes
+
+98. You would like to allow multiple logins with one user name on a HotSpot server. How should this be configured?:0.2:1.0:0.1
+Set “Shared Users” option at /ip hotspot user profile:1
+Set “Shared Users” option at /ip hotspot
+It’s not possible
+Set “only-one=no’ at /ip hotspot
+
+99. Using wireless connect-list it’s possible to prioritize connection to one Access Point over another Access Point by changing the order of the entries?:2.4:5.0:0.1
+Yes:1
+No
+
+100. How many DHCP servers could you run on one interface?:0.5:2.0:0.1
+1:1
+255
+1024
+4
+
+101. What configuration is added by /ip hotspot setup command (select all that apply)?:0.38:2.0:0.1
+/ip hotspot user:1
+/ip dhcp-server:1
+/queue tree
+/ip service
+/ip hotspot walled-garden
+
+102. Router has Wireless and Ethernet client interfaces, all client interfaces are bridged. To create a DHCP service for all clients you must configure DHCP server on?:0.35000000000000003:2.0:0.1
+Only on bridge interface:1
+Every bridge port
+DHCP service is not possible in this setup
+Ethernet and wireless interfaces
+
+103. The first two rules in the forward chain of the filter table are\
+/ip firewall filter add chain=forward connection-state=established action=accept\
+/ip firewall filter add chain=forward connection-state=invalid action=drop connection-state=related\
+Packets are not filtered by the rules above?
+Yes:1
+No
+
+104. A routing table has following entries\
+0 dst-address=10.0.0.0/24 gateway=10.1.5.126\
+1 dst-address=10.1.5.0/24 gateway=10.1.1.1\
+2 dst-address=10.1.0.0/24 gateway=25.1.1.1\
+3 dst-address=10.1.5.0/25 gateway=10.1.1.2\
+Which gateway will be used for a packet with destination address 10.1.5.126?:0.2:1.0:0.1
+10.1.1.2:1
+10.1.1.1
+25.1.1.1
+10.1.5.126
+
+105. You want to skip HotSpot (authorization, accounting, etc.) for a specific host. What should you use?:0.2:1.0:0.1
+/ip hotspot ip-binding:1
+/ip hotspot walled-garden ip
+/ip hotspot walled-garden
+/ip address
+
+106. Which wireless mode allows you to connect to any standard AP (not only MikroTik) and to be able to bridge this wireless interface to an Ethernet?:0.35000000000000003:2.0:0.1
+station:1
+station-pseudobridge
+bridge
+station-wds
+
+107. Which configuration menu should you use to change router's Winbox default port?
+/ip service:1
+/ip firewall service-ports
+/ip firewall filter
+/system resource
+
+108. What kind of users are listed in the "/user" menu in routerOS?
+router users:1
+pptp users
+hotspot users
+wireless user
+
+109. To make all DNS requests coming from your network to resolve on your router (regardless of the clients configuration), which action would you specify for the DST-NAT rule?:0.15000000000000002:1.0:0.1
+redirect:1
+masquerade
+dst-nat
+you can’t use DST-NAT to achieve this
+
+110. Possible actions of ip firewall filter are?:0.8333333333333335:3.0:0.1
+tarpit:1
+add-to-adress-list:1
+log:1
+accept:1
+tarp
+bounce
+
+111. PPP Secrets are used for?:0.5:2.0:0.1
+L2TP clients:1
+PPtP clients:1
+PPPoE clients:1
+PPP clients:1
+Router users
+IPSec clients
+
+112. OSPF area ID does not need to be unique within the AS?:0.2:1.0:0.1
+No:1
+Yes
+
+113. What wireless mode can be used to configure WDS?:0.46:2.0:0.1
+station-wds:1
+ap-bridge
+nstreme-dual-slave
+bridge
+station
+
+114. Check all of the DHCP Server Options that are implemented for DHCP-Client and not Custom?:0.18333333333333335:1.0:0.1
+DNS Server:1
+subnet mask:1
+gateway:1
+WINS Server
+ntp server
+tftp
+
+115. You will store the website that has been visited into a log of web proxy. Which is the correct configuration?:0.5:2.0:0.1
+/system logging add topics=web-proxy, !debug action=remote:1
+/system logging add topics=web-proxy, debug action=memory
+/system logging add topics=web-proxy, !debug action=memory
+/system logging add topics=web-proxy, !debug action=disk
+
+116. Mark queue type that uses fairness principle between sub-queues, allows users to choose classifier queues, and apply a limit to each sub-queue?:0.15000000000000002:1.0:0.1
+PCQ:1
+SFQ
+RED
+BFIFO
+
+117. Which features are removed when advanced-tools package is uninstalled?:0.2:1.0:0.1
+ip-scan:1
+netwatch:1
+ping:1
+neighbours
+LCD support
+bandwidth-test
+
+118. Rate Flapping can be avoided by?:0.8500000000000001:3.0:0.1
+Reduce supported rates:1
+Choose larger channels (40 MHz instead of 20 MHz)
+change ap-bridge to Bridge
+Set basic rates to only one data rate like 24Mbps
+-asi este Set basic... ?
+
+119. Mark possible connection states in the connection tracking table?:0.15000000000000002:1.0:0.1
+Related:1
+Invalid:1
+Established:1
+New:1
+Closed
+Syn
+-established, invalid, new, related, untracked
+
+120. In IP Firewall NAT, can you classify traffic in SRC NAT chain based on "in-interface"?:-0.06666666666666668:-1.0:0.1
+Yes:1
+No
+
+121. To use masquerade, you need to specify?
+action=masquerade, out-interface, chain=src-nat:1
+action=accept, out-interface, chain=src-nat
+action=masquerade, in-interface, chain=src-nat
+action=masquerade, out-interface, chain=dst-nat
+
+122. Is it possible to limit how many clients are able to connect to an access point?:1.4:4.0:0.1
+Yes, but only with access-lists:1
+Yes
+No, it’s not possible at all
+
+123. A backup file from MikroTik router is stored in plain text format?:-0.1:-1.0:0.1
+No:1
+Yes
+
+124. In RouterOS queue configurations the word „total“ usually represents?:0.9:3.0:0.1
+upload + download:1
+download
+download - upload
+upload
+
+125. Choose correct statements for MikroTik proxy?:0.2:1.0:0.1
+To deny access to a specific website, caching should be enabled:1
+Destination NAT rule is required to utilize transparent proxy facility:1
+Controls domains or servers which are allowed to cache by Proxy
+Can deny access to a specific domains or servers, but not specific web pages
+
+126. What can be used as „target-adress“ in the simple queue?:-0.07500000000000001:-1.0:0.1
+server’s adress:1
+client’s adress:1
+client’s MAC adress
+adress list name
+
+127. Connection marks are stored in the connection tracking table?
+True:1
+False
+
+128. What is marked by connection-state=established matcher?:0.15000000000000002:1.0:0.1
+Packet belongs to an existing connection, for example a reply packet or a packet:1
+Packet begins a new TCP connection
+Packet does not correspont do any known connection
+Packet is related to, but not part of an existing connection
+
+129. There are two routes in the routing table\
+0 dst-addr=10.1.1.0/24 gateway=5.5.5.5\
+1 dst-addr=10.1.1.4/24 gateway=5.6.6.6\
+Which gateway will be used to get to the IP adress 10.1.1.6?:0.2:1.0:0.1
+5.6.6.6:1
+both, half of the traffic will be routed through one gateway, half through the other
+the required route is not in the routing table
+5.5.5.5
+
+130. Hotspot ip-binding is used to allow access to Internet web servers specifing the IP address of the web server instead of the URL?:0.9:3.0:0.1
+Yes:1
+No
+
+131. When viewing the routes in Winbox, some routes will show "DAC" in the first collumn?:0.9:3.0:0.1
+Dynamic, Active, Connected:1
+Dynamic, Available, Created
+Dynamic, Active, Console
+Direct, Available, Connected
+
+132. You have a wireless interface with SSID=“WAN1“ mode=“ap-bridge“ and a VirtualAP with SSID=“VAP1“ on the router. Is it possible to use nstreme protocol?:0.2:1.0:0.1
+Yes, Nstreme can be used for both SSIDs:1
+No, Nstreme can not be used on wireless interface if a VirtualAP is on it
+Yes, but Nstreme can be used only for SSID=VAP1
+Yes, but Nstreme can be used only for SSID=WLAN1
+
+133. /store allows you to save to external disk?:0.15000000000000002:1.0:0.1
+web-proxy data:1
+dude data:1
+User-Manager data:1
+system configuration
+
+134. You need to redirect a browser page from search of „xxx“ in google to another website. For example, www.mikrotik.com. Choose correct proxy access rule?:0.15000000000000002:1.0:0.1
+/ip proxy access add dst-host=*xxx* action=deny redirect-to=www.mikrotik.com:1
+/ip proxy access add dst-host=*.google.* path=*xxx* action=deny redirectto=www.mikrotik.com
+/ip proxy access add path=*xxx* action=allow redirect-to=www.mikrotik.com
+/ip proxy access add dst-host=*xxx* action=allow redirect-to=www.mikrotik.com
+
+135. Collisions are possible in full-duplex Ethernet networks?
+False:1
+True
+
+136. Which rule is used to block SMTP protocol from Lan interface for clients?:0.45000000000000007:2.0:0.1
+/ip firewall filter add chain=forward protocol=tcp dst-port=25 action=drop in-interface=Lan:1
+/ip firewall filter add chain=input protocol=tcp dst-port=25 action=drop in-interface=Lan
+/ip firewall filter add chain=forward dst-port=25 action=drop in-interface=Lan
+/ip firewall filter add chain=output protocol=tcp dst-port=25 action=drop in-interface=Lan
+
+137. A client uses a RouterBoard1000. The clock is configured in "/system clock". The clock resets to default after each reboot. Select the best solution for the problem?:0.2:1.0:0.1
+Configure '/system ntp client' and set a valid and reachable NTP server address.:1
+Configure '/system ntp server' and set a valid and reachable NTP client address.
+Write a script in '/system script' to set the clock
+Open the router and ensure the CMOS battery is fine.
+
+138. Define a routing loop?:0.2:1.0:0.1
+situation where the packet is routed through the same sequence of routers until the TTL expires:1
+situation where the TTL of the packet expires
+situation where the packet is routed through the same router twice
+Situation where the packet does not reach it\'s destination
+
+139. Which of the following would prevent unknown clients from connecting to your AP.! Choose the BEST answer?:0.8400000000000001:3.0:0.1
+Uncheck "Default Authenticate" in the wireless card configuration, and add each known client's MACaddress to your connect-list configuration:1
+Uncheck "Default Authenticate" in the wireless card configuration, and add each known client's MAC address to your access-list configuration ensuring that you enable "authenticate" in the entry
+Add each known client's MAC address to your access-list configuration is the only step needed
+Configure the radius server under "/radius"
+Check the "Do not permit unknown client" box in the wireless configuration
+
+140. You want to share the same user and password for different computers. Which menu is used for configuration?:0.35000000000000003:2.0:0.1
+/ip hotspot user profile:1
+/ip hotspot walled-garden
+/ip hotspot profile
+/ip hotspot ip-binding
+
+141. You can not use OSPF and RIP routing protocols simultaneously on the RouterOS?:0.2:1.0:0.1
+No:1
+Yes
+
+142. When adding a user to your local PPP secrets/PPP profiles database, it is possible to?:0.42000000000000004:2.0:0.1
+Allow only pppoe login:1
+Allow/deny use of more than one login by this user:1
+Set max values for total transferred bytes (up- and download):1
+Allow login by pppoe and pptp, but deny login by l2tp
+Deny services (like telnet) only for this user or for one group of users
+-Dál nevím
+
+143. What is true about Bandwidth Test tool (select all that apply)?:0.2:1.0:0.1
+Tests throughput between two MikroTik devices:1
+Only work on MikroTik Router OS
+Can be downloaded on default router webpage
+Can be used to monitor throughput to a remote device
+
+144. Action=redirect can be used in NAT chain src-nat?
+False:1
+True
+
+145. Mark all packages required for PPPoE server on MikroTik RouterOS?:0.16:1.0:0.1
+ppp:1
+synchronous
+radius
+user-manager
+system
+
+146. It is required to make a web server on a private LAN visible on the Public Internet. Only the web server port should be visible to public. Which of the following configuration steps should be met?:0.18000000000000002:1.0:0.1
+Connection Tracking must be enabled on NAT router:1
+in ip firewall NAT there should be a dst-nat between the public ip of the router and the private ip of the webserver:1
+A route between the NAT Router and the webserver must exist
+LAN address of the webserver should be routable on the internet
+Public IP address of the webserver must be installed on the NAT Router
+
+147. What action should be used to inform source that packets reached destination, but was not accepted?:0.45000000000000007:2.0:0.1
+action=reject:1
+action=accept
+action=drop
+action=tarpit
+
+148. In which order are the entries in Access List and Connect List processed?:0.9:3.0:0.1
+In sequence order:1
+By Signal Strength Range
+In a random order
+By interface name
+
+149. Two mangle rules defining different mangle marks for the same traffic type, will make it have both mangle marks?:-0.1:-1.0:0.1
+False:1
+True
+
+150. When adding a static route, you must always ensure that you add both the gateway and the interface?:0.2:1.0:0.1
+False:1
+True
+
+151. A network ready device is directly connected to a MikroTik RouterBOARD 750 with a correct U.T.P RJ45 functioning cable. The device is configured with an IPv4 address of 192.168.100.70 using a subnet mask of 255.255.255.252. What will be a valid IPv4 address for the RouterBOARD 750 for a successfull connection for the device?:0.15000000000000002:1.0:0.1
+192.168.100.69/255.255.255.252:1
+192.168.100.68/255.255.255.252
+192.168.100.71/255.255.255.252
+192.168.100.70/255.255.255.252
+
+152. The gateway router is configured with a transparent proxy with the following parameters\
+/ip proxy access add dst-host=www.mikrotik.com action=allow\
+/ip proxy access add dst-host=www.mt.lv action=deny redirect-to=forum.mikrotik.com\
+When the user is opening www.mt.lv, what is shown in the browser?:0.2:1.0:0.1
+forum.mikrotik.com:1
+www.mt.lv
+www.mikrotik.com
+
+153. Hotspot can be configured on a Virtuall AP interface?:0.2:1.0:0.1
+Yes:1
+No
+
+154. Wireless clients (mode=station) will work properfly if bridged to ethernet?:0.2:1.0:0.1
+No:1
+Yes
+
+155. Where should you upload new MikroTik RouterOS version packages for upgrading router?:0.2:1.0:0.1
+FTP root directory or /files directory of the router:1
+Any directory in /files
+System Backup menu
+System Package menu
+
+156. Is it possible to create a custom firewall chain and use it in both input and forward chains at the same time?:0.2:1.0:0.1
+No:1
+Yes
+
+157. What kind of users are listed in the "/users" menu?
+router users:1
+hotspot users
+wireless users
+pptp users
+
+158. Is action=masquerade allowed in chain=dstnat?:0.2:1.0:0.1
+No:1
+Yes
+yes, but it works only for incoming connections
+yes, but only if dst-addr is specified
+
+159. MikroTik RouterOS is sending logs to an external syslog server. Which protocol and port is used by RouterOs for sending logs (by default)?:0.5:2.0:0.1
+UDP 514:1
+UDP 21
+TCP 110
+UDP 113
+
+160. When „Cache on Disk“ is not checked under the web proxy settings, where does the data get stored?:0.2:1.0:0.1
+RAM (Memory):1
+System Disk
+USB Disk
+It does not get stored
+
+161. Which options are correct.! We use..?
+DST-NAT to define new destination address in our local network for incoming packets:1
+SRC-NAT to prevent access from outside to our local network clients:1
+SRC-NAT to prevent local network clients access to outside
+DST-NAT to redirect all packets to router itself
+
+162. There is an HTTP server 10.0.0.1 in your private network. You have made a DST-NAT rule that sends all HTTP traffic recieved on your router’s address 80.232.50.100 to this server. If you make a firewall rule on the router to disallow address 159.148.20.30 to communicate with the server, how would you identify this communication in this rule?:0.9:3.0:0.1
+src-address=159.148.20.30 dst-address=80.232.50.100:1
+src-address=80.232.50.100 dst-address=10.0.0.1
+src-address=159.148.20.30 dst-address=10.0.0.1
+src-address=80.232.50.100 dst-address=159.148.20.30
+
+163. A station can connect to AP if they both use different country regulation settings, but the frequency chosen is allower in both countries?
+True:1
+No
+
+164. Making use of a narrower channel width such as 10MHz or 5MHz will increase your wireless link speed?
+No:1
+Yes
+
+165. MikroTik proxy features are?:0.5:2.0:0.1
+HTTP caching:1
+SMTP caching
+DNS name filtering
+FTP caching
+POP3 caching
+
+166. Which software version can be installed onto the following RouterBoard types?:0.5:2.0:0.1
+routeros-mipsle-x.xx.npk on RB133:1
+routeros-mipsbe-x.xx.npk on a RB433:1
+routeros-powerpc-x.xx.npk on a RB333
+routeros-mipsbe-x.xx.npk on a RB133
+routeros-x86-x.xx.npk on a RB1100
+
+167. While troubleshooting a network from insde the network, you discover that you can ping thegateway reliably, but you cannot browse the Internet. Skype, however, works flawlessly. What is the most likely issue?:0.2:1.0:0.1
+DNS is not available:1
+Network card and/or cable is not working
+The computer did not get an IP address
+Masquerading rule is not applied
+
+168. What does this simple queue do (check the image)(max-limit 1M v upload a IP 192.168.1.10)?:0.15000000000000002:1.0:0.1
+Queue limits host 192.168.1.10 upload data rate to one megabit per second.:1
+Queue guarantees download data rate of one megabit per second for host 192.168.1.10
+Queue guarantees upload data rate of one megabit per second for host 192.168.1.10
+Queue limits host 192.168.1.10 download data rate to one megabit per second.
+-Na obrázku je max-limit 1M v upload a IP 192.168.1.10
+
+169. Action=redirect could be used to redirect a client’s traffic to a specific mailserver?:0.9:3.0:0.1
+No:1
+Yes
+
+170. How many wireless clients can connect, when wireless card is configured to mode=bridge?:0.5:2.0:0.1
+1:1
+2007
+100
+2
+
+171. The RouterOS graphing is used for?:0.4:2.0:0.1
+average traffic and resource usage display:1
+bandwidth testing
+bandwidth limitation
+real-time traffic and resource usage display
+
+172. What is necessary for PPPoE client configuration?
+Interface (on which PPPoE client is going to work):1
+Static IP address on PPPoE client interface
+ip firewall nat masquerade rule
+
+173. Which of the following are layers in the TCP/IP model.! 1.Application 2.Session 3.Transport 4.Internet 5.Data Link 6.Physical?:0.7000000000000001:3.0:0.1
+1, 3 and 4:1
+3, 4 and 5
+2, 3 and 5
+1 and 2
+
+174. You have 10 users plugged into a hub running 10Mbps half-duplex. There is a server connected to the switch running 10Mbps half-duplex as well. How much bandwidth does each host have to the server?:1.4:4.0:0.1
+10 Mbps:1
+2 Mbps
+1 Mbps
+100 kbps
+
+175. If ARP=reply-only is configured on an interface, what will this interface do?:0.8600000000000001:3.0:0.1
+Accept all IP/MAC combinations listed in /ip arp as static entries:1
+Accept all IP addresses listed in /ip arp as static entries
+Accept all MAC-addresses listed in /ip arp as static entries
+Add new MAC addresses in /ip arp list
+Add new IP addresses in /ip arp list
+-alebo Accept all MAC-addresses listed in /ip arp as static entries?
+
+176. Firewall NAT rules process only the first packet of each connection?:0.2:1.0:0.1
+False:1
+True
+
+177. Select all tunnels that support authentication of clients with a username and password?:0.2:1.0:0.1
+PPPoE:1
+EoIP
+IPIP
+PPTP/L2TP
+OpenVPN
+
+178. What can be used as 'target-address' in the simple queue?:0.024999999999999994:0.0:0.1
+client's address:1
+server's address
+address list name
+client's MAC address
+
+179. To connect your MikroTik router to a wireless access point, you have to?:0.9:3.0:0.1
+Use the same Band (5 GHz, 2.4 GHz, ...):1
+Use the same SSID as on accesspoint:1
+Use the same Radio Name
+
+180. Which command is used to determine if an IP access list is enabled on a particular interface?
+show interface:1
+show interface access-lists
+show ip interface
+show access-lists
+
+181. RouterOS log messages are stored on disk by default?:0.5:2.0:0.1
+False:1
+True
+
+181. In order to use dynamic keys in your wireless security profile for an AP, you MUST set up the dhcp server to provide the dynamic keys?
+False:1
+True
+
+182. What PPP protocol provides dynamic addressing, authentication, and multilink?:0.5:2.0:0.1
+LCP:1
+HDLC
+X.25
+NCP
+
+183. What protocols are used to configure trunking on a switch.! 1.VLAN Trunking Protocol 2.VLAN 3. 84.02.1Q 4.ISL?:0.2:1.0:0.1
+3 and 4:1
+1 and 2
+1 only
+2 only
+
+184. How many collision domains are created when you segment a network with a 12-port switch?:1.2000000000000002:4.0:0.1
+12:1
+2
+1
+5
+
+185. What command will display the line, protocol, DLCI, and LMI information of an interface?:0.2:1.0:0.1
+show interface:1
+show run
+show frame-relay pvc
+sh pvc
+
+186. Consider the following network diagram. In R1, you have the following configuration.!\
+/ip route\
+add dst-address=192.168.1.0/24 gateway=192.168.99.2\
+/ip firewall nat\
+add chain=srcnat out-interface=Ether1 action=masquerade\
+On R2, if you wish to prevent all access to a server located at 192.168.1.10 from LAN1 devices, which of the following rules would be needed?:0.2:1.0:0.1
+/ip firewall filter add chain=input srcaddress=192.168.99.1 dst-address=192.168.1.10 action=drop:1
+/ip firewall filter add chain=forward srcaddress=192.168.99.1 dst-address=192.168.1.10 action=drop
+/ip firewall filter add chain=forward srcaddress=192.168.0.0/24 dst-address=192.168.1.10 action=drop
+/ip firewall nat add chain=dstnat srcaddress=192.168.99.1 dst-address=192.168.1.10 action=drop
+
+187. On the advanced menu of the wireless setup there is a parameter called "/Area", it works directly with?
+Connect List:1
+Access List
+Security Profile
+None of these
+
+188. Which of the following services use UDP.!\
+DHCP\
+SMTP\
+SNMP\
+FTP\
+HTTP\
+TFTP?:0.5:2.0:0.1
+1, 3 and 6:1
+2 and 4
+All of the above
+1, 2 and 4
+
+189. Which class of IP address provides a maximum of only 254 host addresses per network ID?:0.2:1.0:0.1
+Class C:1
+Class D
+Class A
+Class B
+
+190. What are the two main types of access control lists (ACLs).!\
+Standard\
+IEEE\
+Extended\
+Specialized?:0.5:2.0:0.1
+1 and 3:1
+2 and 4
+3 and 4
+1 and 2
+
+191. It is possible to create a configuration where VLAN and PPTP interfaces are bridged together?:-0.1:-1.0:0.1
+False:1
+True
+
+192. Destination NAT (chain dstnat, action dst-nat) can be used to?:0.375:2.0:0.1
+Change destination port:1
+Direct users from the Internet to a server within your local network
+Hide your local network from the Internet
+Change source port
+
+193. What is the minimal possible wireless configuration to create an Access Point?:0.8750000000000001:3.0:0.1
+mode:1
+radio name
+band
+WDS
+frequency
+scan-list
+DFS mode
+ssid
+
+194. Where can you monitor (see addresses and ports) real-time connections which are processed by the router?:0.5:2.0:0.1
+Firewall Connection Tracking:1
+Tool Torch:1
+Firewall Counters
+Queue Tree
+
+195. You need to set up an E1(T1) connection with PPP configured. Which License Level is needed?:0.5:2.0:0.1
+It cannot be done in RouterOS:1
+level 5
+level 4
+
+196. Which of the following is the decimal and hexadecimal equivalents of the binary number 10011101?
+157, 0x9D:1
+185, 0xB9
+159, 0x9F
+155, 0x9B
+
+197. Which of the following is NOT a valid MAC Address?:0.5:2.0:0.1
+80:GF:AA:67:13:5D:1
+88:0C:00:99:5F:EF
+EA:BA:AA:EE:FF:CB
+95:B5:DD:EE:78:8A
+13:16:86:53:89:43
+
+198. There are two wireless cards (wlan1 and wlan2) which are bridged together. On wlan1 card there is a setting 'Forwarding=no'. Choose the correct answer(s)?
+To prevent communication between wlan1 and wlan2 one cannot use Bridge Filters:1
+Stations on wlan1 will be able to communicate with stations on wlan1
+Stations on wlan1 will be able to communicate with stations on wlan2
+Stations on wlan2 will be able to communicate with stations on wlan1
+Stations on wlan2 will be able to communicate with stations on wlan2
+
+199. Which command is used to upgrade an IOS on a Cisco router?:0.15000000000000002:1.0:0.1
+copy tftp flash:1
+copy tftp run
+config net
+copy tftp start
+
+200. Which firewall chain you should use to filter SSH access to the router itself?:0.2:1.0:0.1
+input:1
+prerouting
+forward
+output
+
+201. A client that has successfully connected to a wireless network is considered to be which of the following?:0.2:1.0:0.1
+Authenticated:1
+Unauthenticated
+Associated
+Unassociated
+
+202. What does the passive command provide to dynamic routing protocols?:0.45000000000000007:2.0:0.1
+Stops an interface from sending periodic dynamic updates but not from receiving updates.:1
+Stops the router from receiving any dynamic updates.
+Stops an interface from sending or receiving periodic dynamic updates.
+Stops the router from sending any dynamic updates.
+
+203. What is the meaning of letter 'R' on an active session in the menu PPP Active Connections?:0.2:1.0:0.1
+Radius:1
+Running
+Remote
+
+204. Which layer 4 protocol is used for a Telnet connection?:0.15000000000000002:1.0:0.1
+TCP:1
+TCP/IP
+IP
+UDP
+
+205. Which of the following is the valid host range for the subnet on which the IP address 192.168.168.188 255.255.255.192 resides?:0.2:1.0:0.1
+192.168.168.129-190:1
+192.168.168.129-191
+192.168.168.128-192
+192.168.168.128-190
+
+206. Which protocol does Ping use?:0.9:3.0:0.1
+ICMP:1
+BootP
+TCP
+ARP
+
+207. For a Simple Queue to apply a bandwidth restrictions on a bridged interface, following must be done?:0.2:1.0:0.1
+Use mangle to mark the connections:1
+Enable 'Use IP Firewall' in bridge settings
+Configure an IP address on the bridge interface
+Associate the Simple Queue to the bridge interface
+
+208. What does the firewall action 'log' do?:0.2:1.0:0.1
+It logs the packet:1
+It logs and blocks the packet
+It blocks and logs the packet
+It adds a prefix to the packet and passes it through
+
+209. MAC layer by OSI model is also known as?:0.38:2.0:0.1
+Layer 2:1
+Layer 7
+Layer 3
+Layer 1
+Layer 6
+
+210. In MikroTik RouterOS, Layer-3 communication between 2 hosts can be achieved by using anaddress subnet of?
+/29:1
+/30:1
+/32:1
+/31
+
+211. Which computers would be able to communicate directly (without any routers involved)?:0.4750000000000001:2.0:0.1
+10.5.5.1/24 and 10.5.5.100/25:1
+10.10.0.17/22 and 10.10.1.30/23:1
+192.168.17.15/29 and 192.168.17.20/28
+192.168.0.5/26 and 192.168.0.100
+
+212. What is a stub network?:0.35000000000000003:2.0:0.1
+A network that has only one entry and exit point.:1
+A network with only one entry and no exit point.
+A network with more than one exit point.
+A network with more than one exit and entry point.
+
+213. If ARP=reply-only is enabled on one router interface, router can add dynamic ARP entries for the particular interface?:0.2:1.0:0.1
+False:1
+True
+
+214. Which is a default baud-rate of currently manufactured RouterBOARDs?
+115200:1
+11520
+8291
+3128
+
+215. Impossible to delete admin user on user table mikrotik?:0.9:3.0:0.1
+False:1
+True
+
+216. Which queue-type is suitable for congested environment but not good on UDP?:0.8600000000000001:3.0:0.1
+RED:1
+PCQ
+BFIFO
+PFIFO
+SCQ
+
+217. An IP address pool can contain address from more than one subnet?:0.2:1.0:0.1
+True:1
+False
+
+218. You want to limit bandwidth for your HotSpot users. HotSpot can create dynamic queues on user login to do the speed limitations?:0.2:1.0:0.1
+True:1
+False
+
+219. Netinstall can be used to?:0.2:1.0:0.1
+Install different software version (upgrade or downgrade):1
+Reinstall software without losing licence:1
+Keep configuration, but reset a lost admin password
+Install package for different hardware architecture
+
+220. Your Company has been assigned a 172.16.25.0/25 network from your ISP. What are the possible options to divide the network into subnets?:0.2:1.0:0.1
+two times /26:1
+two times /24
+one /23 and one /27
+four times /27
+
+221. What is the correct action to be specified in the NAT rule to hide a private network when communicating to the outside world?:0.2:1.0:0.1
+masquerade:1
+tarpit
+allow
+passthrough
+
+222. If you wanted to delete the configuration stored in NVRAM, what would you type?:0.2:1.0:0.1
+erase startup:1
+delete nvram
+erase running
+erase nvram
+
+223. Which of the following commands will allow you to set your Telnet password on a Cisco router?:0.2:1.0:0.1
+line vty 0 4:1
+line aux 0 4
+line telnet 0 4
+line con 0
+
+224. If ‚check-gateway‘ is enabled for an ECMP route and one of the gateways is unreachable, then?:0.2:1.0:0.1
+The unreachable gateway is not going be used in Round Robin algorithm.:1
+ECMP is going to send packets to all gateways even if one is unreachable
+The ECMP route becomes inactive.
+
+225. What is the correct action to be specified in the NAT rule to hide a private network when communicating to the outside world?:0.35000000000000003:2.0:0.1
+bootp:1
+arp
+rarp
+dhcp
+
+226. PPPoE server only works within one Ethernet broadcast domain that it is connected to. If there is a router between server and end-user host, it will not be able to create PPPoE tunnel to that PPPoE server?
+False:1
+True
+
+227. How long is an IPv6 address?:1.4:4.0:0.1
+128 bits:1
+128 bytes
+32 bits
+64 bits
+
+226. One host on an internal network is accessing an external web page through a MikroTik router that is doing source NAT. Select correct statement about the packets that flow from that web page to the host ?:0.4:2.0:0.1
+Packets go through the forward chain:1
+Packets go through the input chain before the routing decision and after that through output chain
+Packets go through the output chain
+Packets go through the input chain
+
+227. Where is a hub specified in the OSI model?:0.2:1.0:0.1
+Physical layer:1
+Session layer
+Application layer
+Data Link layer
+
+228. A DHCP server is configured on a LAN interface which is a port on a bridge. The DHCP server does not start. What could be the reason(s)?:0.2:1.0:0.1
+The DHCP server can not run on an interface which is also a bridge port:1
+There may be multiple IP addresses set on the LAN interface
+here might not be an IP address assigned to the LAN Interface
+The IP address pool could be incorrectly defined
+
+229. The correct order for PPPOE discovery stage is?:0.2:1.0:0.1
+Initialization, Offer, Request and Session confirmation:1
+Request, Initialization, Session confirmation and Offer
+Initialization, Session confirmation, Request and Offer
+Request, Offer, Initialization and Session confirmation
+
+230. What kind of users are listed in the „/user“ menu?:0.2:1.0:0.1
+router users:1
+pptp users
+wireless users
+Hot-Spot users
+
+231. Which statements are true regarding ICMP packets.!\
+ICMP guarantees datagram delivery.\
+ICMP can provide hosts with information about network problems.\
+ICMP is encapsulated within IP datagrams.\
+ICMP is encapsulated within UDP datagrams?:0.4:2.0:0.1
+2 and 3:1
+1 only
+1 and 4
+All of the above
+
+232. What is the correct action to be specified in the NAT rule to hide a private network when communicating to the outside world?:0.2:1.0:0.1
+System:1
+Wireless:1
+advanced-tools
+routing
+dhcp
+
+233. Which type of encryption could be used to establish a connection with a simple passkey without using a 802.1X authentication server?
+WPA EAP/WPA2 EAP:1
+WPA PSK/WPA2 PSK
+
+234. You want to implement a mechanism that automates the IP configuration, including IP address, subnet mask, default gateway, and DNS information. Which protocol will you use to accomplish this?
+DHCP:1
+SNMP
+ARP
+SMTP
+
+235. You have a DHCP server on your MikroTik router. The IP addresses 10.1.2.2-10.2.2.20 are distributed in the DHCP network. Additionally, 3 static IP address are defined for your servers.! 10.1.2.31-10.1.2.33. After a while 20 more IP addresses need to be distributed in the network. It is possible to distribute the extra IP address without adding another DHCP Server?:0.5:2.0:0.1
+False:1
+True
+
+236. What protocol does PPP use to identify the Network layer protocol?
+NCP:1
+LCP
+HDLC
+ISDN
+
+237. Mark all correct answers?:0.7400000000000001:3.0:0.1
+Wireless access-list could allow and deny connect to your AP:1
+Default-Forwarding could be enabled for a specific clients by wireless access-list
+/ip firewall filter allows to deny authentication to AP
+The only way to prevent wireless clients connections – disable wireless interface
+
+238. During a scan, in order to see all the available wireless frequencies that are supported by the card, the following option must be selected in the wireless card’s „Frequency Mode“?:0.5:2.0:0.1
+superchannel:1
+manual txpower
+regulatory domain
+
+239. What protocol is used to find the hardware address of a local device?:0.15000000000000002:1.0:0.1
+ARP:1
+ICMP
+IP
+RARP
+
+240. Which of the following allows a router to respond to an ARP request that is intended for a remote host?:0.2:1.0:0.1
+Proxy ARP:1
+Inverse ARP (IARP)
+Reverse ARP (RARP)
+Gateway DP
+
+241. Which one of the following is true regarding VLANs?:0.2:1.0:0.1
+VTP is used to send VLAN information to switches in a configured VTP domain.:1
+Two VLANs are configured by default on all Cisco switches.
+VLANs only work if you have a complete Cisco switched internetwork. No off-brand switches are allowed.
+You should not have more than 10 switches in the same VTP domain.
+
+242. Which of the following are TCP/IP protocols used at the Application layer of the OSI model.!\
+IP\
+TCP\
+Telnet\
+FTP\
+TFTP?:0.75:3.0:0.1
+3, 4 and 5:1
+1, 3 and 5
+1 and 3
+All of the above
+
+243. Which of the following is used in standard 802.11 wireless networks?:0.9:3.0:0.1
+CSMA/CA:1
+CSMA/CD
+CDMA
+FDD
+

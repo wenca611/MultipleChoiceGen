@@ -1,0 +1,1099 @@
+#PSD - vypadá to, že odpověď je vždy jen jedna, hmmm
+
+#poznámky:
+#naučte se všechny přepínače a vypínače, bylo toho tam dost!!
+
+1. Aditivní zákon v osvětlovací technice.....?:0.0:0.0:0.1
+Popisuje chování světla při působení více světelných zdrojů.:1
+Intenzity osvětlení na zkoumané ploše se odečítají
+Popisuje chování světla při průchodu fresnelovou čočkou.
+-E=suma Ei
+
+2. Adresovatelná požární čidla a „chytrá ústředna“?:0.0:0.0:0.1
+Dokáže určit pouze okruhy, kde došlo k poplachu.
+Pracuje stejně jako neadresovatelná. Adresovatelné je pouze proto, že pracuje s chytrou ústřednou.
+Dokáže určit přesné místo poplachu.:1
+
+3. Adresovatelná požární čidla komunikují s ústřednou?:0.0:0.0:0.1
+v určitých časových intervalech si posílají informace:1
+pouze v případě poplachu
+pouze když dojde k poplachu. Posílají si informace do doby, než poplach ustane.
+
+4. Centralizovaný systém je?:0.0:0.0:0.1
+Každý účastník (senzor, aktor, spotřebič) má vlastní spojení s centrální jednotkou. Účastníci mohou vzájemně komunikovat nezávisle na této centrále.
+Každý účastník (senzor, aktor, spotřebič) má vlastní "inteligenci". Neexistuje Žádné centrální řízení.
+Každý účastník (senzor, aktor, spotřebič) má vlastní spojení s centrální jednotkou, Účastníci mohou vzájemně komunikovat jen prostřednictvím této centrály.:1
+
+5. Co je to kalkulace?:0.0:0.0:0.1
+Spekulativní chování.
+Stanovení skutečného nebo očekávaného výsledku obchodního podnikání.:1
+Odhad výsledku obchodního podnikání.
+Stanovení vanabilních, fixních a celkových nákladů.
+
+6. Co musí elektroinstalace splňovat pro schválení a zřízení epřípojky?:0.0:0.0:0.1
+Musí splňovat všechny bezpečnostní normy, nesmí nic a nikoho ohrožovat:1
+Nemusí splňovat všechny normy a může někoho ohrozit
+Nesmí splňovat žádné normy!
+
+7. Co to znamená zkratka BACnet?:0.0:0.0:0.1
+Building Automation and Control Networks:1
+Building And Control Networks
+
+8. Co vyjadřuje součinitel soudobost (náročnost)?:0.0:0.0:0.1
+Účinnost přenosu elektrické energie v objektu.
+Hodinové madmum odběru elektrické energie v období celého roku
+Určitou pravděpodobnost současného chodu spotřebičů v objektu.
+Poměr instalovaných výkonů spotřebičů, které jsou současně v chodu k instalovanému výkonu všech spotřebičů:1
+Poměr skutečného výkonu spotřebičů, které jsou současně v chodu k jejich instalovanému výkonu.
+
+9. Co znamená zkratka KTPO?:0.0:0.0:0.1
+Klíčové trezory požární ochrany:1
+Klíčové tenzory pánevní ochrany
+
+10. Činnost elektrických ochran musí odpovídat následujícím požadavkům?:0.0:0.0:0.1
+Vysoká spolehlivost, rychlost působení. výběrová schopnost, citlivost a přesnost, nízká cena.
+Vysoká spolehlivost, malá citlivost, rychlost působení.
+Vysoká spolehlivost, rychlost působení, výběrová schopnost, citlivost a přesnost.:1
+
+11. Číslice v označení vnějšího vlivu znamená...?:0.0:0.0:0.1
+Všeobecnou kategorii vnějšího vlivu.
+Povahu vnějšího vlivu
+Třídu vnějšího vlivu.:1
+-př.: AA1 ->vnější vliv, povaha tohoto vlivu, třída vnějšího vlivu
+
+12. Datová sběrnice může být spojena do uzavřeného kruhu?:0.0:0.0:0.1
+Pravda
+Nepravda:1
+
+13. Datová sběrnice v systémech KNX?:0.0:0.0:0.1
+Přenáší datové telegramy a napájí jednotlivé účastníky střídavým napětím
+Přenáší datové telegramy a napájí akční prvky stejnosměrným napětím
+Přenáší datové telegramy
+Přenáší datové telegramy a napájí jednotlivé účastníky stejnosměrným napětím:1
+-zkontrolovano
+
+14. Datovou sběrnici lze větvit a rozbočovat?:0.0:0.0:0.1
+Pravda:1
+Nepravda
+
+15. Decentralizovaný systém v inteligentní elektroinstalaci je?:0.0:0.0:0.1
+Každý účastník (senzor, aktor, spotřebič) má vlastní spojení s centrální jednotkou. Účastníci mohou vzájemně komunikovat jen prostřednictvím této centrály.
+Centrální jednotku systému je možno umístit ve kterémkoliv místě instalace (v topologii systému).
+Každý účastník (senzor, aktor, spotřebič) má vlastní "inteligenci" Neexistuje žádné centrální řízení:1
+-chatGPT approved, centr. systém má centrálu
+
+16. Dimenzování vodičů se provádí tak, aby průřez splňoval tyto základní kritéria?:0.0:0.0:0.1
+Hospodárný průřez vodiče, dovolený úbytek napětí, dovolenou provozní teplotu, správnou funkci ochrany, mechanickou pevnost, dynamickou a tepelnou odolnost vůči zkratovým proudům.
+Dynamickou a tepelnou odolnost vůči zkratovým proudům, dovolený úbytek napětí, dovolenou provozní teplotu, správnou funkci ochrany, mechanickou pevnost.
+Hospodárný průřez vodiče, dovolený úbytek napětí, dovolenou provozní teplotu. mechanickou pevnost, dynamickou a tepelnou odolnost vůči zkratovým proudům.:1
+Hospodárný průřez vodiče, dovolený úbytek napětí, dovolenou provozní teplotu, odpovídající barvu izolace, správnou funkci ochrany, mechanickou pevnost, dynamickou a tepelnou odolnost vůči zkratovým proudům.
+
+17. Dokumentace pro stavební povolení?:0.0:0.0:0.1
+Nejsou stanoveny minimální požadavky
+Je stanoven minimální obsah dokumentace vyhláškou:1
+Co bude obsahovat dokumentace, rozhodne investor
+
+18. Doporučené minimální rozmístění čidel EPS?:0.0:0.0:0.1
+pokoje, ložnice, chodba
+ložnice, dětský pokoj:1
+technické místnost, ložnice, chodba, obývací pokoj
+
+19. Druhé písmeno v označení vnějšího vlivu značí?:0.0:0.0:0.1
+Všeobecnou kategorií vnějšího vlivu.
+Povahu vnějšího vlivu.:1
+Třídu vnějšího vlivu.
+-př.: AA1 ->vnější vliv, povaha tohoto vlivu, třída vnějšího vlivu
+
+20. Ekvipotenciální přípojnice je součást?:0.0:0.0:0.1
+Hlavní rozváděčová přípojnice pro připojení fázového vodiče
+Systému ochrany proti přepětí
+Systémové elektroinstalace pro připojení potenciálu:1
+
+21. EPS musí být členěna do tolika sekcí, kolik je požárních úseků pro odvětrání?:0.0:0.0:0.1
+Ano
+Ne:1
+
+22. Existuji dva základní typy sběrnicových systémů?:0.0:0.0:0.1
+Centralizované a decentralizované systémy:1
+Otevřené a uzavřené systémy
+Klasické a inteligentní systémy
+
+23. Funkce, která provede sesouhlasení obsahu výkresu se seznamem spotřebičů se nazývá?:0.0:0.0:0.1
+inventarizace spotřebičů:1
+Změna zařízení
+Aktualizace seznamu spotřebičů
+Specifikace
+
+24. Funkce, která zabraňuje v sběrnicových systémech infomačnímu chaosu a určuje, který telegram kterému prvku patři se nazývá?:0.0:0.0:0.1
+Adresace:1
+Identifikace
+separace
+
+25. Grafický modul systému ElProCAD pro projektování svorkových schémat rozváděčů měření a regulace — řidičích systémů?:0.0:0.0:0.1
+ETM
+ELN
+ELIK
+ELM:1
+ELO
+ELS
+
+26. Grafický modul systému ElProCAD, ktery řeší návrh dispozičního schématu silnoproudu se nazývá?:0.0:0.0:0.1
+ELJE
+ELJ:1
+ELN
+ETS
+ELM
+ELO
+
+27. Hybridní systémy jsou?:0.0:0.0:0.1
+kombinace centralizovaných a decentralizovaných systémů
+kombinace klasické a inteligentní elektroinstalace:1
+kombinace světelných a zásuvkových obvodů
+-chatGPT approved
+
+28. Informace je na napájecí napětí namodulována, přičemž impulz je interpretován jako logická?:0.0:0.0:0.1
+logická 1:1
+logická 0
+
+29. Informace si prvky v inteligentní elektroinstalaci předávají(posílají) po?:0.0:0.0:0.1
+kabelovém vedení
+kroucené dvojlince
+datovém vedení
+datové sběrnici:1
+
+30. Intenzitu osvětlení v rodinném domě určuje?:0.0:0.0:0.1
+pouze majitel
+Normy:1
+majitel, ale musí být dodržena minimální hodnota osvětlení
+
+31. Jak chrání zařízeni nadproudové relé?:0.0:0.0:0.1
+Chrání před nadproudy a velkými zkratovými proudy (až 20 In).
+Dává povel k vypnuti. Vypínací schopnost zkratových proudů je malá.:1
+Obdobná konstrukce jako u jističe, ale je nutno předřadit relé pojistky.
+-vypínají nepřímo, prostřednictvím stykačů (pozor relé!!! + pojistka před)
+
+
+32. Jak je definována efektivní hodnota proudu?:0.0:0.0:0.1
+Je to hodnota střídavého proudu, která odpovídá prošlému náboji daným místem za dobu půlperiody střídavého sinusového proudu.
+Je to hodnota střídavého proudu, která způsobí stejné oteplení na daném rezistoru R jako stejnosměrný proud o stejné velikosti.:1
+Je to hodnota střídavého proudu odpovídající prošlému náboji za dobu jedné periody.
+Je to hodnota střídavého proudu, jenž odpovídá elektrickému náboji protečeným daným místem obvodu za jednu periodu.
+
+33. Jak se jmenuje nejrozšířenější standard inteligentní elektroinstalace v Evropě?:0.0:0.0:0.1
+Egon
+Inels
+EIB
+KNX:1
+-chatGPT approved
+
+34. Jak se nazývá dokument kde jsou popsány hlavní technické informace, postup provádění prací atd?:0.0:0.0:0.1
+Hlavní zpráva
+Technická práva
+Technická zpráva:1
+Technická hlavní zpráva
+
+35. Jak se nazývá skupina zařízení, které systému inteligentní elektroinstalaci poskytuji informace (povely)?:0.0:0.0:0.1
+tlačítka
+snímače
+aktory
+senzory:1
+
+36. Jak Souvisí světelný tok světelného zdroje s napětím?:0.0:0.0:0.1
+S druhou mocninou
+S druhou odmocninou
+s odmocninou ze dvou
+přímo úměrné:1
+-I=U*P/eta
+
+37. Jak vypočteme teplo ve vodiči způsobené průchodem proudu?:0.0:0.0:0.1
+R*I^2*t:1
+m*c*dt
+R*I*t
+U*I*t^2
+U*I^2*t
+-W=U*I*t
+
+38. Jak závisí síla mezi dvěma vodiči, jimiž prochází proud na jejich vzájemné vzdálenosti?:0.0:0.0:0.1
+Lineárně
+S druhou mocninou vzájemné vzdálenosti
+Nepřímo úměrně:1
+Přímo úměrně
+-E=k*Q/r^2
+
+39. Jaká je minimální vzdálenost zásuvky s krytím IP 20 od sprchového koutu?:0.0:0.0:0.1
+120cm od zdroje vody
+100cm od zdroje vody
+60cm od hrany sprchy:1
+
+40. Jaká je minimální vzdálenost zásuvky s krytím IP 20 od umyvadla?:0.0:0.0:0.1
+50 cm
+60 cm:1
+120 cm
+
+41. Jaká je šířka svislé instalační zóny v domě?:0.0:0.0:0.1
+150 mm
+200 mm:1
+300 mm
+450 mm
+-chatGPT 500+ XD
+
+42. Jaká je šířka vodorovné instalační zóny v domech?:0.0:0.0:0.1
+450 mm
+150 mm
+300 mm:1
+200 mm
+-chatGPT 200+ XD
+
+43. Jaká je velikost oka mřížové soustavy pro třídu LPS IV?:0.0:0.0:0.1
+20x20 m:1
+40x40 m
+30x30 m
+15x15 m
+-chatGPT fail
+
+44. Jaká je závislost výkonnosti elektroinstalace na pořizovací ceně u inteligentních elektroinstalací?:0.0:0.0:0.1
+lineární:1
+přibližně kvadratická
+přibližně kubická
+
+45. Jaké DPH se používá při placení práce?:0.0:0.0:0.1
+15% u obytných domů/objektů k bydlení, 21% u komerčních objektů:1
+21% u obytných domů/objektů k bydlení, 15% u komerčních objektů
+-chatGPT approved
+
+46. Jaká je referenční teplota pro výpočet zatěžovacího proudu pro kabely uložené ve vzduchu?:0.0:0.0:0.1
+30 °C
+18 °C
+26 °C
+20 °C:1
+-chatGPT approved
+
+47. Jaké jsou hlavní část bleskosvodu?:0.0:0.0:0.1
+Jímač, svod, ochranný úhelník, zemnič
+Mřížová soustava, zkušební svorka, zemnič
+Jímač, zkušební svorka, zemnič
+Jímač, svod, zemnič:1
+-chatGPT Vrcholová koncovka - tvoří vrchol bleskosvodu a slouží k odchytu blesku.
+-Těleso bleskosvodu - tvoří trubkovitou část bleskosvodu a slouží k přenosu elektrického výboje do země.
+-Připojovací koncovka - slouží k připojení bleskosvodu k elektrické instalaci budovy.
+-Zemnící konec - slouží k odvedení elektrického výboje do země.
+-Ochranné mřížky - slouží k ochraně bleskosvodu před poškozením způsobeným ptáky nebo jinými předměty.
+-Ochranná vrstva - slouží k ochraně bleskosvodu před korozí a dalšími vlivy prostředí.
+
+48. Jaké označení nese normativní standard v oblasti systémových elektroinstalaci?:0.0:0.0:0.1
+NKX
+ISO 9006
+KNX:1
+-chatGPT ISO 9006 je mezinárodní norma pro kvalitu managementu
+
+50. Jaké spouště má jistič?:0.0:0.0:0.1
+Elektromagnetickou a tepelnou:1
+tepelnou a nadproudovou
+zkratovou a elektromagnetickou
+
+51. Jako hlavní vypínací prvek v rozvaděči musí být?:0.0:0.0:0.1
+Jistič
+Vypínač
+Vypínač nebo jistič:1
+-chatGPT jistič nebo pojistka
+
+52. Jakou úsporu lze očekávat při použiti inteligentních systémů oproti klasické elektroinstalaci?:0.0:0.0:0.1
+15%
+30%:1
+25%
+35%
+20%
+-chatGPT approved
+
+53. Jaký je maximální počet oddílů v topologií systému KNX?:0.0:0.0:0.1
+15
+13
+12:1
+16
+-předtím 15
+
+54. Jaký maximální výkon 3f asynchronního motoru můžeme přímo připojit na 3f zásuvku?:0.0:0.0:0.1
+4 kW
+7,5 kW
+3 kW:1
+10 kW
+-chatGPT 2,2kW or 4kW
+
+
+55. Jaký je poloměr valící se koule pro třídu LPS IV?:0.0:0.0:0.1
+30 m
+60 m:1
+45 m
+70 m
+-chatGPT fail
+
+56. Jakým napětím napájí sběrnice KNX jednotlivé účastníky?:0.0:0.0:0.1
+25V
+12V
+24V:1
+18V
+14V
+-v P jen 24V a D prý 21-29V
+
+57. Jakým typem charakteristiky jističe jistíme obvykle vedení?:0.0:0.0:0.1
+D
+G
+B:1
+C
+-chatGPT approved
+
+58. Je možné pomocí klasické elektroinstalace uskutečnit světelné scény a základní řízení osvětlení?:0.0:0.0:0.1
+Ne
+Ano:1
+-chatGPT approved
+
+59. Je možné provozovat datové přenosy po silovém vedení?:0.0:0.0:0.1
+Ne
+Jen pokud se jedná o síť s kmitočtem 60 Hz
+Ano:1
+Ano, ale jen po krátkou dobu
+-chatGPT approved
+
+60. Je nutné použít v objektu všechny 3 stupně (T1, T2, T3) přepěťových ochran, abychom ochránili počítač před přepětím?:0.0:0.0:0.1
+Ano:1
+Ne
+-na ústní prý jo, stejně jako TV
+
+61. Je proudový chránič ochrana základní?:0.0:0.0:0.1
+Pravda
+Nepravda:1
+-chatGPT approved
+
+62. Je systémová elektroinstalace ekonomicky výhodná?:0.0:0.0:0.1
+Ne
+Ano, ale za určitých předpokladů:1
+Ano
+-chatGPT approved
+
+63. K čemu je potřebná výběrová tabulka u systému KNX?:0.0:0.0:0.1
+rozdělování telegramů do jednotlivých oddílů
+Pro výběr telegramů, které jsou určeny pouze pro senzory
+Vypínání nepotřebných účastníků v systému
+Pro výběr ovládacích funkcí:1
+-chatGPT approved + kouknutí se na jejich vlastnosti
+
+#64. K čemu slouží u inteligentního systému Ego-n sekundární sběrnice?:0.0:0.0:0.1
+#Pro připojení přístrojů Ego-n Plus jako jsou moduly LAN a GSM
+#Není potřebná
+#Pro rozšíření systému o dalších 255 prvků
+#-chatGPT fail
+
+65. Kolik senzorů a aktorů lze připojit na sběrnici na jeden řídící modulu inteligentního systému EGON?:0.0:0.0:0.1
+64:1
+255
+25
+-není potřeba vědět
+
+66. Kolik svodů musí mít minimálně na domě?:0.0:0.0:0.1
+2:1
+1
+0
+3
+-chatGPT approved, 1 hlavní a 1 obvod
+
+67. Kolik žil sběrnice je potřeba pro provoz systémové elektroinstalace KNX/EIB?:0.0:0.0:0.1
+2:1
+1
+3
+4
+-chatGPT approved, kontrolní L a datovou T (dále dodatečná N)
+
+68. Kompaktní jističe obsahují následovní typy spouští?:0.0:0.0:0.1
+Elektromagnetická, polovodičová
+Zkratová a tepelná:1
+Tepelná, bimetalová
+Zkratová a elektromagnetická
+-chatGPT approved + magnéziová->kyvadélko
+
+69. Koupelnách muže být zásuvka umístěna od hrany umývacího prostoru vany min?:0.0:0.0:0.1
+70 cm
+40 cm
+50 cm
+60 cm:1
+
+70. Která z následujících skupin vypínačů nelze použít na ovládání ze tří míst?:0.0:0.0:0.1
+sériový, sériový, křížový:1
+střídavý, střídavý dvojitý, křížový
+střídavý, střídavý, křížový
+
+71. Které zásuvkové obvody nemusí být připojeny přes proudový chránič?:0.0:0.0:0.1
+musí být všechny
+Pouze zásuvky v uzavřených technických místnostech, kam má přístup pouze proškolený personál:1
+Ty které jsou v dostatečné výšce nad zemi
+
+72. Který z uvedených systémů je nejvhodnější pro použití v domovní elektroinstalaci?:0.0:0.0:0.1
+BACnet
+KNX
+LonWorks
+INELS:1
+TAC
+-Schneider Electric, INELS je vhodný pro použití v rodinných domech, bytech, kancelářích, školách, nemocnicích a dalších budovách a objektech.
+
+73. Lze jednofázový proudový chránič použit v sít TN-C?:0.0:0.0:0.1
+Ne, jednofázový proudový chránič nelze použít v síti TN-C.:1
+Ano, jednofázový proudový chránič tze použít v síti TN-C, musí však být připojen vodičem o průřezu vyšším než 10 mm2
+Ano, jednofázový proudový chránič lze použít v síti TN-C.
+-Sichr approved
+
+#next otázky
+74. Lze použít křížový přepínač č. 7 pro ovládání osvětlení ze dvou míst?:0.0:0.0:0.1
+Ano
+Pouze v kombinaci se střídavým přepínačem č. 6
+Ne:1
+-více než 2 místa, 3+
+
+75. Mezi výhody výbojových světelných zdrojů patří?:0.0:0.0:0.1
+Závislost světelného toku na teplotě okolního prostředí
+Vysoká účinnost přeměny eklektrické energie na tepelnou
+Vysoká účinnost přeměny eklektrické energie na světelnou:1
+-chatGPT approved
+
+76. Minimální doporučené rozmístění požárních hlásičů v obytné budově je?:0.0:0.0:0.1
+V místnosti kde se shromažďují lidé nejčastěji
+V každé místnosti
+V místnosti ložnice a dětský pokoj:1
+-chatGPT approved, obytné místnosti a přízemí
+
+77. Musí být světelné obvody v rodinném domě chráněny proudovým chráničem?:0.0:0.0:0.1
+pouze světelné obvody v koupelnách
+Ne
+Ano:1
+-chatGPT approved
+
+78. Nejdůležitější údaj seznamu spotřebičů je?:0.0:0.0:0.1
+Název
+Úroveň
+Identifikační číslo:1
+Rozváděč
+
+79. Nejdůležitějším požadavkem na silový elektrický obvod je...?:0.0:0.0:0.1
+Spolehlivost
+Hospodárnost
+Bezpečnost:1
+-chatGPT approved
+
+80. Ochrání samostatná přepěťová ochrana stupně T3(D) počítač, když bude umístěna hned u něj?:0.0:0.0:0.1
+Ne
+pouze v případě že bude počítač vzdálen od rozvaděče max. 50m.
+Ano:1
+-chatGPT approved
+
+81. Ochranný vodič nesmí být použit jako?:0.0:0.0:0.1
+Samostatný zpětný vodič
+Zemnící vodič:1
+
+82. Po datové sběrnici se přenášejí všechny ovládací signály v určité kódované formě. Tyto signály se nazývají?:0.0:0.0:0.1
+ovládací signály
+řídicí signály
+datové telegramy:1
+komunikační signály
+-chatGPT approved +- datová slova
+
+83. Popište řazení vypínačů pro ovládání jednoho světelného obvodu ze tří míst?:0.0:0.0:0.1
+č.6, č.7, č.6:1
+č.7, č.6, č.7
+č.6, č.5, č.6
+
+84. Pro domovní instalaci lze použít pojistku značení?:0.0:0.0:0.1
+gTr
+gF
+gG:1
+aM
+
+85. Pro kvalitativní vyhodnocení faktoru oslnění ve vnějších prostorách se v praxi počítá činitel?:0.0:0.0:0.1
+GER
+UGE
+UGR:1
+UG
+-wiki, unified glare rating
+
+86. Pro ovládání osvětlení z více míst se v obvodu zapojí?:0.0:0.0:0.1
+Dva křížové přepínače č. 7 a libovolný počet střídavých přepínačů č. 6
+Dva střídavé přepínače č. 6 a libovolný počet křížových přepínačů č. 7:1
+Jeden sériový spínač, jeden střídavý přepínač a jeden křížový přepínač
+
+87. Pro stavební povolení jsou potřeba hodnoty minimálního osvětlení v místnostech?:0.0:0.0:0.1
+Pravda
+Nepravda:1
+-chatGPT fail
+
+88. Program na rozpočet a kalkulaci?:0.0:0.0:0.1
+Verox (výrobce Astra Zlín):1
+Varex (výrobce Astra Zlín)
+
+89. Program OCEP je účinný nástroj pro podporu?:0.0:0.0:0.1
+Projektování rozváděčů
+Rozpočtu a kalkulace projektu:1
+Osvětlení komunikací
+Projektování venkovního osvětlení
+-chatGPT approved, SELPO-OCEP
+
+90. Program pro programování a „oživení“ inteligentní elektroinstalace KNX se nazývá?:0.0:0.0:0.1
+Inels Designer
+ETS:1
+EES
+lnels Manager
+-chatGPT approved, Engineering Tool Software
+
+91. Proudový chránič se v domovní elektroinstalaci používá?:0.0:0.0:0.1
+Není ho nutné instalovat do nových instalací na zásuvkové obvody
+Na všechny zásuvkové vývody a Světelné vývody v koupelnách:1
+Pouze na zásuvkové a světelné vývody v koupelně a kuchyni
+
+92. Provedením elektrického rozvodu nesmí vznikat?:0.0:0.0:0.1
+Možnost dodávky elektrické energie
+Nebezpečí pro okolí:1
+Provozní spolehlivost v daném prostředí při určeném způsobu provozu a vlivu prostředí
+
+93. První písmeno v označení vnějšího vlivu značí...?:0.0:0.0:0.1
+Kategorii vnějšího vlivu.:1
+Povahu vnějšího vlivu.
+Třídu vnějšího vlivu.
+-AA1 ->vnější vliv, povaha tohoto vlivu, třída vnějšího vlivu
+
+94. Při návrhu a výpočtu umělého osvětlení se používá?:0.0:0.0:0.1
+Toková metoda:1
+Metoda jednoho bodu
+Tokyho metoda
+-chatGPT approved
+
+95. Při programování systému Ego-n ručně lze?:0.0:0.0:0.1
+Nastavovat spínání a libovolné blokování a čas dle potřeby
+Nastavovat spínání a pouze základní funkce bez blokování:1
+Nastavit spínání a libovolné blokování spínacích členů ale čas nelze nastavit dle potřeby
+
+96. Při zapojení asynchronního motoru pomocí přepínače hvězda trojúhelník, se vzájemně přepínají stykače. Jak je zapojeno vinutí motoru při rozběhu?:0.0:0.0:0.1
+do trojúhelníka
+do hvězdy:1
+do lomené hvězdy
+-chatGPT approved
+
+97. Při zapojení do kruhu u sítě založené na kroucené dvoulince dojde?:0.0:0.0:0.1
+Ke zvýšení spolehlivosti přenosu dat.
+Ke zvýšení rychlosti přenosu dat.
+K prudké degradaci kvality přenosu na síti.:1
+-Kroucení=zlepšení elektrických vlastností, snižuje interakce mezi linkou a okolím, ale asi ne do kruhu
+
+98. Přistroj, který slouží k ovládání dvou světelných okruhů z jednoho místa, se nazývá?:0.0:0.0:0.1
+Skupinový přepínač
+Dvoupólový vypínač
+Sériový přepínač:1
+Střídavý vypínač
+
+99. Rozvodné krabice a svorkovnice mají zůstat vždy?:0.0:0.0:0.1
+Schované pod omítkou
+Vždy rozpojené
+Přístupné:1
+
+100. Rozvody analogové televize?:0.0:0.0:0.1
+Provádí se pomocí koaxiálního kabelu a zásuvky se připojují bez odbočujícího členu
+Provádí se pomocí koaxiálního kabelu a u každé zásuvky musí být odbočující člen:1
+Rozvody se provádí pouze paprskovitě
+
+101. Rozvody LAN sítě se provádějí?:0.0:0.0:0.1
+Okruhově do 10 zásuvek
+Paprskově:1
+Paprskově ale mohu připojit vice zásuvek na okruh (max. 10)
+-chatGPT approved
+
+102. Selektivita je?:0.0:0.0:0.1
+Koordinace nastavení charakteristik ochran jisticích přístrojů tak, aby porucha vzniklá v určitém místě rozvodu byla selektivně odepnuta pouze jisticím přístrojem nejvzdálenějším od místa poruchy, a to bez vybavení ostatních bližších jisticích prvků rozvodu, tedy při zachování funkčnosti zbytých částí rozvodu.
+Selektivita je biotechnologická metoda šlechtění a chovu selat.
+Koordinace nastavení charakteristik ochran jisticích přístrojů tak, aby porucha vzniklá v určitém místě rozvodu byla selektivně odepnuta pouze jisticím přístrojem bezprostředně nad místem poruchy, a to bez vybavení ostatních nadřazených jisticích prvků rozvodu, tedy při zachování funkčnosti zbytých částí rozvodu.:1
+
+103. Skupinová adresa je?:0.0:0.0:0.1
+rozlišení centrálních funkcí:1
+Identifikace skupiny senzorů v systému
+rozlišení konkrétních funkcí
+jednoznačná identifikace účastníka v systému
+
+104. Software pro návrh systémové instalace INELS se nazývá?:0.0:0.0:0.1
+Inels designer:1
+Inels manager
+NikoSoft
+Inels software
+-chatGPT approved, nebo Inels CAD
+
+#105. Software pro oživení složitějších instalaci systému Ego-n se nazývá?:0.0:0.0:0.1
+#Ego-n manager
+#Ego-n Asistent:1
+#ETS3
+#INELS manager
+#-1 pro ETS3, většina ne, TODO
+#-chatGPT fail
+
+106. Software pro programování a návrh systémové elektroinstalace KNX se nazývá?:0.0:0.0:0.1
+EST
+KNX soft
+software
+ETS:1
+-chatGPT approved, polo duplikát
+
+107. Souběh datového a silového vedení....?:0.0:0.0:0.1
+je možný, ale nedoporučuje se:1
+je technicky nemožný
+Je zakázaný
+-chatGPT approved
+
+108. Spínání nebo spojitou regulaci na výstupu v inteligentní elektroinstalace zabezpečují?:0.0:0.0:0.1
+regulátory
+spínače
+vypínače
+Aktory:1
+-chatGPT=relé, spínače nebo spínací moduly, TODO
+
+109. Střídavý přepínač je přepínač s číslem řazení?:0.0:0.0:0.1
+5
+4
+7
+6:1
+
+110. Svítidlo, kterého vyzářený světelný tok z 85% směřuje do dolního poloprostoru je svítidlo?:0.0:0.0:0.1
+Přímé:1
+Smíšené
+Převážně přímá
+Nepřímé
+
+111. Systémová elektroinstalace je?:0.0:0.0:0.1
+Řízení ovládání osvětlení pomocí impulsních relé
+Založena na principu vzájemné komunikace jednotlivých prvků (aktorů a senzorů) pomocí datové sběrnice, kterou jsou tyto propojeny.:1
+Nezávislé propojení samostatných obvodů silovým vedením
+
+112. Systém Ego-n lze programovat?:0.0:0.0:0.1
+přes počítač i ručně:1
+pouze přes počítač
+ručně
+
+113. Systém ElProCAD Je graficko-programový nástroj pro grafický editor?:0.0:0.0:0.1
+BricsCAD, AutoCAD, ProfiCAD
+BricsCAD, AutoCAD, ArchiCAD, ProfiCAD
+BricsCAD, AutoCAD:1
+BricsCAD, AutoCAD, ArchiCAD
+
+114. Systém INELS lze programovat?:0.0:0.0:0.1
+přes počítač i ručně:1
+ručně
+pouze přes počítač
+-chatGPT approved + web rozhraní a hlasové ovládání
+
+115. Tablo obsluhy EZS se umisťuje?:0.0:0.0:0.1
+Do místnosti ve které spíme
+Do vstupní haly:1
+Vždy před hlavní dveře z venku
+-chatGPT approved nebo na chodbě
+
+116. Topologie sběrnicových systémů se člení na?:0.0:0.0:0.1
+oddíly a linie:1
+senzory, aktory a sběrnice
+snímače. spínače a datové rozvody
+-chatGPT fail
+
+117. Technická zpráva by měla obsahovat?:0.0:0.0:0.1
+Specifikace projektu, základní technické údaje, vnější vlivy, ochrana před úrazem elektrickým proudem, ochrana před atmosférickým a pulsním přepětím, napojení na zdroj elektrické energie, měření odběru, vnitřní silnoproudé rozvody, hromosvody, vnitřní slaboproudé rozvody, obsluha a bezpečnost práce, závěr.:1
+Základní technické údaje, vnější Vlivy, ochrana před úrazem elektrickým proudem, ochrana před atmosférickým a pulsním přepětím, napojení na zdroj elektrické energie, měření odběru, vnitřní silnoproudé rozvody, závěr.
+Co uzná projektant za důležité
+
+118. Tlačítka a snímače fyzikálních veličin se v terminologií inteligentní elektroinstalace nazývají jedním slovem?:0.0:0.0:0.1
+aktory
+snímače
+senzory:1
+tlačítka
+-chatGPT approved
+
+119. U systémů EIB/KNX je použit přístup na sběrnici typu?:0.0:0.0:0.1
+HDLC
+poolling
+CSMA/CD
+CSMA/CA:1
+-lol, tohle jsme měli v MOS XD
+
+120. Ukládat vodiče v instalacích obytných budov je možné?:0.0:0.0:0.1
+Pouze do instalačních zón:1
+Nejkratší možnou cestou
+Kamkoliv zná montér za vhodné
+-chatGPT approved
+
+121. Umožňuje jistící prvek komunikaci se sběrnicí u inteligentní elektroinstalace?:0.0:0.0:0.1
+Ne, ani u jednoho systému:1
+Ano, u všech inteligentních systémů
+Ano, pouze u KNX
+-učitel na ústní approved XD
+
+122. Ústředna EPS musí signalizovat svůj základní stav?:0.0:0.0:0.1
+Provoz, Porucha, Požár:1
+Pouze požár
+Porucha, požár
+
+123. V topologii systému KNX může jednu linii tvořit maximálně?:0.0:0.0:0.1
+64 účastníků:1
+128 Účastníků
+256 Účastníků
+32 Účastníků
+-= 64 přístrojů
+-chatGPT fail
+
+124. Ve které síti nesmí být použitý proudový chránič?:0.0:0.0:0.1
+TT
+IT
+TN-S
+TN-C:1
+-Sichr approved
+
+125. Ve vstupním prostoru do rodinného domu, kde je správně instalovaný systém EZS bude?:0.0:0.0:0.1
+Tablo obsluhy, magnetický kontakt na dveře, optický požární senzor
+Tablo obsluhy, pohybové čidlo, magnetický kontakt na dveře:1
+Tablo obsluhy, ústředna EZS, pohybové čidlo, magnetický kontakt na dveře
+-chatGPT approved, kontaktní spínače, infračervené detektory, magnetické snímače dveří a okenních křídel nebo kamery pro sledování
+
+126. Veličina, která charakterizuje tzv. účinnost světelných zdrojů se nazývá?:0.0:0.0:0.1
+Chromatičnost
+Účinnost světelných zdrojů
+Světelná účinnost
+Měrný výkon:1
+-učitel approved
+
+127. Vnější vlivy jsou označeny....?:0.0:0.0:0.1
+Dvěma písmeny a číslicí:1
+Písmenem a dvěmi číslicemi
+Číslicí a písmenem
+-AA1 ->vnější vliv, povaha tohoto vlivu, třída vnějšího vlivu
+
+128. Vnější vlivy se určují?:0.0:0.0:0.1
+Určují se ve všech prostorech, ve kterých je umístěno nebo používáno elektrické zařízení
+Určují se ve všech prostorech, ve kterých je umístěno nebo používáno elektrické zařízení nebo v nichž z jakéhokoliv hledisky musí být řešena ochrana před nebezpečnými účinky statické elektřiny nebo před statickými výboji.:1
+Určují se ve všech prostorech.
+
+129. Vyhotovení dokumentace probíhá následně?:0.0:0.0:0.1
+Uzemní řízení, stavební povolení, zadávací dokumentace, dokumentace skutečného stavu, realizační dokumentace.:1
+Na rozložení dokumentací se projektant domluví s Investorem.
+Stavební povolení a realizační dokumentace.
+
+130. Vypínač sloužící pro ovládání dvou obvodů z jednoho místa?:0.0:0.0:0.1
+Sériový přepínač:1
+Křížový přepíač
+Skupinový přepínač
+Dvoupólový přepínač
+Střídavý přepínač
+
+131. Vypočtěte rezistanci R vodiče o průřezu S=4 mm^2, o délce l=40,7 m a rezistivitě 0,0178 ohm*mm^2*m^-1?:0.0:0.0:0.1
+0.181:1
+0.213
+0.132
+-casio approved, R=rho*l/S
+
+132. Vypočtěte rezistanci R vodiče o průřezu S=4 mm^2, o délce l=25.2 m a rezistivitě 0,0178 ohm*mm^2*m^-1?:0.0:0.0:0.1
+0.112:1
+0.234
+0.345
+-casio approved
+
+133. Vypočtěte rezistanci R vodiče o průřezu S=4 mm^2, o délce l=16.0 m a rezistivitě 0,0178 ohm*mm^2*m^-1?:0.0:0.0:0.1
+0.0712:1
+0.1437
+0.0563
+-casio approved
+
+134. Vypočtěte úbytek napětí na jednofázovém vedení, které má impedanci 0,2 ohmů a napájí spotřebič o výkonu 0.6 kW.Napětí soustavy 230/400V?:0.0:0.0:0.1
+0.521 V:1
+0.128 V
+0.425 V
+-U'=R'*I=R'*U/R=R'*U/(U^2/P)=R'*P/U=0,2*600/230=0,521 V
+-casio approved
+
+135. Vypočtěte úbytek napětí na jednofázovém vedení, které má impedanci 0,2 ohmů a napájí spotřebič o výkonu 1.7 KW. Napětí soustavy 230/400V?:0.0:0.0:0.1
+1.478 V:1
+2.513 V
+0.854 V
+-casio approved
+
+136. Vypočtěte úbytek napětí ve V v 3f soustavě 230/400 V na vodiči s impedancí 0,2 ohmů, který napájí motor o výkonu P=1.1kW a cosfi = 0.8?:0.0:0.0:0.1
+1.196 V
+2.351 V
+0.688 V:1
+-casio approved, pozor je tam 3f!
+-P=U*I*cos(fi), U'=R'*I=R'*U/R=R'*U/(U^2*cos(fi)/P)=R'*P/(U*cos(fi))
+
+137. Vypočtěte úbytek napětí ve V v 3f soustavě 230/400 V na vodiči s impedancí 0,2 ohmů, který napájí motor o výkonu P = 2.0 kW a cosfi = 0.8?:0.0:0.0:0.1
+1.25 V:1
+1.55 V
+0.85 V
+-casio approved, 3f!
+
+138. Výkaz výměr je?:0.0:0.0:0.1
+Seznam použitých komponent a jejich cena
+Seznam použitých komponent v projektu a jejich množství.:1
+Výsledný rozpočet projektu
+Dokument obsahující údaje o rozměrech a vyměřené zastavěné ploše objektu.
+
+139. Zapojení stanic do kruhu, co se stane, když připojím další stanici?:0.0:0.0:0.1
+Nic. Připojení další stanice je bez dalších nákladů na počítačové rozvody:1
+Bouchne to!
+
+140. Základní dělení počítačových sítí je?:0.0:0.0:0.1
+Sběrnicová. hvězdicová, kruhová:1
+Sběrnicová a hvězdicová
+Sběrnicová, hvězdifcová, kruhová, čtvercová
+
+141. Zvětším-li odběr (proud zátěže) na konci vedení dvakrát, tak ztráty mi vzrostou?:0.0:0.0:0.1
+4x
+0,5x
+1x
+2x:1
+-chatGPT approved
+
+#143. Jaké řazení spínače je na obrázku(kolečko, 3 nožky), z nabízených možností?:0.0:0.0:0.1
+#Řazení č. 7
+#Řazení č. 6
+#Řazení č. 6+6
+#Řazení č. 5+1
+#Řazení č. 4
+#Řazení č. 6+1:1
+#Řazení č. 2/A
+#-proč ne 5A
+
+144. Atmosféra přepětí lze charakterizovat jak z nabízených možností?:0.0:0.0:0.1
+Dočasné a podélné přepětí
+Přechodné a příčné přepětí
+Dočasné a příčné přepětí
+Přechodné a podélné přepětí:1
+
+148. Vlnová délka na kterou má lidské oko největší citlivost je?:0.0:0.0:0.1
+450nm
+155nm
+555nm:1
+-chatGPT approved, 550 nm - zelená
+
+149. Která definice vystihuje slovo selektivita?:0.0:0.0:0.1
+Selektivnost mezi přístroji téhož obvodu má iniciovat ten ochranný prvek, který je nejblíže k poruše a zajistit tedy požadovanou posloupnost působení tak aby došlo k minimalizaci ztrát.:1
+Selektivnost mezi přístroji téhož obvodu má iniciovat ten ochranný prvek, který je nejdále od poruchy a zajistit tedy požadovanou posloupnost působení tak, aby došlo k minimalizaci ztrát.
+Selektivnost mezi přístroji téhož obvodu má iniciovat všechny ochranné prvky.
+Selektivnost mezi prvky téhož obvodu nemá iniciovat žádný ochranný prvek.
+-bezprostředně nad místem odebnuta->nejblíže, TODO
+
+150. Jaké je označení spínače na obrázku(kolečko a na 1 nožce 3 čáry)?:0.0:0.0:0.1
+střídavý přepínač dvojitý
+trojpólový vypínač:1
+jednopólový vypínač
+střídavý přepínač
+skupinový přepínač
+sériový přepínač střídavý
+křížový přepínač
+sériový přepínač
+dvoupólový vypínač
+
+151. Vypočtěte výkon jednofázového spotřebiče. Proud, který teče spotřebičem má velikost 6,9 a účiník je 0,58. Napětí soustavy 230/400 V?:0.0:0.0:0.1
+920 W:1
+1120 W
+834 W
+-P=UxIxcos(φ)
+-casio approved
+
+152. Jaká hodnota jmenovitého proudu jističe se používá pro připojení jednofázového zásuvkového obvodu?:0.0:0.0:0.1
+20 A
+16 A:1
+10 A
+-Sichr 16A, chatGPT 16 a 20 A
+
+154. Klíč od KTPO má?:0.0:0.0:0.1
+Policie české republiky.
+Ostraha objektu.
+Hasičská záchranná služba.:1
+-chatGPT approved
+
+155. Co je to proudový chránič s nadproudovou ochranou?:0.0:0.0:0.1
+kombinovaný přistroj proudového chrániče a obloukové ochrany
+kombinovaný přístroj proudového chrániče a jističe:1
+kombinovaný přístroj proudového chrániče a přepěťové ochrany 3. stupně
+-Sichr approved
+
+156. Co znamená označení strukturované kabeláže U/FTP?:0.0:0.0:0.1
+použití folie na stínění pláště
+Použití folie na stínění párů:1
+stínění pláště opletením
+-chatGPT approved, asi U = ochrana páskou a P - folie na stínění párů, nic na plášť
+
+157. Vodiče PE a PEN?:0.0:0.0:0.1
+se jistí pouze ve starých rozvodech, kde není rozlišen od fázového vodiče
+se mohou jistit pouze v síti TT
+se nesmějí jistit:1
+se mohou jistit pouze v případech stanovených normou
+se mohou jistit pouze tehdy, slouží-li zároveň jako střední
+-VUT paragraf approved
+
+158. Jaká je předepsaná maximální doba vypnuti z hlediska správné funkce ochrany před úrazem elektrickým proudem pro zařízení držená v ruce?:0.0:0.0:0.1
+0,2s
+0,4s:1
+5s
+0,8s
+-pozor VUT paragraf, stříd. do 1000 V nebo taky u gG->5s
+
+159. Mohou se pevné spotřebiče umisťovat do umývacího prostoru v koupelně?:0.0:0.0:0.1
+Ano. pokud je výrobce určen do daného umývacího prostoru a má certifikát daný výrobcem:1
+Ne
+Ano. pokud se jedná o bojler nebo ohřívač vody a nemá žádný certifikát
+-chatGPT approved +- ano, když je zásuvka s krytím proti vodě
+
+161. Kolik zásuvek je možné instalovat na jeden jednofázový obvod?:0.0:0.0:0.1
+8ks
+počet je omezen pouze jisticím prvkem
+10ks:1
+-chatGPT fail +- 12, je tam pouze!!!
+
+162. Opravy a údržba stávajících zařízení již dokončené stavby podléhají sazbě DPH?:0.0:0.0:0.1
+21%
+15%:1
+10%
+20%
+-15% u obytných domů/objektů k bydlení, 21% u komerčních objektů
+
+163. Jaké je jmenovité napětí rozvodné sítě NN v ČR?:0.0:0.0:0.1
+230/400 V:1
+120/210 V
+220/380 V
+-chatGPT fail
+
+164. Vodič PEN je součástí sítě?:0.0:0.0:0.1
+TN-C:1
+TN-S
+TT
+-Diskord approved
+
+165. U obvodů SELV?:0.0:0.0:0.1
+živé části mohou být spojené se zemí nebo jinými živými částmi
+živé části musí být uzemněné
+živé části nesmějí být spojené se zemí nebo jinými živými částmi:1
+-VUT paragraf approved
+
+167. Projektovou dokumentaci pro stavební dokumentaci může vypracovávat?:0.0:0.0:0.1
+Autorizovaný technik
+Samostatný projektant (vyhl. 50, S10)
+Autorizovaný inženýr:1
+Samozvaný projektant
+-chatGPT approved, architekt nebo stavební inženýr
+
+168. Výpočet rezistence R?:0.0:0.0:0.1
+=ρ*l/S:1
+=ρ*S/l
+=S/(ρ*l)
+
+169. Mají rozvodové krabice a svorkovnice zůstat vždy přístupné?:0.0:0.0:0.1
+Ano:1
+Ne
+
+170. světlo, svítidlo - do dolního podprostoru příjme nad 80%, převážně příjme 60-80%, smíšené 40-60%, prevážně nepřijme 20-40%, nepřijme do 20%?:0.0:0.0:0.1
+Pravda:1
+Nepravda
+
+171. Střídavý přepínač je označen číslem řazení?:0.0:0.0:0.1
+4
+6:1
+5
+3
+7
+
+172. LSP 1 – poloměr 20m, oko 5x5m; 2 – 30m, 10x10m; 3 – 45m, 15x15m; 4 – 60m, 20x20m?:0.0:0.0:0.1
+Pravda:1
+Nepravda
+
+173. Co je OPPO?:0.0:0.0:0.1
+obslužní panel požární ochrany:1
+obloukový poplašný panel ochrany
+-chatGPT approved
+
+174. Co je modul ELS?:0.0:0.0:0.1
+Přehledové schémata sdělovacích zařízení:1
+Svorkové schémata rozvaděčů měření a regulace - řídících systémů
+Situační (dispoziční) schéma slaboproudu
+Návrh bleskosvodů
+Legendy a tabulky výkresové dokumentace
+-P approved
+
+175. Co je modul ELE?:0.0:0.0:0.1
+Situační (dispoziční) schéma slaboproudu:1
+Přehledové schémata sdělovacích zařízení
+Svorkové schémata rozvaděčů měření a regulace - řídících systémů
+Návrh bleskosvodů
+Legendy a tabulky výkresové dokumentace
+-P approved
+
+176. Co je modul ELO?:0.0:0.0:0.1
+Návrh bleskosvodů:1
+Legendy a tabulky výkresové dokumentace
+Situační (dispoziční) schéma slaboproudu
+Přehledové schémata sdělovacích zařízení
+Svorkové schémata rozvaděčů měření a regulace - řídících systémů
+-P approved
+
+177. Co je modul ELT?:0.0:0.0:0.1
+Návrh bleskosvodů
+Legendy a tabulky výkresové dokumentace:1
+Situační (dispoziční) schéma slaboproudu
+Přehledové schémata sdělovacích zařízení
+Svorkové schémata rozvaděčů měření a regulace - řídících systémů
+-P approved
+
+178. Co je síť TN-C?:0.0:0.0:0.1
+Síť TN, ve které vodič PEN plní současně funkci středního (pracovního) a ochranného vodiče.:1
+Síť TN, ve které jsou ochranný vodič PE a střední pracovní vodič N vedeny samostatně (odděleně)
+-Síť TN je síť, ve které je 1 bod(zpravidla nulák) bezprostředně uzemněn a neživé části chráněných zařízení jsou vodičem spojeny s tímto bodem
+
+179. Co je síť TN-S?:0.0:0.0:0.1
+Síť TN, ve které vodič PEN plní současně funkci středního (pracovního) a ochranného vodiče.
+Síť TN, ve které jsou ochranný vodič PE a střední pracovní vodič N vedeny samostatně (odděleně):1
+
+178. Co je síť TN-C-S?:0.0:0.0:0.1
+Síť TN, ve které vodič PEN plní současně funkci středního (pracovního) a ochranného vodiče.
+Síť TN, ve které jsou ochranný vodič PE a střední pracovní vodič N vedeny samostatně (odděleně)
+Síť TN, jejiž první část je provedena jako síť TN-C a druhá část od bodu rozdělení jako síť TN-S.:1
+Síť TN, jejiž první část je provedena jako síť TN-S a druhá část od bodu rozdělení jako síť TN-C.
+-koukněte se i jak všechny sítě nakreslit
+
+179. Jaký typický proud má blesk?:0.0:0.0:0.1
+100kA
+150kA
+200kA:1
+250kA
+500kA
+1MA
+
+180. Jaký typ je Svodič bleskových proudů?:0.0:0.0:0.1
+SPD typ 1(B):1
+SPD typ 2(C)
+SPD typ 3(D)
+
+181. Jaký typ je Svodič přepětí?:0.0:0.0:0.1
+SPD typ 1(B)
+SPD typ 2(C):1
+SPD typ 3(D)
+
+182. Jaký typ je Přepěťové ochrany?:0.0:0.0:0.1
+SPD typ 1(B)
+SPD typ 2(C)
+SPD typ 3(D):1
+
+Co je LEMP?:0.0:0.0:0.1
+Úder blesku (atmosférické přepětí):1
+Spínací/průmyslová přepětí
+Elektrostatický výboj
+Jaderný elektromagnetický puls
+-přímý úder, úder do rozvodu nn nebo rozvodu telekomunikačního, úder do vedení vn a vvn, nepřímý úder – blízký nebo vzdálený, výboj mezi mraky
+
+Co je SEMP?:0.0:0.0:0.1
+Úder blesku (atmosférické přepětí)
+Spínací/průmyslová přepětí:1
+Elektrostatický výboj
+Jaderný elektromagnetický puls
+-spínací přepětí v sítích nn, vn a vvn, přepětí vzniklé vzájemným působením mezi systémy
+
+Jakou rychlost má UTP nebo FTP u Cat6 a vyšší?:0.0:0.0:0.1
+500Mb/s
+1Gb/s
+10Gb/s:1
+1TB/s
+1YB/s
+1ZB/s

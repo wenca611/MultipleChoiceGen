@@ -1,0 +1,780 @@
+# MPG test
+# pozn. pozor kde píšete dvojtečky a otazníky
+# Teorie určitě není z ChadGPT, ok možná trochu XD
+
+# Co bylo
+#1. glob. def. pole float ver[] = {1.0f, 2,0f, 5.0f}\
+#jen good definice vertexů?:0.08888888888888889:0.0:0.1
+#glVertex3s(ver[0], ver[1], ver[2]);
+#glVertex2f(ver[1], ver[2]);:1
+#glVertex3fv(&ver[0]);:1
+#glVertex3fv(&ver[2]);
+#glVertex3i(ver);
+#glVertex3fv(ver);:1
+#glVertex3f(ver[0], ver[1]);
+#glVertex2d(&ver[0], &ver[1]);
+#Ani jedna z předchozích možností
+#-máme 3D vektor floatů -> 3f, 3fv a 2f
+
+#2. Při vytváření geom. primitiv lze ve fci glBegin použít konstanty?:0.5:2.0:0.1
+#GL_POINTS:1
+#GL_TRIANGLE
+#GL_LINE
+#GL_POLYGON:1
+#GL_LINE_STRIP:1
+#GL_POINT
+#GL_TRIANGLES:1
+#-pozor, někdy je rozdíl v S na konci!!
+
+#3. V jakém případě bude volána obslužná funkce změny/překreslení velikosti okna?:0.5:2.0:0.1
+#při posunu okna pomocí myši
+#při vytvoření okna:1
+#vždy při překleslení scény
+#vždy při změně velikosti okna:1
+
+#4. Jaký je počet řídících bodů pro výpočet Bézierovy kubiky?:0.9:3.0:0.1
+#2
+#3
+#4:1
+#5
+#6
+
+#5. V jakém případě bude volána událost registovaná pomocí funkce glutMouseFunc?:0.5:2.0:0.1
+#Při pohybu myši po okně bez stisknutého tlačítka myši
+#Při uvolnění kteréhokoliv stisknutého tlačítka myši:1
+#Při stisknutí pouze levého tlačítka myši
+#Při změně stavu tlačítek myši:1
+
+#6. Vyberte pravdu o tvoření animací pomocí registrace funkce glutIdleFunc?:0.05:0.0:0.1
+#Událost se nemusí definovat znovu:1
+#Po vypršení časového intervalu je nutné znovu registrovat funkci pro vykonání
+#Událost se provede po uplynutí definovaného časového intervalu, který se počítá od doby registrace
+#Událost se vyvolá vždy když má aplikace přidělen od OS strojový čas a nezpracovává žádnou jinou událost:1
+
+#7. Vyberte správná tvrzení o tvorbě animací pomocí časovače registrovaného funkcí glutTimerFunc?:0.07500000000000001:0.0:0.1
+#Událost se provede po uplynutí definovaného časového intervalu, který se počítá od doby registrace:1
+#Po vypršení časového intervalu je nutné znovu registrovat funkci pro vykonání
+#Událost se vyvolá vždy, když má aplikace přidělen od OS strojový čas a nezpracovává žádnou událost
+#Událost se nemusí definovat
+
+#8. Bézierova křivka vždy prochází svými řidicími body?:-0.1:-1.0:0.1
+#True
+#False:1
+
+#=====================================Teorie======================================#
+#=P1==============================================================================#
+100. Popište, co jsou geometrické a co topologické aspekty grafických informací v sítích?:0.2:1.0:0.1
+Geometrické aspekty grafických informací v sítích se týkají umístění a vztahů mezi prvky sítě v rovině, zatímco topologické aspekty se týkají vzájemného propojení prvků sítě.:1
+Geometrické aspekty grafických informací v sítích zahrnují barvy a tvary prvků sítě, zatímco topologické aspekty se týkají vztahů mezi prvky sítě.
+Geometrické aspekty grafických informací v sítích zahrnují rychlost a výkon sítě, zatímco topologické aspekty se týkají fyzického umístění prvků sítě.
+Geometrické aspekty grafických informací v sítích se týkají výběru protokolu pro přenos dat, zatímco topologické aspekty se týkají zabezpečení sítě.
+
+101. Vyjmenujte přednosti trojúhelníkových sítí oproti víceúhelníkovým?:0.5:2.0:0.1
+Trojúhelníkové sítě mají lepší vlastnosti pro numerické výpočty, jsou jednodušší a lépe se s nimi pracuje v počítačové grafice.:1
+Víceúhelníkové sítě jsou lépe čitelné a srozumitelné pro lidské vnímání.
+Víceúhelníkové sítě mají větší flexibilitu v počtu vrcholů a hran.
+Trojúhelníkové sítě jsou pomalejší a náročnější na výpočetní výkon než víceúhelníkové sítě.
+
+102. Jaké vlastnosti má validní trojúhelníková síť?:0.24285714285714288:1.0:0.1
+Žádné dva vrcholy nesměřují do stejného bodu.:1
+Žádné dva hrany se nesměřují do stejného bodu.:1
+Každá hrana má neprázdný průnik s každou jinou hranou.:1
+Žádné tři hrany nejsou v jednom bodě.:1
+Validní trojúhelníková síť musí mít pouze rovnostranné trojúhelníky.
+Validní trojúhelníková síť musí mít stejný počet vrcholů jako hran.
+Validní trojúhelníková síť musí být orientovaná.
+
+103. Kolik máme možností při triangularizaci čtyřúhelníku a jaké to jsou?:-0.05:-1.0:0.1
+Existuje 2 možnosti při triangularizaci čtyřúhelníku - buď pomocí jedné nebo dvou diagonál.:1
+Existuje 3 možnosti při triangularizaci čtyřúhelníku - pomocí jedné diagonály, dvou diagonál nebo žádné diagonály.
+Existuje 4 možnosti při triangularizaci čtyřúhelníku - pomocí jedné diagonály, dvou diagonál, tří diagonál nebo žádné diagonály.
+Existuje pouze 1 možnost při triangularizaci čtyřúhelníku - pomocí jedné diagonály.
+
+104. V jakém případě je vhodné použít adaptivní síť povrchu tělesa?:0.2:1.0:0.1
+Používá se v případech, kdy je potřeba získat co nejpřesnější výsledky simulace a současně minimalizovat počet elementů sítě.:1
+Používá se vždy, bez ohledu na konkrétní aplikaci.
+Používá se pouze v případě, kdy je potřeba co nejrychleji provést simulaci bez ohledu na přesnost výsledků.
+Používá se pouze u jednoduchých geometrických tvarů, u složitých tvarů není efektivní.
+
+105. Pro jaké topologie sítí je určen Catmull–Clark algoritmus?:0.25:1.0:0.1
+Catmull-Clark algoritmus je určen pro úplné polyhedrální sítě (meshes) se čtyřúhelníky a/nebo trojúhelníky.:1
+Catmull-Clark algoritmus je určen pouze pro topologii čtyřúhelníkových sítí.
+Catmull-Clark algoritmus je určen pro topologii sítí s libovolným počtem vrcholů.
+Catmull-Clark algoritmus je určen pouze pro topologii trojúhelníkových sítí.
+
+#=P2==============================================================================#
+106. Vysvětlete rozdíl mezi aproximačními a interpolačními křivkami?:0.85:2.0:0.1
+Interpolační křivky procházejí všemi body, které mají být na křivce, zatímco aproximační křivky se snaží najít křivku, která ne prochází všemi body, ale co nejvíce jim odpovídá.:1
+Aproximační křivky jsou používány pouze v matematice, zatímco interpolační křivky jsou používány v počítačové grafice.
+Interpolační křivky jsou vždy přesné, zatímco aproximační křivky jsou vždy jen přibližné.
+Aproximační křivky jsou používány pouze pro křivky nízkého řádu, zatímco interpolační křivky jsou používány pro křivky vysokého řádu.
+
+107. Mějme křivku ve 2D definovanou rovnicí Q=T*C, kde T=[t3 t2 t 1].\
+Který parametr v matici C změníte a jak, aby se křivka pouze posunula o 1 ve směru osy y (tzn. nahoru)?:0.16666666666666669:0.0:0.1
+dy->dy+1:1
+cy->cy+1
+ay->ay+1
+bx->bx+1
+dy->dy-1
+cy->cy-1
+-je to dy+1 v C, protože je tam mezivýpočet 1*(dy+1), u jiných je tam t na něco
+-C = [ax ay]
+-    [bx by]
+-    [cx cy]
+-    [dx dy]
+
+108. Kolik řídicích bodů má 2D-Bézierova kubika a Kolik je to čísel?:0.5:2.0:0.1
+4 řídicí body, celkem 8 čísel:1
+4 řídicí body, celkem 4 čísla
+3 řídicí body, celkem 6 čísel
+5 řídicích bodů, celkem 10 čísel
+6 řídicích bodů, celkem 12 čísel
+
+109. Proč se v počítačové grafice používají nejčastěji zrovna kubiky?:0.2:1.0:0.1
+Kubiky jsou v počítačové grafice často používány kvůli jejich dostatečné flexibilitě, co se týče vykreslování různých tvarů a krivek, ale zároveň jsou dostatečně jednoduché na výpočet.:1
+Kubiky se v počítačové grafice vůbec nepoužívají.
+Kubiky jsou v počítačové grafice používány kvůli jejich nízké kvalitě.
+Kubiky jsou v počítačové grafice používány pouze pro specifické typy křivek a tvarů.
+
+110. Jaké typy napojení dvou křivek znáte?:0.5:2.0:0.1
+Patří zde spojování, skládání a aproximace.:1
+Patří zde pouze spojování.
+Patří zde pouze skládání.
+Patří zde pouze aproximace.
+
+111. Jsou dány řídicí body kubiky P0, P1, P2, P3. Pomocí algoritmu de Casteljau určete bod na této křivce v čase t=3/4?:0.9:3.0:0.1
+Q0 = (1-t)P0 + tP1,Q1(t,P1,P2),Q2(t,P2,P3);R0 = (1-t)Q0 + tQ1,R1(t,Q1,Q2);S = (1-t)R0 + tR1 = 1/4R0+3/4R1:1
+Vypočítáme bod přímo podle vzorce pro kubiku a dosadíme t=3/4
+Vypočítáme pomocné body, ale nespočítáme výsledný bod
+Vypočítáme pomocné body a následně nějakým nekorektním způsobem spočítáme výsledný bod.
+-vzorec pro kubiku je P(t) = (1-t)^3P0 + 3t(1-t)^2P1 + 3t^2(1-t)P2 + t^3P3
+-TEST1
+
+#=P3=1/2==========================================================================#
+112. Čím se odlišují racionální Bézierovy křivky od obyčejných?:0.15000000000000002:0.0:0.1
+Racionální Bézierovy křivky se liší od obyčejných tím, že mají kromě řídicích bodů také váhy, které ovlivňují tvar křivky.:1
+Racionální Bézierovy křivky se liší od obyčejných křivek tím, že mají více řídicích bodů.
+Racionální Bézierovy křivky se liší od obyčejných křivek tím, že jsou omezené pouze na určité typy geometrických tvarů.
+Racionální Bézierovy křivky se liší od obyčejných křivek tím, že výpočet bodů na křivce je mnohem složitější.
+
+113. Jaký vliv mají váhy u racionálních Bézierových křivek a Co by se stalo, kdyby nějaká váha byla nulová?:0.9:3.0:0.1
+Váhy u racionálních Bézierových křivek určují, jak moc jsou řídicí body křivky významné.:1
+Pokud je váha určitého bodu nulová, tak se tento bod vůbec nepoužije při tvorbě křivky a výsledná křivka může mít jinou podobu, než kdyby byla tato váha nenulová.:1
+Váhy nemají žádný vliv na tvar křivky.
+Pokud je nějaká váha nulová, křivka se zkrátí o jeden bod.
+Pokud jsou všechny váhy stejné, křivka se stane lineární.
+
+114. Jaká je hlavní výhoda křivek NURBS oproti Bézierovým i racionálním Bézierovým?:0.9:3.0:0.1
+Křivky NURBS umožňují přesné modelování křivek a ploch různých tvarů s různou hustotou řídicích bodů, a zároveň poskytují jednoduchý způsob kontroly křivosti a zakřivení.:1
+Křivky NURBS mají nižší řád než Bézierovy křivky.
+Křivky NURBS neumožňují použití racionálních vah.
+Křivky NURBS neumožňují přesné modelování křivek a ploch.
+
+#=P3=2/2==========================================================================#
+115. Objasněte pojem rasterizace?:0.2:1.0:0.1
+Rasterizace je proces převodu vektorové grafiky na pixelovou formu pro zobrazení na obrazovce.:1
+Tento proces spočívá v určení, které pixely budou zaplněny a jakým způsobem, na základě geometrických informací objektů a vlastností zobrazovacího zařízení.:1
+Rasterizace je proces převodu pixelové grafiky na vektorovou formu.
+Rasterizace je výpočet matematického integrálu na pixelovém obrazu.
+Rasterizace je proces vytváření 3D modelů pomocí speciálních softwarů.
+
+116. Jaké znáte algoritmy pro rasterizaci úsečky a jaké jsou jejich výhody a nevýhody?:0.06666666666666668:-1.0:0.1
+DDA algoritmus(Digital Differential Analyzer) - jednoduchý a rychlý algoritmus, ale může vést k nepřesnostem, zejména pokud úsečka není kolmá ani vodorovná ani svislá.:1
+Bresenhamův algoritmus - vyhýbá se nepřesnostem DDA algoritmu tím, že používá celočíselné výpočty, ale může být pomalejší.:1
+Xiaolin Wuův algoritmus - používá antialiasing pro vyhlazení hran úseček, ale může být náročný na výpočetní výkon.:1
+Algoritmus pro rasterizaci vícerozměrných objektů
+Algoritmus pro rasterizaci křivek pomocí pouze sčítaček a odčítaček (bez násobení)
+Algoritmus pro rasterizaci komplexních geometrických tvarů bez nutnosti aproximace pomocí trojúhelníků.
+
+117. Nakreslete úseču o směrnici m=1/4 a naznačte, jak dopadne její rasterizace?:0.08000000000000002:0.0:0.1
+Vypadala by jako vodorovná úsečka s malými diagonálními přeskoky.:1
+Její rasterizace by mohla být nepravidelná, s mnoha mezerami mezi pixely, zejména pokud by byla velmi krátká nebo pokud by mřížka rastrového obrazu měla nízké rozlišení.:1
+Úsečka by se při rasterizaci ztratila
+Úsečka by se rasterizovala jako rovná čára
+Úsečka by se rasterizovala jako křivka
+-pokud úsečka protíná nějakou osu, její rasterizace se bude zobrazovat.
+-úsečka o nenulové směrnici se zobrazuje jako diagonální přeskoky mezi sousedními pixely.
+
+118. Pracuje Bresenhamův algoritmus rasterizace úsečky identicky pro jakoukoliv její směrnici?:0.9:3.0:0.1
+Ne, výpočet platí pouze pro řídící osu x a směrnicí 0<m<1. Pro ostatní případy se musí upravit.:1
+Ano, Bresenhamův algoritmus pracuje identicky pro jakoukoliv směrnici úsečky.
+Bresenhamův algoritmus nefunguje pro žádnou úsečku, je to zastaralá metoda.
+Bresenhamův algoritmus funguje pouze pro úsečky se směrnicí v intervalu <-1, 1>, ostatní úsečky musí být převedeny na tuto oblast.
+-rychlejší než DDA <= celé čísla
+
+119. Jakým způsobem lze provést rasterizaci přerušované úsečky?:0.07500000000000001:0.0:0.1
+Při rasterizaci přerušované úsečky se využívá technika tzv. "zalamování" (angl. "dashing"), kdy se úsečka rozdělí na segmenty a některé segmenty jsou vynechány tak, aby vznikl efekt přerušované čáry.:1
+Při rasterizaci přerušované úsečky se používá stejný algoritmus jako pro spojitou úsečku, ale s jinými vstupními parametry.
+Přerušovanou úsečku nelze rasterizovat, protože nejde vytvořit přerušovaný efekt v pixelové rovině.
+Při rasterizaci přerušované úsečky se používá technika "nahrazování" (angl. "filling"), kdy se vymaluje oblast kolem úsečky, která odpovídá požadovanému efektu přerušované čáry.
+
+120. Jakým způsobem se provádí rasterizace silné čáry a jaké mohou nastat problémy?:0.5:2.0:0.1
+Silná čára se rasterizuje stejným způsobem jako plná čára, tedy pomocí Bresenhamova algoritmu nebo jiného podobného algoritmu.:1
+Problémy mohou nastat, pokud jsou body, ze kterých je silná čára tvořena, velmi blízko sebe nebo pokud jsou výrazně zkoseny. V takových případech mohou být některé body přeskočeny nebo mohou být vytvořeny mezery v čáře.:1
+Silné čáry se rasterizují jiným způsobem než plné čáry.
+Problémy s rasterizací silných čar nevznikají.
+Silné čáry se nedají vytvořit pomocí Bresenhamova algoritmu.
+
+121. Vysvětlete postup rasterizace kružnice?:0.9:3.0:0.1
+Začíná se v počátečním bodě kružnice a v každém kroku se volí nejlepší pixel, který by měl být vykreslen na základě aktuální polohy a vzdálenosti od kružnice.:1
+Postup rasterizace kružnice se obvykle provádí pomocí Bresenhamova algoritmu.:1
+Rasterizace kružnice se provádí pomocí stejného algoritmu jako u úsečky.
+Rasterizace kružnice je nepřesná a často dochází k výrazným chybám.
+Rasterizace kružnice se provádí pomocí algoritmu, který vyžaduje ruční zadání všech pixelů na kružnici.
+-více viz skripta
+
+122. Vysvětlete postup při rasterizaci elipsy a použité triky pro zrychlení vykreslení?:0.275:1.0:0.1
+Při rasterizaci elipsy se využívá transformace na kružnici, kdy se nejprve kružnice natáhne v ose x, poté se provede rasterizace kružnice a výsledek se zpětně transformuje zpět na elipsu.:1
+Trikem je použití symetrie, kdy se stačí rasterizovat pouze jednu čtvrtinu elipsy a výsledek se následně zrcadlí podle osy x a y.:1
+Při rasterizaci elipsy se používá metoda středu a poloměrů, kdy se nejprve určí střed a poloměry elipsy a následně se pomocí matematického vzorce spočítají jednotlivé body elipsy.
+Rasterizace elipsy se provádí stejně jako u kružnice, pouze se musí přizpůsobit kruhové rovnici pro rovnici eliptickou.
+Při rasterizaci elipsy se používá metoda "scanline", kdy se postupně procházejí jednotlivé řádky a hledají body, které leží na elipse.
+Trikem je použití neviditelných čar pro zrychlení vykreslení elipsy.
+Trikem je ignorování určitých sektorů elipsy pro snížení počtu vypočítaných bodů.
+Trikem je aproximace elipsy pomocí jednoduchých geometrických tvarů.
+
+123. Vysvětlete neadaptivní a adaptivní postup při rasterizaci Bézierovy křivky?:-0.08000000000000002:-1.0:0.1
+Neadaptivní postup při rasterizaci Bézierovy křivky spočívá v rozdělení křivky na řadu segmentů a následném vykreslení těchto segmentů pomocí algoritmu pro rasterizaci křivek.:1
+Adaptivní postup využívá určitého kritéria pro určení, které segmenty křivky je potřeba vykreslit a které lze přeskočit.:1
+Adaptivní postup při rasterizaci Bézierovy křivky spočívá v rozdělení křivky na řadu segmentů a následném vykreslení těchto segmentů pomocí algoritmu pro rasterizaci křivek.
+Neadaptivní postup při rasterizaci Bézierovy křivky využívá určitého kritéria pro určení, které segmenty křivky je potřeba vykreslit a které lze přeskočit.
+Adaptivní postup při rasterizaci Bézierovy křivky využívá náhodné generování bodů na křivce a následnou interpolaci mezi nimi.
+
+#=P4==============================================================================#
+125. Jak vypadá parametrický popis obecné 3D plochy?:0.2:1.0:0.1
+P(u,v) = (x(u,v), y(u,v), z(u,v)), kde u a v jsou parametry plochy a x(u,v), y(u,v), z(u,v) jsou funkce popisující souřadnice bodů na ploše.:1
+Parametrický popis obecné 3D plochy se zapisuje pomocí obyčejné rovnice, jako třeba koule nebo rovina.
+P(u,v) = (x,y,z) je parametrický popis obecné 3D plochy, ale není to plně vyjádřeno pomocí funkcí u a v.
+Obecné 3D plochy nemají parametrický popis, lze je popsat pouze rovnicí vektoru normály.
+-ve skriptech místo P() je q()
+
+126. Co vyjadřuje normálový vektor plochy v bodě?:0.05:0.0:0.1
+Určuje směr nejkratší spojnice mezi daným bodem a plochou.:1
+Určuje délku nejkratší spojnice mezi daným bodem a plochou.
+Určuje směr nejdelší spojnice mezi daným bodem a plochou.
+Určuje směr tečny k ploše v daném bodě.
+
+127. Uveďte maticový tvar popisu bikubické plochy a vysvětlete význam jednotlivých součinitelů?:0.2:1.0:0.1
+x(u, v) atd. = UMGxM'V' = [u^3 u^2 u 1]MGxM'[v^3 v^2 v 1]':1
+x(u, v) atd. = UGxMM'V' = [u^3 u^2 u 1]GxMM'[v^3 v^2 v 1]'
+x(u, v) atd. = UGxM+M'V' = [u^3 u^2 u 1]GxM+M'[v^3 v^2 v 1]'
+x(u, v) atd. = UGx+MM'V' = [u^3 u^2 u 1]Gx+MM'[v^3 v^2 v 1]'
+-P˜00=P00; P˜01=(P00+P01)/2; P˜10=(P00+P10)/2
+-M je bázová matice
+-U = [u^3 u^2 u 1], V = [v^3 v^2 v 1]
+-Gx, Gy, Gz - matice 4x4, 16 řídících bodů
+
+128. Kolik řídicích bodů určuje tvar Bézierovy bikubické plochy?:0.5:2.0:0.1
+Řídí se 16 body.:1
+Řídí se 8 body.
+Řídí se 4 body.
+Řídí se 32 body.
+
+129. Co musí být splněno, aby dva pláty byly C^1-spojitě napojeny?:0.9:3.0:0.1
+Dva pláty mají společnou stranu, která sama je třídy 𝐶^1(spojitá v 1. derivaci) + all příčné parciální derivace v jejích bodech jsou same:1
+Dva pláty musí mít stejný počet řídicích bodů na společné hranici.
+Dva pláty musí mít stejný typ (např. oba Bézierovy, oba Coonsovy).
+Dva pláty musí být vytvořeny stejnou metodou (např. oba povrchy vytvořené z řídkých bodů).
+-C^0 - aspoň spojittá
+-C^1 - spojitá v 1. derivaci a všechny parciální derivace v jejich bodech jsou same
+-G^1 - příčné derivace jsou k-násobkem
+
+130. Jaké jsou dvě hlavní výhody plátů NURBS oproti Bézierovým?:0.24000000000000002:1.0:0.1
+Flexibilita při tvorbě tvarů - NURBS mohou reprezentovat širší škálu tvarů než Bézierovy plochy, zejména tvarů s vyšší symetrií a zakřivením.:1
+Kontrola hustoty vrcholů - NURBS umožňují variabilní hustotu vrcholů na ploše, což umožňuje efektivnější využití zdrojů v oblastech s menším zakřivením.:1
+Pláty NURBS jsou výhradně pro 2D tvary a nelze je použít pro 3D modelování.
+Bézierovy plochy jsou mnohem rychlejší než pláty NURBS.
+Pláty NURBS mají horší kvalitu zobrazování než Bézierovy plochy.
+
+131. Co je to polygonizace plátu a jak k tomu lze použít subdivision?:0.9:3.0:0.1
+Polygonizace plátu je proces převodu plochy určené řídicími body na množinu trojúhelníků, které aproximují tuto plochu.:1
+Subdivision je technika, která umožňuje zjemnit aproximaci plochy rozdělením jednotlivých trojúhelníků na menší části a iterativním opakováním tohoto procesu. Tím se zvyšuje kvalita aproximace a zároveň se snižuje počet trojúhelníků potřebných k přesnému popisu plochy.:1
+Polygonizace plátu je proces vytvoření plochy z řídicích bodů. Subdivision se k tomu nedá použít.
+Polygonizace plátu se používá pouze pro plochy s určitými geometrickými vlastnostmi.
+Subdivision se používá pouze pro tvorbu detailnějších modelů.
+Polygonizace plátu je proces, který se používá pouze v počítačových hrách.
+Subdivision se používá pouze v klasické počítačové grafice.
+
+132. Jaké jsou výhody polygonizace pomocí trojúhelníků oproti čtyřúhelníkům?:0.5:2.0:0.1
+Trojúhelníky jsou geometricky jednodušší než čtyřúhelníky, což znamená, že jsou snadněji řiditelné a manipulovatelné.:1
+Trojúhelníková sít je topologicky více konzistentní než sít s čtyřúhelníky. To znamená, že nevznikají tzv. "netopologické chyby", které by mohly vést k nekonzistentním výsledkům při dalším zpracování dat.:1
+Čtyřúhelníky jsou geometricky jednodušší než trojúhelníky, takže jsou snadněji řiditelné a manipulovatelné.
+Trojúhelníky jsou topologicky méně konzistentní než sít s čtyřúhelníky. To znamená, že vznikají "netopologické chyby", které by mohly vést k nekonzistentním výsledkům při dalším zpracování dat.
+Čtyřúhelníky jsou více podobné původnímu tvaru plochy než trojúhelníky, což znamená, že zachovávají větší část informace o původní ploše.
+
+#=P5=1/2==========================================================================#
+133. Jak jsou definovány homogenní souřadnice a k čemu se používají?:0.5:2.0:0.1
+Homogenní souřadnice jsou rozšířením prostorových souřadnic o další souřadnici nazývanou w (často označovanou jako homogenní složka).:1
+Homogenní souřadnice se používají v projektivní geometrii a v počítačové grafice pro reprezentaci bodů, transformací a projektivních operací.:1
+Homogenní souřadnice jsou souřadnice bodů v hyperprostoru s více než třemi rozměry.
+Homogenní souřadnice jsou definovány jako souřadnice v komplexním číselném prostoru.
+Homogenní souřadnice jsou způsob, jak reprezentovat barevné informace v počítačové grafice.
+
+134. Uveďte tvar rovnice pro transformaci posunutí bodu?:0.5:2.0:0.1
+P' = P + A
+P' = A + P
+P' = A * P:1
+-A=[1 0 0 tx; 0 1 0 ty; 0 0 1 tz; 0 0 0 1], P=[x y z w=1]
+
+135. Uveďte tvar rovnice pro transformaci rotace?:0.1:0.0:0.1
+A = [cos(α) -sin(α) 0 0; sin(α) cos(α) 0 0; 0 0 1 0; 0 0 0 1]:1
+A = [sin(α) -cos(α) 0 0; cos(α) sin(α) 0 0; 0 0 1 0; 0 0 0 1]
+A = [cos(α) sin(α) 0 0; sin(α) cos(α) 0 0; 0 0 1 0; 0 0 0 1]
+A = [cos(α) sin(α) 0 0; sin(α) -cos(α) 0 0; 0 0 1 0; 0 0 0 1]
+
+136. Uveďte tvar rovnice pro transformaci změny měřítka?:0.35000000000000003:1.0:0.1
+A = [Sx 0 0 0; 0 Sy 0 0; 0 0 Sz 0; 0 0 0 1]:1
+A = [Sx 0 0 0; Sy 0 0 0; Sz 0 0 0; 0 0 0 1]
+A = [Sx 0 0 0; 0 -Sy 0 0; 0 0 Sz 0; 0 0 0 1]
+A = [0 Sx 0 0; Sy 0 0 0; 0 0 Sz 0; 0 0 0 1]
+
+137. Uveďte tvar rovnice pro transformaci souměrnosti?:0.5:2.0:0.1
+jako změna měřítka, jen Sx=-1->podle osy x, Sx,y=-1->přes rovinu xy, Sx,y,z=-1->středová soum.:1
+jako změna měřítka, jen Sx=-1->přes rovinu yz, Sx,y=-1->podle osy z, Sx,y,z=-1->středová soum.
+jako změna měřítka, jen Sx=-1->podle osy y, Sx,y=-1->přes rovinu yz, Sx,y,z=-1->středová soum.
+jako změna měřítka, jen Sx=-1->středová soum., Sx,y=-1->přes rovinu xy, Sx,y,z=-1->podle osy x
+
+138. Jakým způsobem dosáhneme skládání transformací?:0.2:1.0:0.1
+P'=An*...*A2*A1*P:1
+P'=An+...+A2+A1*P
+P'=An-...-A2-A1-P
+P'=An/.../A2/A1/P
+-záleží na pořadí matic(rotace+posunutí)!! [ne u zkosení*2]
+
+139. Záleží obecně na pořadí transformací a Záleží vždycky na pořadí transformací?:0.5:2.0:0.1
+Ano; ne pokud se jedná o komutativní transformace.:1
+Nezáleží na pořadí transformací, vždy je dosažen stejný výsledek.
+Transformace jsou nezávislé na pořadí, protože se aplikují na různé aspekty objektu.
+
+140. Uveďte příklad, kdy na pořadí transformací záleží a příklad, kdy nezáleží?:0.5:2.0:0.1
+záleží posun+rotace:1
+záleží posun+posun
+záleží rotace+rotace
+záleží zkosení+zkosení
+nezáleží posun+rotace
+nezáleží posun+posun:1
+nezáleží rotace+rotace:1
+nezáleží zkosení+zkosení:1
+-pro jiné matematický důkaz 
+
+#=P5=2/2==========================================================================#
+141. Je možné zapsat transformaci posunutí pomocí matice i bez čtvrté souřadnice?:0.9:3.0:0.1
+Ne:1
+Ano
+-ví jen ChatGPT, ale na konci musí být 1 => [0 0 0 1], takže asi approved
+
+142. Jaký tvar bude mít transformační matice, chceme-li dosáhnout středové souměrnosti v rámci roviny "xy"?:0.2:1.0:0.1
+M = [-1 0 0 0; 0 -1 0 0; 0 0 1 0; 0 0 0 1]:1
+M = [-1 0 0 0; 0 1 0 0; 0 0 -1 0; 0 0 0 1]
+M = [-1 0 0 0; 0 -1 0 0; 0 0 -1 0; 0 0 0 1]
+M = [1 0 0 0; 0 1 0 0; 0 0 -1 0; 0 0 0 1]
+
+143. Jakou transformaci by realizovala matice [0 1 0 0; 1 0 0 0; 0 0 1 0; 0 0 0 1]?:0.05:0.0:0.1
+zrcadlení podle roviny xy, které svírá 45° s osou x:1
+zrcadlení podle roviny xy, které svírá 90° s osou x
+zrcadlení podle roviny x, které svírá 45° s osou x
+zrcadlení podle roviny xy, které svírá 45° s osou y
+-A = [cos(2α) sin(2α) 0 0; sin(2α) -cos(2α) 0 0; 0 0 1 0; 0 0 0 1]
+
+144. Jakou transformaci by realizovala matice [0 0 0 0; 0 1 0 0; 0 0 1 0; 0 0 0 1] a je invertovaná?:0.9:3.0:0.1
+změna 3D->2D rovinu yz:1
+změna 3D->2D rovinu xz
+změna 4D-3D rovinu xyz
+změna 3D->1D osu x
+
+# Jak byste realizovali efekt "stín"? Z jakých transformací se skládají výsledné obrázky? U vybraného příkladu nalezněte konkrétní transformační matici. (Změny barvy neuvažujte)
+
+#=P6==============================================================================#
+145. Čím se liší kolmá a perspektivní projekce z hlediska geometrické představy a z hlediska matematického výpočtu?:0.5:2.0:0.1
+Kolmá projekce zachovává rovnoběžnost a perspektivní projekce simuluje odvzdálení a zmenšení vzdálených objektů.:1
+Kolmá projekce a perspektivní projekce jsou totožné, pouze se liší názvem.
+Kolmá projekce se používá pro 2D objekty, zatímco perspektivní projekce se používá pro 3D objekty.
+Perspektivní projekce je jen speciálním případem kolmé projekce, kdy je pozorovatel umístěn ve vzdálenosti nekonečno od projekční plochy.
+-matika skip, odkazuje se na knihu XD
+-TEST1
+
+146. Uveďte příklad matice, která v homogeních souřadnicích realizuje perspektivní projekci a projektujte pomocí ní jeden konkrétní bod?:-0.1:-2.0:0.1
+T=[1 0 0 0; 0 1 0 0; 0 0 0 z0; 0 0 0 1], průmětná rovina z=z0, rovnoběžná s rovinou xy:1
+T=[0 0 0 x0; 0 1 0 0; 0 0 1 0; 0 0 0 1], průmětná rovina x=x0, rovnoběžná s rovinou yz:1
+T=[1 0 0 0; 0 1 0 0; 0 0 z0 0; 0 0 0 1], průmětná rovina z=z0, rovnoběžná s rovinou xy
+T=[x0 0 0 0; 0 1 0 0; 0 0 1 0; 0 0 0 1], průmětná rovina x=x0, rovnoběžná s rovinou yz
+-<=rovnoběžné promítání
+
+147. Co je to pohledový objem(viewing frustum) a Jakými parametry je určen?:0.2:1.0:0.1
+Pohledový objem slouží k tomu, aby se potlačilo zbytečné zpracování objektů, které se nacházejí mimo „oblast zájmu“:1
+near/far clipping plane a viewing volume(asi = fov a aspect ratio):1
+Pohledový objem je geometrický tvar se třemi stěnami
+Pohledový objem je určen pouze vzdáleností od pozorovatele ke stěně dalekosti
+Pohledový objem je určen pouze horizontálním úhlem pohledu
+Pohledový objem je určen pouze poměrem šířky a výšky
+
+148. Co jsou ořezové roviny (clipping planes)?:0.5:2.0:0.1
+ořezávají viditelnou oblast scény a určují, které části objektů budou vykresleny:1
+oddělují objekty ve scéně
+určují světelné podmínky v prostoru
+definují zrcadlové odrazy objektů
+používají se k vytváření stínů ve scéně
+-přední a zadní(near/far clipping plane)
+
+#=P7==============================================================================#
+# part 1/2
+149. Vyjmenujte tři hlavní druhy světelných zdrojů a uveďte jejich vlastnosti?:0.06666666666666667:0.0:0.1
+Bodový zdroj světla vyzařuje světlo z jednoho bodu do všech směrů. Intenzita se zmenšuje vzdáleností, př.: žárovka, svíčka.:1
+Směrový zdroj světla vyzařuje světlo ve specifickém směru. Má směr a intenzitu na delší vzdálenost, př.: slunečního světlo.:1
+Plošný zdroj světla vyzařuje světlo z rozsáhlé plochy. Má určitou intenzitu a rozložení světla na ploše, př.: osvětlení z oblohy nebo od reflektorů.:1
+Stacionární zdroj světla nemá žádnou intenzitu světla.
+Bodový zdroj světla vyzařuje světlo pouze ve směru osy Z.
+Směrový zdroj světla se používá pouze pro stínování objektů ve scéně.
+
+150. Jaký je rozdíl mezi lokálním osvětlovacím modelem a globálními zobrazovacími metodami?:0.5:2.0:0.1
+Lokál se zaměřuje na výpočet osvětlení každého objektu nezávisle na ostatních objektech ve scéně.:1
+Globál provádí sofistikovanější simulaci osvětlení scény a zohledňují interakce světla mezi všemi objekty.:1
+Lokální osvětlovací model se používá pouze pro 2D scény.
+Globální zobrazovací metody jsou rychlejší než lokální osvětlovací model.
+Lokální osvětlovací model bere v úvahu globální odražené světlo ve scéně.
+
+151. Jaké tři složky odrazu světla (osvětlení) se používají v lokálním osvětlovacím modelu a Vysvětlete, co každá ze složek modeluje?:0.9:3.0:0.1
+Ambientní modeluje rozptýlené a okolní světlo ve scéně. Difúzní modeluje rozptyl světla na povrchu objektu. Spekulární modeluje odrazy světla od lesklých povrchů.:1
+Složky odrazu světla v lokálním osvětlovacím modelu jsou červená, zelená a modrá, které modelují barevné vlastnosti odrazu.
+Složky odrazu světla v lokálním osvětlovacím modelu jsou primární, sekundární a terciární, které modelují pořadí odrazů světla.
+Složky odrazu světla v lokálním osvětlovacím modelu jsou rozptyl, refrakce a absorpce, které modelují interakci světla s materiály.
+-TEST1
+
+152. Jaký význam má mocnina použitá při modelování spekulárního odrazu světla?:0.2:1.0:0.1
+Mocnina určuje sílu a koncentraci odrazu.:1
+Mocnina určuje barvu spekulárního odrazu.
+Mocnina ovlivňuje intenzitu difúzního osvětlení.
+Mocnina ovlivňuje množství ambientního osvětlení.
+-Vyšší mocnina vede k ostřejším a koncentrovanějším odrazům, zatímco nižší mocnina produkuje rozptýlenější odrazy.
+
+153. Popište v několika větách každý ze tří kroků základního algoritmu sledování paprsku (ray tracing)?:0.5:2.0:0.1
+1. Zvolený pixel na obrazovce je proměněn na paprsek, který vychází z pozice kamery do scény.:1
+2. Paprsek je testován na průsečík s objekty ve scéně. Pokud dojde ke kolizi, určí se průsečík s nejbližším objektem.:1
+3. Na základě průsečíku a materiálu objektu se provádí výpočet osvětlení, zahrnující difúzní, spekulární a ambientní složky.:1
+1. Vytvoření paprsku pomocí koule a kladiva.
+2. Paprsek je testován na průsečík s duchy a upíry.
+3. Osvětlení se provádí pomocí magické hůlky a kouzelného prachu.
+
+154. Jak se u metody sledování paprsku (ray tracing) předchází riziku vzniku aliasingu?:0.16:0.0:0.1
+Vzorkování(sampling) zahrnuje vytváření více paprsků pro každý pixel a sběr hodnot z různých vzorkovacích bodů uvnitř pixelu, což vede k hladšímu a vyššímu rozlišení obrazu.:1
+Antialiasing slouží k vyhlazování ostrých hran a redukci aliasingu.:1
+Při sledování paprsku se aliasingu předchází pomocí zakouřeného zrcadla.
+Aliasingu se předchází tancem kolem ohně a zpěvem písně.
+Pro eliminaci aliasingu se používá kouzelného proutku a kouzelného lektvaru.
+
+# part 2/2
+155. Popište algoritmické rozdíly mezi stínováním konstantním, Gouraudovým a Phongovým?:0.2:1.0:0.1
+Konstantní stínování přiděluje stejnou barvu a intenzitu osvětlení všem vrcholům v rámci jednoho polygonu.:1
+Gouraudovo stínování interpoluje barvu a intenzitu osvětlení mezi vrcholy a vytváří tak plynulý přechod.:1
+Phongovo stínování provádí interpolaci normál na povrchu polygonu, což vede k přesnějšímu a hladšímu stínování.:1
+Konstantní stínování je určeno pro tvary konstantních stínů.
+Gouraudovo stínování se používá pro rohové tvary.
+Phongovo stínování pro kulaté tvary.
+Konstantní stínování je nejpokročilejší metoda stínování.
+Gouraudovo stínování je zastaralé.
+Phongovo stínování je určeno pouze pro 2D grafiku.
+Konstantní stínování vytváří jasnější a výraznější stíny než Gouraudovo a Phongovo stínování.
+
+#=P8+P9===========================================================================#
+156. Rozdělte textury podle alespoň dvou kriterií?:0.26666666666666666:1.0:0.1
+Podle modelované vlastnosti -> barva povrchu, odraz světla atd.:1
+Podle rozměru -> dvojrozměrné textury, trojrozměrně (tělesové) textury (solid textures).:1
+Podle způsobu definice -> rastrové (pixelové) textury, procedurální textury.:1
+Textury lze rozdělit podle barvy a velikosti.
+Textury se dělí podle počtu pixelů a umístění na disku.
+Rozdělení textur závisí na počtu vrcholů a osvětlení scény.
+
+157. Jaký je rozdíl mezi procedurální a bitmapovou texturou?:0.9:3.0:0.1
+U rastrových (bitmapových) textur je rastrový obrázek.:1
+Procedurální textury gen. with matematická funkce; + nezáleží na rozlišení, přizpůsobení velikosti render. obrazu, - ne všechny povrchy lze matematicky vyjádřit.:1
+Procedurální textura je barevně bohatší než bitmapová textura.
+Rozdíl mezi procedurální a bitmapovou texturou spočívá v jejich rozlišení.
+Bitmapová textura je vhodná pro 3D modely, zatímco procedurální textura se používá pouze ve 2D grafice.
+
+158. Kdy se používá funkce inverzního mapování a jaký má význam?:-0.039999999999999994:-2.0:0.1
+Používá se tehdy, když není nutné zpracovávat obraz v reálném čase.:1
+Jde o mapování 2D textury na povrch 3D tělesa.:1
+Pro každý pixel na obrazovce vypočítána barva ze všech texelů (název pro pixel u textur), které se mapují na tento pixel:1
+Používá se pouze při 3D modelování a nemá žádný význam v jiných oblastech.
+Využívá se pouze při malování obrazu na plátno a nemá žádný význam v texturování.
+-prý se to dá použít i pro interakci s texturou <- chatgpt
+
+159. Vysvětlete co to je pohledově závislé mapování a uveďte příklad, kdy se použije?:-0.057142857142857155:-1.0:0.1
+Mapování prostředí nebo chromové mapování je typické pro texturování lesklých objektů.:1
+Odraz od tělesa závisí nejen na povrchu tělesa, ale také na okolním prostředí, poloze pozorovatele, poloze světel, apod.:1
+Těleso se umístí do středu koule, na jejíž vnitřní povrch se nanese textura,:1
+Hodnota se zjistí z bodu textury, do kterého dopadne paprsek od pozorovatele odražený od sledovaného bodu povrchu.:1
+Je pouze pro animaci filmových postav, kde se textura mění podle jejich pohybů.
+Využívá se pouze při tvorbě interaktivních map ve videohrách, kde se textura mění v závislosti na interakcích hráče.
+Používá se pouze pro tvorbu abstraktních uměleckých děl, kde se textura mění podle náhodných algoritmů.
+
+160. Vysvětlete techniku mip-mapping a k čemu a proč se používá. Uveďte související výhody a nevýhody?:0.2:1.0:0.1
+MIP (multum in parvo – mnohé v malém) značí způsob uložení textury pro několik měřítek v jednom.:1
+Při mapování se vybere nejbližší odpovídající měřítko, a dodatečně se případně provede lineární interpolace.:1
+Nevýhodou je patrné rozmazání textury pro malá měřítka.:1
+Typický způsob uložení RGB bitmapové textury v paměti:1
+Mip-mapping je pro aplikace virtuální reality, kde se používá k rozšíření viditelného pole a zlepšení prostorového vnímání.
+Mip-mapping je pro texturování zemských povrchů ve videohrách, aby se dosáhlo realističtějšího vzhledu.
+Mip-mapping se využívá pouze pro vykreslování statických objektů a nemá význam u dynamických scén.
+
+161. Vysvětlete stručně princip komprese S3TC a z ní plynoucí výhody a nevýhody?:-0.009090909090909094:-1.0:0.1
+Princip spočívá ve skupinovém kódování bloků pixelů, které sdílejí podobné vlastnosti, jako jsou barvy a gradienty.:1
+Textura se rozdělí na bloky 4 × 4 texely:1
+Textura se rozdělí na bloky 16 × 16 texely
+V každém bloku se naleznou dvě extrémní barvy, které se zakódují dvěma 16bitovými slovy:1
+Dvě další barvy se získají interpolací ze dvou extrémních barev (případné další barvy se změní na jednu z těchto čtyř).:1
+Kompresní poměr je 4ku1.:1
+Kompresní poměr je 3ku1.
+Kompresní poměr je 1ku4.
+Používaná pouze pro kompresi audiosouborů a nevztahuje se k texturám v počítačové grafice.
+Komprimuje textury bez jakékoliv ztráty kvality, což umožňuje dosažení vyšší vizuální přesnosti.
+Zastaralá metoda, která se již nepoužívá v současné počítačové grafice kvůli svým omezením a nedostatečné efektivitě.
+
+162. Jaké typické vizuální nedostatky mohou nastat při používání komprese S3TC?:0.9:3.0:0.1
+Čáry jdoucí přes různé dlaždice mění barvu (Blokové artefakty, zráta detailů a barevné nepřesnosti).:1
+Komprese S3TC nemá žádné vizuální nedostatky, zaručuje perfektní zobrazení textur.
+S3TC komprese způsobuje rozmazání textur a ztrátu ostrosti.
+Komprese S3TC nepřináší žádné vizuální změny, zachovává původní kvalitu textur bez vad.
+
+163. K čemu se používají Perlinovy šumové funkce a jaké jsou jejich vlastnosti?:0.5:2.0:0.1
+V PC grafice a gen. procedurálních textur.:1
+Produkují náhodně vypadající strukturované a koherentní šumové vzory, př.: tvorba realistických efektů - terénní reliéfy, mraky, vlny nebo textury s přirozeným vzhledem.:1
+Používají se k dekódování tajných zpráv.
+Používají se pro vytvoření přesných matematických grafů.
+Mají vlastnost vytvářet nepředvídatelné a chaotické vzory.
+
+164. Vysvětlete princip lineární/bilineární/trilineární interpolace?:0.2:1.0:0.1
+Lin. vypočítá hodnotu mezi dvěma známými body na přímce.:1
+Bilin. rozšiřuje lineární interpolaci na dvourozměrný prostor, kde se hodnota vypočítá na základě čtyřokolí.:1
+Trilin. je rozšířením bilineární interpolace do trojrozměrného prostoru, kde se hodnota vypočítá na základě osmiokolí.:1
+Lin. je metoda pro vytváření složitých grafických efektů pomocí jednoduchých čar.
+Bilin. se používá pro změnu velikosti obrázků zvýšením jejich rozlišení.
+Trilin. je technika pro komprimaci dat a redukci jejich velikosti.
+-TEST1
+
+#=P10=1/3=========================================================================#
+165. Proč ve tmě velice špatně rozeznáváme odstíny barev?:0.9:3.0:0.1
+Světlo dopadá v oku člověka na sítnici. Na ní jsou tyčinky (jas) a čípky (barva).:1
+Tyčinky jsou 10krát citlivější než čípky. (Proto ve tmě nevidíme barevně, protože čípky jsou již pod prahem citlivosti):1
+Ve tmě špatně rozeznáváme odstíny barev, protože všechny barvy se mění na černou.
+To je způsobeno tím, že ve tmě jsou všechny barvy nejasné a rozmazané.
+Neschopnost rozeznat odstíny barev ve tmě je důsledkem nedostatku vitamínu A v naší stravě.
+
+166. Která barva je doplňková ke žluté (Y)?:0.5:2.0:0.1
+modrá (B):1
+fialová (V)
+zelená (G)
+červená (R)
+-R=C, G=M, B=Y, asi
+
+167. Kde v krychli RGB-CMY najdeme odstíny šedi?:0.5:2.0:0.1
+Na diagonále mezi černou a bílou.:1
+Na okrajích krychle RGB-CMY.
+Pouze v černé a bílé oblasti krychle RGB-CMY.
+Nelze nalézt v krychli RGB-CMY.
+-krychle začíná černou K, pak je RGB, pak jejich součty CMY a pak bílá W
+
+168. Pokud na digitální fotografii z koupelny jsou kachličky žluté, i když by měly být bílé, přidáním jaké barvy (R,G,B,C,M) tento jev vykompenzuji?:0.5:2.0:0.1
+Přidáním modré barvy (B).:1
+Přidáním tyrkysové a purpurové barvy (C a M).:1
+Přidáním červené barvy (R).
+Přidáním zelené barvy (G).
+Přidáním azurové barvy (C).
+-odebráním žluté => přidání doplňkové barvy
+
+169. Jaká barva vznikne, smícháme-li v RGB modelu červenou a zelenou?:0.5:2.0:0.1
+Žlutá.:1
+Fialová.
+Oranžová.
+Bílá.
+
+170. Vysvětlete, proč se používá gama korekce?:0.16666666666666669:0.0:0.1
+Y ↦ Y1/gamma, nerovn. kvant. Y a rovn. kvant. L:1
+Gama korekce vyrovnává jasové přechody a zachovává konzistenci barev při zobrazení na různých zařízeních.:1
+Gama korekce se používá k zesílení jasu obrazu.
+Gama korekce slouží k přizpůsobení kontrastu obrazu.
+Gama korekce se využívá k redukci barevných odstínů.
+
+171. Kolik existuje možností převodu z RGB do stupňů šedi?:0.9:3.0:0.1
+Existuje nekonečně mnoho možností převodu z RGB do stupňů šedi.:1
+Nejčastěji se používá průměr ze složek R, G a B pro převod do stupňů šedi nebo 𝑌=0,3𝑟+0,6𝑔+0,1𝑏 (JPEG):1
+Existuje pouze jedna možnost převodu z RGB do stupňů šedi.
+Převod z RGB do stupňů šedi se provádí prostým sčítáním složek R, G a B.
+Převod z RGB do stupňů šedi se provádí násobením složek R, G a B konstantními faktory.
+
+#=P10=2/3=========================================================================#
+172. Co je účelem anti-aliasingového filtru při vzorkování signálu?:0.5:2.0:0.1
+Účelem je redukovat aliasing a zkreslení signálu.:1
+Potlačuje frekvence vyšší než Nyquistova frekvence.:1
+Slouží ke zvýšení frekvence signálu.
+Účelem je zesílit aliasing a vytvořit specifické efekty.
+Používá se pouze k filtraci šumů ve signálu.
+-realizace pomocí DP
+
+173. Uveďte nějaký příklad projevu aliasingu z běžného života?:-0.03333333333333334:-1.0:0.1
+Sledování filmů nebo videí na obrazovce s nižším rozlišením => schodičkovité hrany nebo zkreslení jemných detailů.:1
+Moiré, ztráta ostrosti při zmenšování digi fotek, původní geometrické obrazce mění svůj tvar (zmenšení fotek s drobným vzorem):1
+Zachycení rotačního pohybu na filmu.:1
+Projevuje se v chování zvířat během migrace.
+Objevuje se při pečení dortu kvůli nesprávnému množství ingrediencí.
+Je způsoben nedostatečným odstínem barvy na malovaném obraze.
+
+174. Popište obecný princip indexového módu reprezentace obrazu (paleta)?:1.2999999999999998:4.0:0.1
+Paletový mód, využívá tabulky barev nazývané paleta.:1
+Namísto přímého kódování barev pro každý pixel obsahuje každý pixel index, který odkazuje na konkrétní barvu v paletě => úspora paměti.:1
+Metoda vytváření indexů pro knihy v knihovně.
+Je technika třídění indexů v databázovém systému.
+Používá se pro organizaci čísel v matematických rovnicích.
+-obvykle 1B = 8bit = 256 barev
+
+175. Objasněte pojem paměť snímku?:0.5:2.0:0.1
+Je paměťový prostor používaný k dočasnému uchování obrazového snímku nebo jeho části.:1
+Umožňuje uchovat informace o jednotlivých pixelech, jejich barevných hodnotách a umístění na obrazové ploše.:1
+Je druh paměťového média používaného pro ukládání digitální hudby.
+Je výraz pro dlouhodobou paměť u lidí, která uchovává vzpomínky.
+Je speciální druh paměťového modulu v počítačích, který se používá pro ukládání programů.
+
+176. Objasněte pojem double buffering a proč se tato technika používá?:-0.02857142857142858:-2.0:0.1
+Používaná v PC grafice, která spočívá v použití dvou paměťových bufferů pro vykreslování obrazu.:1
+První buffer slouží k záznamu a vykreslení aktuálního obrazu.:1
+Druhý buffer slouží k přípravě a aktualizaci dalšího obrazu.:1
+Minimalizuje se efekt "mrkání" a zajišťuje plynulý přechod mezi snímky.:1
+Používá k uložení dvojnásobného množství dat v paměti.
+Umožňuje vykreslovat grafiku s dvakrát vyšším rozlišením.
+Je používán pro ukládání zvukových dat ve formátu s dvojitým množstvím vzorků na sekundu.
+
+177. Vysvětlete pojem bitová rovina, kde se používá a její výhody?:0.1:-2.0:0.1
+Je grafický režim, který umožňuje přímou manipulaci s jednotlivými bity v paměti.:1
+Používá se v počítačové grafice a umožňuje pokročilé efekty a práci s maskami a barevnými indexy.:1
+Je termín používaný v letecké dopravě pro označení letové dráhy pro vzlétání a přistání letadel.
+Je obrazový formát, který ukládá data ve formě bitových obrázků.
+Je název pro technologii používanou v počítačových sítích k přenosu digitálních signálů mezi zařízeními.
+-nevýhoda je složitější organizace v paměti
+
+#=P10=3/3=========================================================================#
+178. Jaký je hlavní rozdíl mezi pevnou a plovoucí řádovou čárkou a jaké výhody/nevýhody z těchto reprezentací plynou?:0.5:2.0:0.1
+Hlavním rozdílem je způsob, jakým reprezentují a ukládají číselné hodnoty.:1
+Pevná řádová čárka používá fixní počet bitů pro celou a desetinnou část čísla:1
+Plovoucí řádová čárka používá dynamicky přizpůsobivý formát, který umožňuje reprezentovat velmi malé i velmi velké hodnoty s různou přesností.:1
+Hlavní rozdíl je v jejich použití v různých oblastech matematiky. 
+Pevná řádová čárka se používá v aritmetice a plovoucí řádová čárka v geometrii.
+Hlavní rozdíl je ve způsobu zaokrouhlování čísel.
+Pevná řádová čárka vždy zaokrouhluje dolů, zatímco plovoucí řádová čárka zaokrouhluje nahoru.
+
+179. Jaká je přesnost a jaký je dynamický rozsah pro číslo typu byte bez znaménka (celá čísla v pevné řádové čárce)?:0.26:1.0:0.1
+Jeho přesnost je 1, což znamená, že dokáže reprezentovat celá čísla s přesností na jednotky.:1
+Jeho dynamický rozsah je od 0 do 65 535 = 96dB.:1
+Přesnost čísla typu byte bez znaménka je 0.5, což znamená, že dokáže reprezentovat i desetinná čísla s přesností na poloviny.
+Přesnost čísla typu byte bez znaménka je 10, což znamená, že dokáže reprezentovat celá čísla s přesností na desítky.
+Dynamický rozsah čísla typu byte bez znaménka je od -128 do 127, což je celkem 256 různých hodnot.
+-ydB=20log(x)
+
+180. Vysvětlete princip a výhodu režimu saturace aritmetiky procesoru?:0.25:0.0:0.1
+Režim +- a no +- saturace => při překročení šířky datového slova dojde k dosazení max./min. vyjádřitelné hodnoty.:1
+Saturace zavedena z důvodu menšího zkreslení a nedojde k neočekovávanému chování algoritmu.:1
+Režim umožňuje dosahovat výrazně vyšších výkonů procesoru ve srovnání s jinými režimy.
+Režim slouží k přesnému zaokrouhlování desetinných čísel na celá čísla.
+
+181. Popište formát čísel s plovoucí řádovou čárkou s jednoduchou přesností. Uveďte, jak vypadá datové slovo, kolik má bitů, co která jeho část znamená a jak je číslo pomocí těchto částí vyjádřeno?:0.5:2.0:0.1
+Jednoduchá přesnost(float) má 32 bitů = znaménko (1 bit), exponent (8 bitů) a mantisu (23 bity).:1
+Znaménko určuje, zda je číslo kladné nebo záporné.:1
+Exponent reprezentuje mocninu, ke které je číslo vyjádřeno.:1
+Mantisa určuje samotnou hodnotu čísla, která je normalizovaná a v rozsahu mezi 1 a 2.:1
+Jednoduchá přesnost má 16 bitů a obsahuje znaménko (1 bit), exponent (4 bity) a mantisu (11 bitů).
+Datové slovo formátu float má 64 bitů, znaménko (1 bit), exponent (11 bitů) a mantisu (52 bity).
+Exponent ve formátu float určuje přesnost čísla, zatímco mantisa určuje mocninu, ke které je číslo vyjádřeno.
+
+#=P11=============================================================================#
+182. Jaké je dělení paralelních systémů podle Flynna a jaké kategorie paralelních systémů lze podle tohoto dělení definovat?:0.5:2.0:0.1
+Dle Flynna to jsou SI, MI, SD, MD.:1
+Kategorie paral. systémů jsou SISD, MISD, SIMD, MIMD.:1
+SI (Single Instruction Stream) – jeden řešený program:1
+MI (Multiple Instruction Stream) – několik řešených programů:1
+SD (Single Data Stream) – jeden zpracovávaný tok dat:1
+MD (Multiple Data Stream) – několik zpracovávaných toků dat:1
+SISD – Von Neumannova architektura s jedním programem a jedním sériově přiváděným tokem dat:1
+MISD – databázové systémy, používá se i pro označení proudového zpracování dat:1
+SIMD – větší počet jednotek provádí stejný program současně, každá ale s jinými daty (multimediální instrukční sady počítačů, grafické procesory):1
+MIMD – obecný typ paralelního systému (duální procesorové systémy, clustery, technologie grid).:1
+-BONUS, vše je správně
+
+183. Vysvětlete pojmy proudové zpracování instrukcí, strojový a instrukční cyklus?:-0.08888888888888889:-3.0:0.1
+Proudové zpracování instrukcí je technika => instrukce zpracovávány nepřetržitě ve formě "proudu" (instrukce na několik fází).:1
+Strojový cyklus zahrnuje jednu instrukci od načtení a dekódování až po vykonání a zápis výsledku.:1
+Instrukční cyklus zahrnuje všechny fáze vykonání jedné instrukce.:1
+Proudové zpracování instrukcí je technika => instrukce zpracovávají postupně v lineárním pořadí.
+Strojový cyklus se skládá z načtení instrukce a vykonání jejích operací.
+Proudové zpracování instrukcí je technika => instrukce vykonávají paralelně ve více jádrech procesoru.
+Strojový cyklus je část vykonávání jedné instrukce.
+Proudové zpracování instrukcí je technika => instrukce přeskakují a zpracovávají se pouze vybrané.
+Instrukční cyklus se skládá z načtení instrukce, jejího dekódování a vykonání.
+-TEST1
+
+184. Uveďte důvod použití a princip paměti cache. Vysvětlete výhodu víceúrovňových pamětí cache?:0.5:2.0:0.1
+Paměť cache urychluje přístup k často používaným datům, zatímco hlavní paměť je pomalejší.:1
+Paměť cache slouží k rozšíření kapacity hlavní paměti.
+Paměť cache ukládá stará a nepoužívaná data, aby uvolnila místo v hlavní paměti.
+Paměť cache pracuje s daty v opačném směru než hlavní paměť.
+
+185. Jaký je rozdíl mezi úlohovým a datovým paralelismem?:-0.02857142857142857:-1.0:0.1
+Úlohový paralelismus se zaměřuje na současné provádění různých úloh.:1
+Datový paralelismus se zaměřuje na současné provádění operací nad různými daty.:1
+Úlohový paralelismus a datový paralelismus jsou ekvivalentní termíny pro stejný koncept.
+Úlohový paralelismus se zaměřuje na rozdělení dat na části.
+Datový paralelismus se zaměřuje na rozdělení úloh.
+Úlohový paralelismus se využívá při paralelním zpracování vstupních dat.
+Datový paralelismus se využívá při paralelním zpracování různých úloh.
+
+186. Vysvětlete pojem zdánlivý paralelismus?:0.07500000000000001:0.0:0.1
+Situace, kdy se úlohy zdají být prováděny paralelně, i když ve skutečnosti probíhají sekvenčně (přepínání).:1
+Je termín pro současné provádění úloh na více procesorech.
+Je metoda využívaná k optimalizaci výkonu paměti cache.
+Využívá se při paralelním zpracování datových proudů.
+
+187. Popište princip technologie SIMD, vysvětlete rozdíl mezi skalárním a vektorovým paralelním zpracováním dat a vysvětlete horizontální a vertikální operace s vektory?:-0.025:-1.0:0.1
+SIMD umožňuje provádět stejnou operaci na více datových prvcích současně, což vede k paralelnímu zpracování dat.:1
+Skalární paralelní zpracování se týká operací na jednotlivých prvcích.:1
+Vektorové paralelní zpracování umožňuje provádět operace na celých vektorech najednou.:1
+Horizontální operace se vztahují k operacím, které se provádějí mezi prvky v jednom vektoru.:1
+Vertikální operace se provádějí mezi odpovídajícími prvky dvou vektorů.:1
+Technologie SIMD znamená současné provádění různých operací na jednom datovém prvku.
+Skalární paralelní zpracování se používá pouze na jednoduché matematické výpočty.
+Horizontální operace s vektory se týkají operací prováděných na jednom prvcí vektoru.
+-SIMD (Single Instruction, Multiple Data)
+
+#=P12=============================================================================#
+188. Vysvětlete pojmy vertex shader a pixel shader, jejich princip, datový typ, který používají, a jejich účel a místo v řetězci zpracování grafických dat?:0.5:2.0:0.1
+Vertex shader transformuje vstupní geometrii a vypočítává vlastnosti vrcholů, jako je jejich poloha a osvětlení (data=vertex).:1
+Pixel shader určuje vlastnosti a barvu každého pixelu ve výsledném obrazu (data=fragment).:1
+Vertex shader je speciální typ špičkového pera používaného pro psaní na tabuli s vrcholy.
+Pixel shader je program, který převádí obrázky na pixelovou grafiku pro webové stránky.
+Vertex shader a pixel shader jsou dva různé způsoby označování barevných odstínů v grafice.
+-první je vertex a pak pixel shader
+
+189. Popište strukturu paměti a možnosti sdílení dat mezi výpočetními jádry GPU?:0.9:3.0:0.1
+GPU se skládá z globální, sdílené a konstantní paměti, které umožňují ukládání a sdílení dat mezi vlákny na GPU.:1
+GPU je tvořena kávovými šálky a data se sdílejí pomocí pokřiků.
+GPU je jako plovoucí ostrovy a data se sdílejí plavbou na kajaku mezi jádry GPU.
+GPU je podobná zásobníkům jízdenek v autobusech. Data jsou předávána cestujícími mezi jednotlivými jádry GPU.
+-více s obrázky ve skriptech
+
+190. Popište programový model obecného paralelního zpracování dat v GPU?:0.5:2.0:0.1
+Zakládá se na rozdělení úloh do vláken, která jsou organizována do bloků a mřížek.:1
+Každé vlákno provádí stejný program, ale s různými daty.:1
+Zahrnuje kreslení obrázků pomocí magických křídel.
+Spočívá v provádění tance synchronizovaného s výkonem reproduktorů.
+Vyžaduje neustálé provádění operací s hlídacími psy a posílání signálů na vesmírnou stanici.
+
+191. V čem jsou hlavní výhody/nevýhody paraleleního zpracování dat pomocí GPU?:0.9:3.0:0.1
++ je vysoký výpočetní výkon a schopnost zpracovávat velké množství dat paralelně.:1
+minus může být složitější programování a omezení na určité typy úloh.:1
++ je možnost výroby chutných zmrzlinových pohárů.
+minus je potřeba pravidelného plavání na vodě.
++ je možnost přenosu myšlenek telepaticky.
+-minus beru na začátku jako komentář, takže menší oprava
+
+192. V jakých situacích je výpočet na GPU efektivnjší než CPU?:0.2:1.0:0.1
+Při zpracování velkého množství dat paralelně, př.: grafické zpracování, simulacích fyzikálních jevů nebo dolování dat.:1
+Při vaření těstovin.
+Při psaní básní.
+Při čištění okenních skel.
